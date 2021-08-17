@@ -10,7 +10,7 @@
 
 入力は
 
-https://www.seisakukikaku.metro.tokyo.lg.jp/information/corona-people-flow-analysis.html
+https://tokyo.mobakumap.jp/
 
 から取得する. それ以外のより良い方法がればそれでも問題なし.
 出力の実際の値は
@@ -75,3 +75,11 @@ https://stopcovid19.metro.tokyo.lg.jp/
 
 データを買うことはできそうであるが, そこまではしない. 最初は面倒かもしれないが手で
 データを集める. それが面倒なら工夫する.
+
+やればよいことは Firefox のような linux でも起動する web ブラウザを起動して
+「新宿駅東口」をクリックして出てきたグラフデータを示すウィンドウをキャプチャする.
+ということになる.
+
+
+
+
