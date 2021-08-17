@@ -1,0 +1,15 @@
+入力 : 人出のデータ
+
+出力 : 2 週間後の陽性者数等の予測
+
+入力は
+
+https://www.seisakukikaku.metro.tokyo.lg.jp/information/corona-people-flow-analysis.html
+
+から取得する. それ以外のより良い方法がればそれでも問題なし.
+出力の実際の値は
+
+https://stopcovid19.metro.tokyo.lg.jp/
+
+にある.
+
