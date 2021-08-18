@@ -1,0 +1,164 @@
+> firefox https://tokyo.mobakumap.jp/#35.681236,139.767125,13z --display 192.168.100.17:0.0 &
+> xprop
+WM_STATE(WM_STATE):
+		window state: Normal
+		icon window: 0x0
+WM_HINTS(WM_HINTS):
+		Client accepts input or input focus: True
+		Initial state is Normal State.
+		bitmap id # to use for icon: 0x600007d
+		bitmap id # of mask for icon: 0x600007e
+		window id # of group leader: 0x6000001
+WM_WINDOW_ROLE(STRING) = "browser"
+XdndAware(ATOM) = BITMAP
+_MOTIF_DRAG_RECEIVER_INFO(_MOTIF_DRAG_RECEIVER_INFO) = 0x6c, 0x0, 0x5, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x10, 0x0, 0x0, 0x0
+_NET_WM_ICON(CARDINAL) = 	Icon (16 x 16):
+	                
+	      ░░▒▒░     
+	    ░░▒▒▒▒▓▒░   
+	   ░░░▒▒▒▒▓▓▓░  
+	  ░░░░▒▒▒▒▓▓▓▓  
+	  ░░░▒▒▒▒▓▓▓▓▓▒ 
+	 ░▒▒▒▒▒▒▒▓▓▓▓▓▒ 
+	 ░▒▒▒▒▒▒▒▓▓▓▓▓▒ 
+	 ▒▒▒▒▒▒▒▓▓▓▓▓▓▒ 
+	 ▒▒▓▓▓▒▓▓▓▓▓▓▓▒ 
+	 ░▓▓▓▓▓▓▓▓▓▓▓▓▒ 
+	  ▒▓▓▓▓▓▓▓▓▓▓▒  
+	  ░▓▓▓▓▓▓▓▓▓▒░  
+	   ▒▓▓▓▓▓▓▓▒▒   
+	    ░▒▒▒▒▒▒▒░   
+	      ░░░░      
+
+	Icon (32 x 32):
+	                                
+	                                
+	            ░░░░░░░░            
+	          ░░░░▒▒▒▒▒▒▒▒░         
+	        ░░░░▒▒▒▒▒▒▒▒▒▓▒▒        
+	       ░░░▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒░      
+	      ░░░░░▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓░     
+	     ░░░░░░▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓     
+	    ░░░░░░░▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▒    
+	    ░░░░░░▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓░   
+	   ░░▒░░░▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒   
+	   ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓░  
+	  ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒  
+	  ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒  
+	  ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▒  
+	  ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓  
+	  ░▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+	  ░▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒  
+	  ░▒▒▓▓▓▓▓▓▓▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒  
+	  ░▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒  
+	   ▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░  
+	   ▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒   
+	   ░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░   
+	    ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒    
+	     ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░    
+	     ░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░     
+	      ░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒      
+	       ░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒░      
+	        ░▒▓▓▓▓▓▓▓▓▓▓▓▒▒░░       
+	         ░░▒▒▒▒▒▒▒▒▒▒░░         
+	              ░░░░░             
+	                                
+
+	Icon (48 x 48):
+	                                                
+	                                                
+	                     ░░░░░░░                    
+	                 ░░░░░░░▒▒▒▒▒▒░░                
+	               ░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒░              
+	             ░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▓▒▒▒░            
+	           ░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▒▒           
+	          ░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▒          
+	         ░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▒         
+	        ░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒        
+	       ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒       
+	       ░░░░░░▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓░      
+	      ░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓      
+	      ░░░░░░▒▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▒     
+	     ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓     
+	     ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒    
+	    ░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓    
+	    ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓    
+	    ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░   
+	    ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒   
+	   ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓   
+	   ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓   
+	   ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓   
+	   ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓   
+	   ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓   
+	   ░▒▒▒▒▒▒▒▒▓▓▓▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓   
+	   ░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒   
+	    ▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░   
+	    ▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░   
+	    ▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓    
+	    ░▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒    
+	     ▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓     
+	     ░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒     
+	      ▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓      
+	      ░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒      
+	       ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒       
+	        ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓        
+	        ░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░        
+	         ░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░         
+	         ░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░         
+	          ░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░░         
+	          ░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒░░          
+	           ░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒░░░           
+	             ░░░░▒▒▒▒▓▓▓▓▓▓▒▒▒▒▒░░░             
+	                ░░░░░░░░░░░░░░░░                
+	                                                
+	                                                
+	                                                
+
+
+_NET_WM_SYNC_REQUEST_COUNTER(CARDINAL) = 100663420
+_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL
+_NET_WM_USER_TIME_WINDOW(WINDOW): window id # 0x600007b
+WM_CLIENT_LEADER(WINDOW): window id # 0x6000001
+_NET_WM_PID(CARDINAL) = 5192
+WM_LOCALE_NAME(STRING) = "ja_JP.UTF-8"
+WM_CLIENT_MACHINE(STRING) = "localhost.localdomain"
+WM_NORMAL_HINTS(WM_SIZE_HINTS):
+		program specified minimum size: 300 by 71
+		program specified maximum size: 32767 by 32767
+		window gravity: NorthWest
+WM_PROTOCOLS(ATOM): protocols  WM_DELETE_WINDOW, WM_TAKE_FOCUS, _NET_WM_PING, _NET_WM_SYNC_REQUEST
+WM_CLASS(STRING) = "Navigator", "Firefox"
+WM_ICON_NAME(STRING) = "Firefox"
+_NET_WM_ICON_NAME(UTF8_STRING) = "モバイル空間統計 人口マップ - Fx ウェブブラウザ"
+WM_NAME(STRING) = "Firefox"
+_NET_WM_NAME(UTF8_STRING) = "モバイル空間統計 人口マップ - Fx ウェブブラウザ"
+> xwininfo
+
+xwininfo: Please select the window about which you
+          would like information by clicking the
+          mouse in that window.
+
+xwininfo: Window id: 0x600007a "モバイル空間統計 人口マップ - Fx ウェブブラウザ"
+
+  Absolute upper-left X:  202
+  Absolute upper-left Y:  52
+  Relative upper-left X:  0
+  Relative upper-left Y:  25
+  Width: 1024
+  Height: 699
+  Depth: 24
+  Visual: 0x21
+  Visual Class: TrueColor
+  Border width: 0
+  Class: InputOutput
+  Colormap: 0x20 (installed)
+  Bit Gravity State: NorthWestGravity
+  Window Gravity State: NorthWestGravity
+  Backing Store State: NotUseful
+  Save Under State: no
+  Map State: IsViewable
+  Override Redirect State: no
+  Corners:  +202+52  -134+52  -134--52  +202--52
+  -geometry 1024x699+200+25
+
+>
