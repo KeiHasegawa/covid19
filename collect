@@ -1,0 +1,8 @@
+#! /bin/csh -vxf
+
+firefox https://tokyo.mobakumap.jp/\#35.681236,139.767125,13z &
+sleep 20
+set wid=`xwininfo -root -tree | grep 'モバイル空間統計' | awk '{print $1}'`
+xwd -id $wid -out $wid.xwd -silent || exit 1
+kill %1
+xwud -in $wid.xwd
