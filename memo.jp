@@ -80,6 +80,25 @@ https://stopcovid19.metro.tokyo.lg.jp/
 「新宿駅東口」をクリックして出てきたグラフデータを示すウィンドウをキャプチャする.
 ということになる.
 
+プロセス ID に対して X ウィンドウのハンドルを取得するようなことができないだろうか?
+
+    pid_t pid = fork()
+    if (!pid) {
+      // exec firefox
+      
+    }
+
+    Widget w = getWidget(pid);
+
+
+% xwininfo -name firefox
+
+のようにすると Window ID と言われるものを取得することはできるようである. 一方
+
+% xprop -name emacs@localhost.localdomain
+
+のようにするとプロセス ID を取得することはできるようである. 反対は無理なのかもしれない.
+ともあれ -name firefox とすればそのプロセス ID もウィンドウ ID も取得できるらしい.
 
 
 
