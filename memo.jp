@@ -99,6 +99,3 @@ https://stopcovid19.metro.tokyo.lg.jp/
 
 のようにするとプロセス ID を取得することはできるようである. 反対は無理なのかもしれない.
 ともあれ -name firefox とすればそのプロセス ID もウィンドウ ID も取得できるらしい.
-
-
-
