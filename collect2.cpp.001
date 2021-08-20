@@ -13,7 +13,6 @@ struct info_t {
 
 std::vector<info_t> data = {
   {533946114, "Nihonbashi"},
-#if 0  
   {533946113, "Marunouchi"},
   {533946211, "Ootemachi"},
   {533946013, "Ginza"},
@@ -46,7 +45,6 @@ std::vector<info_t> data = {
   {533926524, "Haneda"},
   {533925354, "Kawasaki"},
   {533925363, "KeikyuKawasaki"},
-#endif  
 };
 
 enum kind_t { time_s, generation, place };
