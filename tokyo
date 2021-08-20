@@ -1,0 +1,29 @@
+#! /bin/csh -vxf
+
+#wget -q https://stopcovid19.metro.tokyo.lg.jp/index.html || exit 1
+
+firefox https://stopcovid19.metro.tokyo.lg.jp/index.html &
+
+sleep 20
+
+set wid=`xwininfo -root -tree | grep '都内の最新感染動向' | awk '{print $1}'`
+
+xdotool mousemove --window $wid 700 100 || exit 1
+
+xdotool key --window $wid Next || exit 1
+xwd -id $wid -silent -out tokyo1
+
+xdotool key --window $wid Next || exit 1
+sleep 10
+xwd -id $wid -silent -out tokyo2
+
+xdotool key --window $wid Next || exit 1
+sleep 10
+xwd -id $wid -silent -out tokyo3
+
+xdotool key --window $wid Next || exit 1
+sleep 10
+xwd -id $wid -silent -out tokyo4
+
+
+
