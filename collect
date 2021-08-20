@@ -1,13 +1,14 @@
 #! /bin/csh -vxf
 
-firefox https://tokyo.mobakumap.jp/\#35.681236,139.767125,13z &
-sleep 20
-set wid=`xwininfo -root -tree | grep 'モバイル空間統計' | awk '{print $1}'`
+firefox &
+sleep 25
+set wid1=`xwininfo -root -tree | grep 'モバイル空間統計' | awk '{print $1}'`
 
-xdotool mousemove --window $wid 500 380 || exit 1
-xdotool click 1
-sleep 3
-xwd -id $wid -out 500_380.xwd -silent || exit 1
+./collector1 $wid1
+
+firefox https://tokyo.mobakumap.jp/\#35.681236,139.767125,13z &
+set wid2=`xwininfo -root -tree | grep 'モバイル空間統計' | awk '{print $1}'`
+
+./collector2 $wid2
 
 kill %1
-xwud -in 500_380.xwd
