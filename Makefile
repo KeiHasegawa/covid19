@@ -1,6 +1,6 @@
 all:collect2
 
-collect2:collector2.cpp
+collect2:collect2.cpp
 	g++ -g3 -o $@ $<
 
 clean:

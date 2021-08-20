@@ -15,6 +15,7 @@ struct info_t {
 
 std::vector<info_t> data = {
   {533946114, "Nihonbashi"},
+#if 1
   {533946113, "Marunouchi"},
   {533946211, "Ootemachi"},
   {533946013, "Ginza"},
@@ -47,6 +48,7 @@ std::vector<info_t> data = {
   {533926524, "Haneda"},
   {533925354, "Kawasaki"},
   {533925363, "KeikyuKawasaki"},
+#endif  
 };
 
 inline bool capture(std::string wid, std::string place)
@@ -63,6 +65,27 @@ inline bool capture(std::string wid, std::string place)
   return false;
 }
 
+inline bool close_tab(std::string wid)
+{
+  using namespace std;
+  ostringstream os;
+  os << "xdotool mousemove --window " << wid << " 210 10";
+  auto x = system(os.str().c_str());
+  if (x) {
+    cerr << os.str() << " failed\n";
+    return true;
+  }
+
+  const char* cmd = "xdotool click 1";
+  auto y = system(cmd);
+  if (y) {
+    cerr << cmd << " failed\n";
+    return true;
+  }
+
+  return false;
+}
+
 inline bool subr(const info_t& info)
 {
   using namespace std;
@@ -70,11 +93,12 @@ inline bool subr(const info_t& info)
   if (!pid) {
     ostringstream os;
     os << "https://tokyo.mobakumap.jp/#" << info.id;
-    execl("/usr/bin/firefox", "firefox", os.str().c_str(), nullptr);
+    execl("/usr/bin/firefox", "firefox", // "-new-window",
+	  os.str().c_str(), nullptr);
     cerr << "execl failed\n";
     return 1;
   }
-  sleep(25);
+  sleep(10);
   ostringstream os;
   os << "w."<< pid;
   string log = os.str();
@@ -89,16 +113,15 @@ inline bool subr(const info_t& info)
   ifstream ifs(log);
   string wid;
   ifs >> wid;
-  unlink(log.c_str());
-  struct sweeper {
-    pid_t pid;
-    sweeper(pid_t p) : pid{p} {}
-    ~sweeper()
-    {
-      kill(pid, SIGTERM);
-    }
-  } sweeper(pid);
-  return capture(wid, info.place);
+  unlink(log.c_str());  
+  if (wid.empty()) {
+    // no firefox mobakumap page
+    return true;
+  }
+  if (capture(wid, info.place))
+    return true;
+
+  return close_tab(wid);
 }
 
 int main()
