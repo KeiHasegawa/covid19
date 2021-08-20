@@ -13,6 +13,7 @@ struct info_t {
 
 std::vector<info_t> data = {
   {533946114, "Nihonbashi"},
+#if 0  
   {533946113, "Marunouchi"},
   {533946211, "Ootemachi"},
   {533946013, "Ginza"},
@@ -45,16 +46,45 @@ std::vector<info_t> data = {
   {533926524, "Haneda"},
   {533925354, "Kawasaki"},
   {533925363, "KeikyuKawasaki"},
+#endif  
 };
 
-inline bool capture(std::string wid, std::string name)
+enum kind_t { time_s, generation, place };
+
+inline int pos(kind_t kind)
+{
+  switch (kind) {
+  case time_s:
+    return 350;
+  case generation:
+    return 480;
+  case place:
+  default:
+    return 610;
+  }
+}
+
+inline bool capture(std::string wid, std::string name, kind_t kind)
 {
   using namespace std;
-  ostringstream os;
-  os << "xwd -id " << wid << " -out " << name << " -silent";
-  auto status = system(os.str().c_str());
-  if (status) {
-    cerr << os.str() << " failed\n";
+  ostringstream osx;
+  osx << "xdotool mousemove --window " << wid << ' ' << pos(kind) << ' ' << 490;
+  auto x = system(osx.str().c_str());
+  if (x) {
+    cerr << osx.str() << " failed\n";
+    return true;
+  }
+  const char* cmd = "xdotool click 1";
+  auto y = system(cmd);
+  if (y) {
+    cerr << cmd << " failed\n";
+    return true;
+  }
+  ostringstream osy;  
+  osy << "xwd -id " << wid << " -out " << name << " -silent";
+  auto z = system(osy.str().c_str());
+  if (z) {
+    cerr << osy.str() << " failed\n";
     return true;
   }
   return false;
@@ -110,7 +140,11 @@ inline bool subr(const info_t& info)
     // no firefox mobakumap page
     return true;
   }
-  if (capture(wid, info.place + ".xwd"))
+  if (capture(wid, info.place + ".time", time_s))
+    return true;
+  if (capture(wid, info.place + ".gen", generation))
+    return true;
+  if (capture(wid, info.place + ".place", place))
     return true;
   return close_tab(wid);
 }
