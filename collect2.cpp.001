@@ -65,12 +65,15 @@ inline int pos(kind_t kind)
 inline bool capture(std::string wid, std::string name, kind_t kind)
 {
   using namespace std;
-  ostringstream osx;
-  osx << "xdotool mousemove --window " << wid << ' ' << pos(kind) << ' ' << 490;
-  auto x = system(osx.str().c_str());
-  if (x) {
-    cerr << osx.str() << " failed\n";
-    return true;
+  if (kind != time_s) {
+    ostringstream os;
+    os << "xdotool mousemove --window " << wid << ' ';
+    os << pos(kind) << ' ' << 490;
+    auto x = system(os.str().c_str());
+    if (x) {
+      cerr << os.str() << " failed\n";
+      return true;
+    }
   }
   const char* cmd = "xdotool click 1";
   auto y = system(cmd);
