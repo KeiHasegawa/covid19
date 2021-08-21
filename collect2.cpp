@@ -14,6 +14,7 @@ struct info_t {
 std::vector<info_t> data = {
   {533946114, "Nihonbashi"},
   {533946113, "Marunouchi"},
+#if 0  
   {533946211, "Ootemachi"},
   {533946013, "Ginza"},
   {533936904, "Shinbashi"},
@@ -45,6 +46,7 @@ std::vector<info_t> data = {
   {533926524, "Haneda"},
   {533925354, "Kawasaki"},
   {533925363, "KeikyuKawasaki"},
+#endif  
 };
 
 enum kind_t { time_s, generation, place };
@@ -74,18 +76,18 @@ inline bool capture(std::string wid, std::string name, kind_t kind)
       cerr << os.str() << " failed\n";
       return true;
     }
+    const char* cmd = "xdotool click 1";
+    auto y = system(cmd);
+    if (y) {
+      cerr << cmd << " failed\n";
+      return true;
+    }
   }
-  const char* cmd = "xdotool click 1";
-  auto y = system(cmd);
-  if (y) {
-    cerr << cmd << " failed\n";
-    return true;
-  }
-  ostringstream osy;  
-  osy << "xwd -id " << wid << " -out " << name << " -silent";
-  auto z = system(osy.str().c_str());
+  ostringstream os;
+  os << "xwd -id " << wid << " -out " << name << " -silent";
+  auto z = system(os.str().c_str());
   if (z) {
-    cerr << osy.str() << " failed\n";
+    cerr << os.str() << " failed\n";
     return true;
   }
   return false;
@@ -121,7 +123,13 @@ inline bool subr(const info_t& info)
     cerr << "execl failed\n";
     return 1;
   }
-  sleep(10);
+  static bool first = true;
+  if (first) {
+    sleep(20);
+    first = false;
+  }
+  else
+    sleep(10);
   ostringstream os;
   os << "w."<< pid;
   string log = os.str();
@@ -153,6 +161,15 @@ inline bool subr(const info_t& info)
 int main()
 {
   using namespace std;
+  pid_t pid = fork();
+  if (!pid) {
+    ostringstream os;
+    execl("/usr/bin/firefox", "firefox",
+	  "https://tokyo.mobakumap.jp/", nullptr);
+    cerr << "execl failed\n";
+    return 1;
+  }
+  sleep(30);
   auto p = find_if(begin(data), end(data), subr);
   return end(data) - p;
 }
