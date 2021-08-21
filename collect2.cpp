@@ -5,6 +5,7 @@
 #include <sstream>
 #include <vector>
 #include <fstream>
+#include <set>
 
 struct info_t {
   int id;
@@ -14,7 +15,7 @@ struct info_t {
 std::vector<info_t> data = {
   {533946114, "Nihonbashi"},
   {533946113, "Marunouchi"},
-#if 0  
+#if 1
   {533946211, "Ootemachi"},
   {533946013, "Ginza"},
   {533936904, "Shinbashi"},
@@ -83,12 +84,29 @@ inline bool capture(std::string wid, std::string name, kind_t kind)
       return true;
     }
   }
-  ostringstream os;
-  os << "xwd -id " << wid << " -out " << name << " -silent";
-  auto z = system(os.str().c_str());
+ label:  
+  ostringstream osz;
+  osz << "xwd -id " << wid << " -out " << name << " -silent";
+  auto z = system(osz.str().c_str());
   if (z) {
-    cerr << os.str() << " failed\n";
+    cerr << osz.str() << " failed\n";
     return true;
+  }
+
+  if (kind == time_s) {
+    ostringstream osu;
+    osu << "tdata -in " << name << " > " << name << ".dat";
+    auto u = system(osu.str().c_str());
+    if (u) {
+      static set<string> retry;
+      if (retry.find(name) != retry.end()) {
+	cerr << osu.str() << " failed\n";
+	return true;
+      }
+      retry.insert(name);
+      sleep(5);
+      goto label;
+    }
   }
   return false;
 }
@@ -123,13 +141,7 @@ inline bool subr(const info_t& info)
     cerr << "execl failed\n";
     return 1;
   }
-  static bool first = true;
-  if (first) {
-    sleep(20);
-    first = false;
-  }
-  else
-    sleep(10);
+  sleep(15);
   ostringstream os;
   os << "w."<< pid;
   string log = os.str();
