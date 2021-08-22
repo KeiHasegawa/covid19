@@ -123,7 +123,7 @@ typedef pair<double, double> COORD;
 
 typedef map<int, int> CROWD;
 
-map<COOD, CROWD> data;
+map<COORD, CROWD> data;
 
 現状この data から Yahoo の雨雲レーダー相当のことができないかという問題になっている..
 

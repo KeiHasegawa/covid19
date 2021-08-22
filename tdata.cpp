@@ -46,6 +46,7 @@ from The Open Group.
 #include <cassert>
 #include <algorithm>
 #include <vector>
+#include <sstream>
 
 namespace mine {
   using namespace std;
@@ -5163,6 +5164,32 @@ namespace mine {
     }
     return -1;
   }
+  pair<double, double> coord;
+  inline string out_header()
+  {
+    cout << "#include <map>\n";
+    cout << "using namespace std;\n\n";
+    cout << "extern map<pair<double, double>, map<int, int> > ";
+    string vn = "g_crow_data";
+    cout << vn << ";\n\n";
+    ostringstream os;
+    auto x = coord.first;
+    auto y = coord.second;
+    os << '_' << x << '_' << y;
+    string tn = "x" + os.str();
+    auto p = tn.find_first_of('.');
+    assert(p != string::npos);
+    tn[p] = 'd';
+    auto q = tn.find_first_of('.', p+1);
+    assert(q != string::npos);
+    tn[q] = 'd';
+    cout << "struct " << tn << " : map<int, int> {\n";
+    cout << "  " << tn << "()\n";
+    cout << "  " << "{\n";
+    cout << "  " << "  auto& table = " << vn;
+    cout << "[make_pair(" << x << ',' << y << ")];\n";
+    return tn;
+  }
   int first_x = 306;
   inline void out_data(int i, int xscale, __time_t t, XImage* in_image)
   {
@@ -5175,7 +5202,13 @@ namespace mine {
     double b = bottom - top;
     int v = a/b * xscale;
     int u = t - 3600 *(23-i);
-    cout << u << ' ' << v << '\n';
+    cout << "    ";
+    cout << "table[" << u << "] = " << v << ";\n";
+  }
+  inline void out_footer(string name)
+  {
+    cout << "  " << "}\n";
+    cout << "} " << name << ";\n";
   }
   inline void update()
   {
@@ -5608,6 +5641,18 @@ main(int argc, char *argv[])
 	if (strcmp(argv[i], "-in") == 0) {
 	    if (++i >= argc) usage();
 	    file_name = argv[i];
+	    continue;
+	}
+	if (strcmp(argv[i], "-x") == 0) {
+	    if (++i >= argc) usage();
+	    char* end;
+	    mine::coord.first = strtod(argv[i], &end);
+	    continue;
+	}
+	if (strcmp(argv[i], "-y") == 0) {
+	    if (++i >= argc) usage();
+	    char* end;
+	    mine::coord.second = strtod(argv[i], &end);
 	    continue;
 	}
 	if (strcmp(argv[i], "-inverse") == 0) { /* for compatibility */
@@ -6516,8 +6561,10 @@ Do_Direct(Display *dpy, XWDFileHeader *header, Colormap *colormap,
 	    d += 24;
 	  assert(d >= 0);
 	  t -= d * 3600;
+	  auto nm = out_header();
 	  for (int i = 0 ; i != 24 ; ++i)
 	    out_data(i, xs, t, in_image);
+	  out_footer(nm);
 	  if (1)
 	    exit(0);
 	}

@@ -15,6 +15,7 @@ struct info_t {
 
 std::vector<info_t> data = {
   {533946114, "Nihonbashi", {35.68123,139.774534}},
+#if 1
   {533946113, "Marunouchi", {35.680478,139.765367}},
   {533946211, "Ootemachi", {35.687438,139.764955}},
   {533946013, "Ginza", {35.669626,139.765539}},
@@ -32,7 +33,7 @@ std::vector<info_t> data = {
   {533935952, "Centergai", {35.658034,139.701636}},
   {533935853, "Kamiizumi", {35.65727,139.693623}},
   {533945052, "Yoyogikouen", {35.671587,139.696703}},
-  {533945254, "Shinjuku", {35.689607,139.700571}},
+  {533945254, "ShinjukuNishi", {35.693292,139.699132}},
   {533945263, "ShinjukuHigashi", {35.689607,139.700571}},
   {533945361, "Kabukicho", {35.695543,139.703149}},
   {533945764, "Ikebukuro", {35.736262,139.707009}},
@@ -119,6 +120,7 @@ std::vector<info_t> data = {
   {533932172, "Hashimoto", {35.594864,139.344922}},
   {533922352, "Aikawacho", {35.528821,139.321661}},
   {533933434, "Tamacenter", {35.623931,139.422853}},
+#endif  
 };
 
 enum kind_t { time_s, generation, place };
@@ -136,7 +138,20 @@ inline int pos(kind_t kind)
   }
 }
 
-inline bool capture(std::string wid, std::string name, kind_t kind)
+inline std::string dump_file(std::string base, kind_t kind)
+{
+  switch (kind) {
+  case time_s:
+    return base + ".time";
+  case generation:
+    return base + ".gen";
+  case place:
+  default:
+    return base + ".gen";
+  }
+}
+
+inline bool capture(std::string wid, const info_t& info, kind_t kind)
 {
   using namespace std;
   if (kind != time_s) {
@@ -155,9 +170,10 @@ inline bool capture(std::string wid, std::string name, kind_t kind)
       return true;
     }
   }
- label:  
+  string fn = dump_file(info.place, kind);
+ label:
   ostringstream osz;
-  osz << "xwd -id " << wid << " -out " << name << " -silent";
+  osz << "xwd -id " << wid << " -out " << fn << " -silent";
   auto z = system(osz.str().c_str());
   if (z) {
     cerr << osz.str() << " failed\n";
@@ -165,22 +181,24 @@ inline bool capture(std::string wid, std::string name, kind_t kind)
   }
 
   if (kind == time_s) {
-    ostringstream osu;
-    osu << "tdata -in " << name << " > " << name << ".dat";
-    auto u = system(osu.str().c_str());
+    ostringstream os;
+    auto c = info.coord;
+    os << "tdata -in " << fn;
+    os << " -x " << c.first;
+    os << " -y " << c.second;
+    os << " > " << fn << ".cpp";
+    auto u = system(os.str().c_str());
     if (u) {
       static set<string> retry;
-      if (retry.find(name) != retry.end()) {
-	cerr << osu.str() << " failed\n";
+      if (retry.find(fn) != retry.end()) {
+	cerr << os.str() << " failed\n";
 	return true;
       }
-      retry.insert(name);
+      retry.insert(fn);
       sleep(5);
       goto label;
     }
-#if 0    
-    unlink(name.c_str());
-#endif    
+    unlink(fn.c_str());
   }
   return false;
 }
@@ -235,11 +253,11 @@ inline bool subr(const info_t& info)
     // no firefox mobakumap page
     return true;
   }
-  if (capture(wid, info.place + ".time", time_s))
+  if (capture(wid, info, time_s))
     return true;
-  if (capture(wid, info.place + ".gen", generation))
+  if (capture(wid, info, generation))
     return true;
-  if (capture(wid, info.place + ".place", place))
+  if (capture(wid, info, place))
     return true;
   return close_tab(wid);
 }
