@@ -267,6 +267,378 @@ namespace mine {
       table8c[pos] = x.second;
     }
   }
+  // "400" data
+  //  ^^
+  struct table400_t : map<pair<int, int>, int> {
+    table400_t()
+    {
+      (*this)[make_pair(295, 233)] = 16777215;
+      (*this)[make_pair(295, 234)] = 16777215;
+      (*this)[make_pair(295, 235)] = 16777215;
+      (*this)[make_pair(295, 236)] = 16777215;
+      (*this)[make_pair(295, 237)] = 16777215;
+      (*this)[make_pair(295, 238)] = 16777215;
+      (*this)[make_pair(295, 239)] = 16777215;
+      (*this)[make_pair(295, 240)] = 16777215;
+      (*this)[make_pair(295, 241)] = 16777215;
+      (*this)[make_pair(295, 242)] = 16777215;
+      (*this)[make_pair(295, 243)] = 16777215;
+      (*this)[make_pair(295, 244)] = 16777215;
+      (*this)[make_pair(295, 245)] = 16777215;
+      (*this)[make_pair(296, 233)] = 16777215;
+      (*this)[make_pair(296, 234)] = 16777215;
+      (*this)[make_pair(296, 235)] = 16777215;
+      (*this)[make_pair(296, 236)] = 16777215;
+      (*this)[make_pair(296, 237)] = 16777215;
+      (*this)[make_pair(296, 238)] = 16777215;
+      (*this)[make_pair(296, 239)] = 16777215;
+      (*this)[make_pair(296, 240)] = 16777215;
+      (*this)[make_pair(296, 241)] = 16777215;
+      (*this)[make_pair(296, 242)] = 16777215;
+      (*this)[make_pair(296, 243)] = 16777215;
+      (*this)[make_pair(296, 244)] = 16777215;
+      (*this)[make_pair(296, 245)] = 16777215;
+      (*this)[make_pair(297, 233)] = 16777215;
+      (*this)[make_pair(297, 234)] = 16777215;
+      (*this)[make_pair(297, 235)] = 16777215;
+      (*this)[make_pair(297, 236)] = 16777215;
+      (*this)[make_pair(297, 237)] = 16777215;
+      (*this)[make_pair(297, 238)] = 16777215;
+      (*this)[make_pair(297, 239)] = 16777215;
+      (*this)[make_pair(297, 240)] = 16777215;
+      (*this)[make_pair(297, 241)] = 16777215;
+      (*this)[make_pair(297, 242)] = 16777215;
+      (*this)[make_pair(297, 243)] = 16777215;
+      (*this)[make_pair(297, 244)] = 16777215;
+      (*this)[make_pair(297, 245)] = 16777215;
+      (*this)[make_pair(298, 233)] = 16777215;
+      (*this)[make_pair(298, 234)] = 16777215;
+      (*this)[make_pair(298, 235)] = 16777215;
+      (*this)[make_pair(298, 236)] = 16777215;
+      (*this)[make_pair(298, 237)] = 16777215;
+      (*this)[make_pair(298, 238)] = 16777215;
+      (*this)[make_pair(298, 239)] = 16777215;
+      (*this)[make_pair(298, 240)] = 16777215;
+      (*this)[make_pair(298, 241)] = 16777215;
+      (*this)[make_pair(298, 242)] = 16777215;
+      (*this)[make_pair(298, 243)] = 16777215;
+      (*this)[make_pair(298, 244)] = 16777215;
+      (*this)[make_pair(298, 245)] = 16777215;
+      (*this)[make_pair(299, 233)] = 16777215;
+      (*this)[make_pair(299, 234)] = 16777215;
+      (*this)[make_pair(299, 235)] = 16777215;
+      (*this)[make_pair(299, 236)] = 16777215;
+      (*this)[make_pair(299, 237)] = 16777215;
+      (*this)[make_pair(299, 238)] = 16777215;
+      (*this)[make_pair(299, 239)] = 16777215;
+      (*this)[make_pair(299, 240)] = 16777215;
+      (*this)[make_pair(299, 241)] = 16777215;
+      (*this)[make_pair(299, 242)] = 16777215;
+      (*this)[make_pair(299, 243)] = 16777215;
+      (*this)[make_pair(299, 244)] = 16777215;
+      (*this)[make_pair(299, 245)] = 16777215;
+      (*this)[make_pair(300, 233)] = 16777215;
+      (*this)[make_pair(300, 234)] = 16777215;
+      (*this)[make_pair(300, 235)] = 16777215;
+      (*this)[make_pair(300, 236)] = 16777215;
+      (*this)[make_pair(300, 237)] = 16777215;
+      (*this)[make_pair(300, 238)] = 16777215;
+      (*this)[make_pair(300, 239)] = 16777215;
+      (*this)[make_pair(300, 240)] = 16777215;
+      (*this)[make_pair(300, 241)] = 16777215;
+      (*this)[make_pair(300, 242)] = 16777215;
+      (*this)[make_pair(300, 243)] = 16777215;
+      (*this)[make_pair(300, 244)] = 16777215;
+      (*this)[make_pair(300, 245)] = 16777215;
+      (*this)[make_pair(301, 233)] = 16777215;
+      (*this)[make_pair(301, 234)] = 16777215;
+      (*this)[make_pair(301, 235)] = 16777215;
+      (*this)[make_pair(301, 236)] = 16777215;
+      (*this)[make_pair(301, 237)] = 16777215;
+      (*this)[make_pair(301, 238)] = 16777215;
+      (*this)[make_pair(301, 239)] = 16777215;
+      (*this)[make_pair(301, 240)] = 16777215;
+      (*this)[make_pair(301, 241)] = 16777215;
+      (*this)[make_pair(301, 242)] = 16777215;
+      (*this)[make_pair(301, 243)] = 16777215;
+      (*this)[make_pair(301, 244)] = 16777215;
+      (*this)[make_pair(301, 245)] = 16777215;
+      (*this)[make_pair(302, 233)] = 16777215;
+      (*this)[make_pair(302, 234)] = 16777215;
+      (*this)[make_pair(302, 235)] = 16777215;
+      (*this)[make_pair(302, 236)] = 16777215;
+      (*this)[make_pair(302, 237)] = 16777215;
+      (*this)[make_pair(302, 238)] = 16777215;
+      (*this)[make_pair(302, 239)] = 16777215;
+      (*this)[make_pair(302, 240)] = 16777215;
+      (*this)[make_pair(302, 241)] = 16777215;
+      (*this)[make_pair(302, 242)] = 16777215;
+      (*this)[make_pair(302, 243)] = 16777215;
+      (*this)[make_pair(302, 244)] = 16777215;
+      (*this)[make_pair(302, 245)] = 16777215;
+      (*this)[make_pair(303, 233)] = 16777215;
+      (*this)[make_pair(303, 234)] = 16777215;
+      (*this)[make_pair(303, 235)] = 16777215;
+      (*this)[make_pair(303, 236)] = 16777215;
+      (*this)[make_pair(303, 237)] = 16777215;
+      (*this)[make_pair(303, 238)] = 16777215;
+      (*this)[make_pair(303, 239)] = 16777215;
+      (*this)[make_pair(303, 240)] = 16777215;
+      (*this)[make_pair(303, 241)] = 16777215;
+      (*this)[make_pair(303, 242)] = 16777215;
+      (*this)[make_pair(303, 243)] = 16777215;
+      (*this)[make_pair(303, 244)] = 16777215;
+      (*this)[make_pair(303, 245)] = 16777215;
+      (*this)[make_pair(304, 233)] = 16777215;
+      (*this)[make_pair(304, 234)] = 16777215;
+      (*this)[make_pair(304, 235)] = 16777215;
+      (*this)[make_pair(304, 236)] = 16777215;
+      (*this)[make_pair(304, 237)] = 16777215;
+      (*this)[make_pair(304, 238)] = 16777215;
+      (*this)[make_pair(304, 239)] = 16777215;
+      (*this)[make_pair(304, 240)] = 16777215;
+      (*this)[make_pair(304, 241)] = 16777215;
+      (*this)[make_pair(304, 242)] = 16777215;
+      (*this)[make_pair(304, 243)] = 16777215;
+      (*this)[make_pair(304, 244)] = 16777215;
+      (*this)[make_pair(304, 245)] = 16777215;
+      (*this)[make_pair(305, 233)] = 16777215;
+      (*this)[make_pair(305, 234)] = 16777215;
+      (*this)[make_pair(305, 235)] = 16777215;
+      (*this)[make_pair(305, 236)] = 16777215;
+      (*this)[make_pair(305, 237)] = 16777215;
+      (*this)[make_pair(305, 238)] = 16777215;
+      (*this)[make_pair(305, 239)] = 16777215;
+      (*this)[make_pair(305, 240)] = 16777215;
+      (*this)[make_pair(305, 241)] = 16777215;
+      (*this)[make_pair(305, 242)] = 16777215;
+      (*this)[make_pair(305, 243)] = 16777215;
+      (*this)[make_pair(305, 244)] = 16777215;
+      (*this)[make_pair(305, 245)] = 16777215;
+      (*this)[make_pair(306, 233)] = 16777215;
+      (*this)[make_pair(306, 234)] = 16777215;
+      (*this)[make_pair(306, 235)] = 16777215;
+      (*this)[make_pair(306, 236)] = 16777215;
+      (*this)[make_pair(306, 237)] = 16777215;
+      (*this)[make_pair(306, 238)] = 14935011;
+      (*this)[make_pair(306, 239)] = 9539985;
+      (*this)[make_pair(306, 240)] = 15921906;
+      (*this)[make_pair(306, 241)] = 16777215;
+      (*this)[make_pair(306, 242)] = 16777215;
+      (*this)[make_pair(306, 243)] = 16777215;
+      (*this)[make_pair(306, 244)] = 16777215;
+      (*this)[make_pair(306, 245)] = 16777215;
+      (*this)[make_pair(307, 233)] = 16777215;
+      (*this)[make_pair(307, 234)] = 16777215;
+      (*this)[make_pair(307, 235)] = 16777215;
+      (*this)[make_pair(307, 236)] = 16711422;
+      (*this)[make_pair(307, 237)] = 12171705;
+      (*this)[make_pair(307, 238)] = 9737364;
+      (*this)[make_pair(307, 239)] = 9539985;
+      (*this)[make_pair(307, 240)] = 15658734;
+      (*this)[make_pair(307, 241)] = 16777215;
+      (*this)[make_pair(307, 242)] = 16777215;
+      (*this)[make_pair(307, 243)] = 16777215;
+      (*this)[make_pair(307, 244)] = 16777215;
+      (*this)[make_pair(307, 245)] = 16777215;
+    }
+  } s400;
+  map<pair<int, int>, int> table400;
+  void update_table400()
+  {
+    for (const auto& x : s400) {
+      auto pos = x.first;
+      pos.first += time_button.first - 271 - 39;
+      pos.second += time_button.second - 482 + 2;
+      table400[pos] = x.second;
+    }
+  }
+  // "600" data
+  //  ^^
+  struct table600_t : map<pair<int, int>, int> {
+    table600_t()
+    {
+      (*this)[make_pair(295, 233)] = 16777215;
+      (*this)[make_pair(295, 234)] = 16777215;
+      (*this)[make_pair(295, 235)] = 16777215;
+      (*this)[make_pair(295, 236)] = 16777215;
+      (*this)[make_pair(295, 237)] = 16777215;
+      (*this)[make_pair(295, 238)] = 16777215;
+      (*this)[make_pair(295, 239)] = 16777215;
+      (*this)[make_pair(295, 240)] = 16777215;
+      (*this)[make_pair(295, 241)] = 16777215;
+      (*this)[make_pair(295, 242)] = 16777215;
+      (*this)[make_pair(295, 243)] = 16777215;
+      (*this)[make_pair(295, 244)] = 16777215;
+      (*this)[make_pair(295, 245)] = 16777215;
+      (*this)[make_pair(296, 233)] = 16777215;
+      (*this)[make_pair(296, 234)] = 16777215;
+      (*this)[make_pair(296, 235)] = 16777215;
+      (*this)[make_pair(296, 236)] = 16777215;
+      (*this)[make_pair(296, 237)] = 16777215;
+      (*this)[make_pair(296, 238)] = 16777215;
+      (*this)[make_pair(296, 239)] = 16777215;
+      (*this)[make_pair(296, 240)] = 16777215;
+      (*this)[make_pair(296, 241)] = 16777215;
+      (*this)[make_pair(296, 242)] = 16777215;
+      (*this)[make_pair(296, 243)] = 16777215;
+      (*this)[make_pair(296, 244)] = 16777215;
+      (*this)[make_pair(296, 245)] = 16777215;
+      (*this)[make_pair(297, 233)] = 16777215;
+      (*this)[make_pair(297, 234)] = 16777215;
+      (*this)[make_pair(297, 235)] = 16777215;
+      (*this)[make_pair(297, 236)] = 16777215;
+      (*this)[make_pair(297, 237)] = 16777215;
+      (*this)[make_pair(297, 238)] = 16777215;
+      (*this)[make_pair(297, 239)] = 16777215;
+      (*this)[make_pair(297, 240)] = 16777215;
+      (*this)[make_pair(297, 241)] = 16777215;
+      (*this)[make_pair(297, 242)] = 16777215;
+      (*this)[make_pair(297, 243)] = 16777215;
+      (*this)[make_pair(297, 244)] = 16777215;
+      (*this)[make_pair(297, 245)] = 16777215;
+      (*this)[make_pair(298, 233)] = 16777215;
+      (*this)[make_pair(298, 234)] = 16777215;
+      (*this)[make_pair(298, 235)] = 16777215;
+      (*this)[make_pair(298, 236)] = 16777215;
+      (*this)[make_pair(298, 237)] = 16777215;
+      (*this)[make_pair(298, 238)] = 16777215;
+      (*this)[make_pair(298, 239)] = 16777215;
+      (*this)[make_pair(298, 240)] = 16777215;
+      (*this)[make_pair(298, 241)] = 16777215;
+      (*this)[make_pair(298, 242)] = 16777215;
+      (*this)[make_pair(298, 243)] = 16777215;
+      (*this)[make_pair(298, 244)] = 16777215;
+      (*this)[make_pair(298, 245)] = 16777215;
+      (*this)[make_pair(299, 233)] = 16777215;
+      (*this)[make_pair(299, 234)] = 16777215;
+      (*this)[make_pair(299, 235)] = 16777215;
+      (*this)[make_pair(299, 236)] = 16777215;
+      (*this)[make_pair(299, 237)] = 16777215;
+      (*this)[make_pair(299, 238)] = 16777215;
+      (*this)[make_pair(299, 239)] = 16777215;
+      (*this)[make_pair(299, 240)] = 16777215;
+      (*this)[make_pair(299, 241)] = 16777215;
+      (*this)[make_pair(299, 242)] = 16777215;
+      (*this)[make_pair(299, 243)] = 16777215;
+      (*this)[make_pair(299, 244)] = 16777215;
+      (*this)[make_pair(299, 245)] = 16777215;
+      (*this)[make_pair(300, 233)] = 16777215;
+      (*this)[make_pair(300, 234)] = 16777215;
+      (*this)[make_pair(300, 235)] = 16777215;
+      (*this)[make_pair(300, 236)] = 16777215;
+      (*this)[make_pair(300, 237)] = 16777215;
+      (*this)[make_pair(300, 238)] = 16777215;
+      (*this)[make_pair(300, 239)] = 16777215;
+      (*this)[make_pair(300, 240)] = 16777215;
+      (*this)[make_pair(300, 241)] = 16777215;
+      (*this)[make_pair(300, 242)] = 16777215;
+      (*this)[make_pair(300, 243)] = 16777215;
+      (*this)[make_pair(300, 244)] = 16777215;
+      (*this)[make_pair(300, 245)] = 16777215;
+      (*this)[make_pair(301, 233)] = 16777215;
+      (*this)[make_pair(301, 234)] = 16777215;
+      (*this)[make_pair(301, 235)] = 16777215;
+      (*this)[make_pair(301, 236)] = 16777215;
+      (*this)[make_pair(301, 237)] = 16777215;
+      (*this)[make_pair(301, 238)] = 16777215;
+      (*this)[make_pair(301, 239)] = 16777215;
+      (*this)[make_pair(301, 240)] = 16777215;
+      (*this)[make_pair(301, 241)] = 16777215;
+      (*this)[make_pair(301, 242)] = 16777215;
+      (*this)[make_pair(301, 243)] = 16777215;
+      (*this)[make_pair(301, 244)] = 16777215;
+      (*this)[make_pair(301, 245)] = 16777215;
+      (*this)[make_pair(302, 233)] = 16777215;
+      (*this)[make_pair(302, 234)] = 16777215;
+      (*this)[make_pair(302, 235)] = 16777215;
+      (*this)[make_pair(302, 236)] = 16777215;
+      (*this)[make_pair(302, 237)] = 16777215;
+      (*this)[make_pair(302, 238)] = 16777215;
+      (*this)[make_pair(302, 239)] = 16777215;
+      (*this)[make_pair(302, 240)] = 16777215;
+      (*this)[make_pair(302, 241)] = 16777215;
+      (*this)[make_pair(302, 242)] = 16777215;
+      (*this)[make_pair(302, 243)] = 16777215;
+      (*this)[make_pair(302, 244)] = 16777215;
+      (*this)[make_pair(302, 245)] = 16777215;
+      (*this)[make_pair(303, 233)] = 16777215;
+      (*this)[make_pair(303, 234)] = 16777215;
+      (*this)[make_pair(303, 235)] = 16777215;
+      (*this)[make_pair(303, 236)] = 16777215;
+      (*this)[make_pair(303, 237)] = 16777215;
+      (*this)[make_pair(303, 238)] = 16777215;
+      (*this)[make_pair(303, 239)] = 16777215;
+      (*this)[make_pair(303, 240)] = 16777215;
+      (*this)[make_pair(303, 241)] = 16777215;
+      (*this)[make_pair(303, 242)] = 16777215;
+      (*this)[make_pair(303, 243)] = 16777215;
+      (*this)[make_pair(303, 244)] = 16777215;
+      (*this)[make_pair(303, 245)] = 16777215;
+      (*this)[make_pair(304, 233)] = 16777215;
+      (*this)[make_pair(304, 234)] = 16777215;
+      (*this)[make_pair(304, 235)] = 16777215;
+      (*this)[make_pair(304, 236)] = 16777215;
+      (*this)[make_pair(304, 237)] = 16777215;
+      (*this)[make_pair(304, 238)] = 16777215;
+      (*this)[make_pair(304, 239)] = 16777215;
+      (*this)[make_pair(304, 240)] = 16777215;
+      (*this)[make_pair(304, 241)] = 16777215;
+      (*this)[make_pair(304, 242)] = 16777215;
+      (*this)[make_pair(304, 243)] = 16777215;
+      (*this)[make_pair(304, 244)] = 16777215;
+      (*this)[make_pair(304, 245)] = 16777215;
+      (*this)[make_pair(305, 233)] = 16777215;
+      (*this)[make_pair(305, 234)] = 16777215;
+      (*this)[make_pair(305, 235)] = 16777215;
+      (*this)[make_pair(305, 236)] = 16777215;
+      (*this)[make_pair(305, 237)] = 16777215;
+      (*this)[make_pair(305, 238)] = 16777215;
+      (*this)[make_pair(305, 239)] = 16777215;
+      (*this)[make_pair(305, 240)] = 16777215;
+      (*this)[make_pair(305, 241)] = 16777215;
+      (*this)[make_pair(305, 242)] = 16777215;
+      (*this)[make_pair(305, 243)] = 16777215;
+      (*this)[make_pair(305, 244)] = 16777215;
+      (*this)[make_pair(305, 245)] = 16777215;
+      (*this)[make_pair(306, 233)] = 16777215;
+      (*this)[make_pair(306, 234)] = 16777215;
+      (*this)[make_pair(306, 235)] = 16777215;
+      (*this)[make_pair(306, 236)] = 16053492;
+      (*this)[make_pair(306, 237)] = 14803425;
+      (*this)[make_pair(306, 238)] = 14277081;
+      (*this)[make_pair(306, 239)] = 16250871;
+      (*this)[make_pair(306, 240)] = 16777215;
+      (*this)[make_pair(306, 241)] = 16777215;
+      (*this)[make_pair(306, 242)] = 16777215;
+      (*this)[make_pair(306, 243)] = 16777215;
+      (*this)[make_pair(306, 244)] = 16777215;
+      (*this)[make_pair(306, 245)] = 16777215;
+      (*this)[make_pair(307, 233)] = 16777215;
+      (*this)[make_pair(307, 234)] = 15987699;
+      (*this)[make_pair(307, 235)] = 10066329;
+      (*this)[make_pair(307, 236)] = 7434609;
+      (*this)[make_pair(307, 237)] = 8158332;
+      (*this)[make_pair(307, 238)] = 7763574;
+      (*this)[make_pair(307, 239)] = 9737364;
+      (*this)[make_pair(307, 240)] = 9342606;
+      (*this)[make_pair(307, 241)] = 14803425;
+      (*this)[make_pair(307, 242)] = 16777215;
+      (*this)[make_pair(307, 243)] = 16777215;
+      (*this)[make_pair(307, 244)] = 16777215;
+      (*this)[make_pair(307, 245)] = 16777215;
+    }
+  } s600;
+  map<pair<int, int>, int> table600;
+  void update_table600()
+  {
+    for (const auto& x : s600) {
+      auto pos = x.first;
+      pos.first += time_button.first - 271 - 39;
+      pos.second += time_button.second - 482 + 2;
+      table600[pos] = x.second;
+    }
+  }
   // "2,000" data
   //  ^^
   struct table2c_t : map<pair<int, int>, int> {
@@ -451,6 +823,192 @@ namespace mine {
       pos.first += time_button.first - 271 - 39;
       pos.second += time_button.second - 482 + 2;
       table2c[pos] = x.second;
+    }
+  }
+  // "1,000" data
+  //  ^^
+  struct table1c_t : map<pair<int, int>, int> {
+    table1c_t()
+    {
+      (*this)[make_pair(295, 233)] = 16777215;
+      (*this)[make_pair(295, 234)] = 16777215;
+      (*this)[make_pair(295, 235)] = 16777215;
+      (*this)[make_pair(295, 236)] = 16777215;
+      (*this)[make_pair(295, 237)] = 16777215;
+      (*this)[make_pair(295, 238)] = 16777215;
+      (*this)[make_pair(295, 239)] = 16777215;
+      (*this)[make_pair(295, 240)] = 16777215;
+      (*this)[make_pair(295, 241)] = 16777215;
+      (*this)[make_pair(295, 242)] = 16777215;
+      (*this)[make_pair(295, 243)] = 16777215;
+      (*this)[make_pair(295, 244)] = 16777215;
+      (*this)[make_pair(295, 245)] = 16777215;
+      (*this)[make_pair(296, 233)] = 16777215;
+      (*this)[make_pair(296, 234)] = 16777215;
+      (*this)[make_pair(296, 235)] = 16777215;
+      (*this)[make_pair(296, 236)] = 16777215;
+      (*this)[make_pair(296, 237)] = 16777215;
+      (*this)[make_pair(296, 238)] = 16777215;
+      (*this)[make_pair(296, 239)] = 16777215;
+      (*this)[make_pair(296, 240)] = 16777215;
+      (*this)[make_pair(296, 241)] = 16777215;
+      (*this)[make_pair(296, 242)] = 16777215;
+      (*this)[make_pair(296, 243)] = 16777215;
+      (*this)[make_pair(296, 244)] = 16777215;
+      (*this)[make_pair(296, 245)] = 16777215;
+      (*this)[make_pair(297, 233)] = 16777215;
+      (*this)[make_pair(297, 234)] = 16777215;
+      (*this)[make_pair(297, 235)] = 16777215;
+      (*this)[make_pair(297, 236)] = 16777215;
+      (*this)[make_pair(297, 237)] = 16777215;
+      (*this)[make_pair(297, 238)] = 16777215;
+      (*this)[make_pair(297, 239)] = 16777215;
+      (*this)[make_pair(297, 240)] = 16777215;
+      (*this)[make_pair(297, 241)] = 16777215;
+      (*this)[make_pair(297, 242)] = 16777215;
+      (*this)[make_pair(297, 243)] = 16777215;
+      (*this)[make_pair(297, 244)] = 16777215;
+      (*this)[make_pair(297, 245)] = 16777215;
+      (*this)[make_pair(298, 233)] = 16777215;
+      (*this)[make_pair(298, 234)] = 16777215;
+      (*this)[make_pair(298, 235)] = 16777215;
+      (*this)[make_pair(298, 236)] = 16777215;
+      (*this)[make_pair(298, 237)] = 16777215;
+      (*this)[make_pair(298, 238)] = 16777215;
+      (*this)[make_pair(298, 239)] = 16777215;
+      (*this)[make_pair(298, 240)] = 16777215;
+      (*this)[make_pair(298, 241)] = 16777215;
+      (*this)[make_pair(298, 242)] = 16777215;
+      (*this)[make_pair(298, 243)] = 16777215;
+      (*this)[make_pair(298, 244)] = 16777215;
+      (*this)[make_pair(298, 245)] = 16777215;
+      (*this)[make_pair(299, 233)] = 16777215;
+      (*this)[make_pair(299, 234)] = 16777215;
+      (*this)[make_pair(299, 235)] = 12632256;
+      (*this)[make_pair(299, 236)] = 13816530;
+      (*this)[make_pair(299, 237)] = 16777215;
+      (*this)[make_pair(299, 238)] = 16777215;
+      (*this)[make_pair(299, 239)] = 16777215;
+      (*this)[make_pair(299, 240)] = 16777215;
+      (*this)[make_pair(299, 241)] = 16777215;
+      (*this)[make_pair(299, 242)] = 16777215;
+      (*this)[make_pair(299, 243)] = 16777215;
+      (*this)[make_pair(299, 244)] = 16777215;
+      (*this)[make_pair(299, 245)] = 16777215;
+      (*this)[make_pair(300, 233)] = 16777215;
+      (*this)[make_pair(300, 234)] = 13882323;
+      (*this)[make_pair(300, 235)] = 9868950;
+      (*this)[make_pair(300, 236)] = 16711422;
+      (*this)[make_pair(300, 237)] = 16777215;
+      (*this)[make_pair(300, 238)] = 16777215;
+      (*this)[make_pair(300, 239)] = 16777215;
+      (*this)[make_pair(300, 240)] = 16777215;
+      (*this)[make_pair(300, 241)] = 16777215;
+      (*this)[make_pair(300, 242)] = 16777215;
+      (*this)[make_pair(300, 243)] = 16777215;
+      (*this)[make_pair(300, 244)] = 16777215;
+      (*this)[make_pair(300, 245)] = 16777215;
+      (*this)[make_pair(301, 233)] = 16053492;
+      (*this)[make_pair(301, 234)] = 7500402;
+      (*this)[make_pair(301, 235)] = 11842740;
+      (*this)[make_pair(301, 236)] = 12369084;
+      (*this)[make_pair(301, 237)] = 12369084;
+      (*this)[make_pair(301, 238)] = 12369084;
+      (*this)[make_pair(301, 239)] = 12369084;
+      (*this)[make_pair(301, 240)] = 12369084;
+      (*this)[make_pair(301, 241)] = 12369084;
+      (*this)[make_pair(301, 242)] = 16777215;
+      (*this)[make_pair(301, 243)] = 16777215;
+      (*this)[make_pair(301, 244)] = 16777215;
+      (*this)[make_pair(301, 245)] = 16777215;
+      (*this)[make_pair(302, 233)] = 16185078;
+      (*this)[make_pair(302, 234)] = 12369084;
+      (*this)[make_pair(302, 235)] = 12369084;
+      (*this)[make_pair(302, 236)] = 12369084;
+      (*this)[make_pair(302, 237)] = 12369084;
+      (*this)[make_pair(302, 238)] = 12369084;
+      (*this)[make_pair(302, 239)] = 12369084;
+      (*this)[make_pair(302, 240)] = 12369084;
+      (*this)[make_pair(302, 241)] = 12369084;
+      (*this)[make_pair(302, 242)] = 16777215;
+      (*this)[make_pair(302, 243)] = 16777215;
+      (*this)[make_pair(302, 244)] = 16777215;
+      (*this)[make_pair(302, 245)] = 16777215;
+      (*this)[make_pair(303, 233)] = 16777215;
+      (*this)[make_pair(303, 234)] = 16777215;
+      (*this)[make_pair(303, 235)] = 16777215;
+      (*this)[make_pair(303, 236)] = 16777215;
+      (*this)[make_pair(303, 237)] = 16777215;
+      (*this)[make_pair(303, 238)] = 16777215;
+      (*this)[make_pair(303, 239)] = 16777215;
+      (*this)[make_pair(303, 240)] = 16777215;
+      (*this)[make_pair(303, 241)] = 16777215;
+      (*this)[make_pair(303, 242)] = 16777215;
+      (*this)[make_pair(303, 243)] = 16777215;
+      (*this)[make_pair(303, 244)] = 16777215;
+      (*this)[make_pair(303, 245)] = 16777215;
+      (*this)[make_pair(304, 233)] = 16777215;
+      (*this)[make_pair(304, 234)] = 16777215;
+      (*this)[make_pair(304, 235)] = 16777215;
+      (*this)[make_pair(304, 236)] = 16777215;
+      (*this)[make_pair(304, 237)] = 16777215;
+      (*this)[make_pair(304, 238)] = 16777215;
+      (*this)[make_pair(304, 239)] = 16777215;
+      (*this)[make_pair(304, 240)] = 16777215;
+      (*this)[make_pair(304, 241)] = 16777215;
+      (*this)[make_pair(304, 242)] = 16777215;
+      (*this)[make_pair(304, 243)] = 16777215;
+      (*this)[make_pair(304, 244)] = 16777215;
+      (*this)[make_pair(304, 245)] = 16777215;
+      (*this)[make_pair(305, 233)] = 16777215;
+      (*this)[make_pair(305, 234)] = 16777215;
+      (*this)[make_pair(305, 235)] = 16777215;
+      (*this)[make_pair(305, 236)] = 16777215;
+      (*this)[make_pair(305, 237)] = 16777215;
+      (*this)[make_pair(305, 238)] = 16777215;
+      (*this)[make_pair(305, 239)] = 16777215;
+      (*this)[make_pair(305, 240)] = 16777215;
+      (*this)[make_pair(305, 241)] = 16777215;
+      (*this)[make_pair(305, 242)] = 15658734;
+      (*this)[make_pair(305, 243)] = 16250871;
+      (*this)[make_pair(305, 244)] = 16777215;
+      (*this)[make_pair(305, 245)] = 16777215;
+      (*this)[make_pair(306, 233)] = 16777215;
+      (*this)[make_pair(306, 234)] = 16777215;
+      (*this)[make_pair(306, 235)] = 16777215;
+      (*this)[make_pair(306, 236)] = 16777215;
+      (*this)[make_pair(306, 237)] = 16777215;
+      (*this)[make_pair(306, 238)] = 16777215;
+      (*this)[make_pair(306, 239)] = 16777215;
+      (*this)[make_pair(306, 240)] = 13816530;
+      (*this)[make_pair(306, 241)] = 8618883;
+      (*this)[make_pair(306, 242)] = 8947848;
+      (*this)[make_pair(306, 243)] = 15658734;
+      (*this)[make_pair(306, 244)] = 16777215;
+      (*this)[make_pair(306, 245)] = 16777215;
+      (*this)[make_pair(307, 233)] = 16777215;
+      (*this)[make_pair(307, 234)] = 16777215;
+      (*this)[make_pair(307, 235)] = 16777215;
+      (*this)[make_pair(307, 236)] = 16777215;
+      (*this)[make_pair(307, 237)] = 16777215;
+      (*this)[make_pair(307, 238)] = 16777215;
+      (*this)[make_pair(307, 239)] = 16777215;
+      (*this)[make_pair(307, 240)] = 14277081;
+      (*this)[make_pair(307, 241)] = 14869218;
+      (*this)[make_pair(307, 242)] = 16777215;
+      (*this)[make_pair(307, 243)] = 16777215;
+      (*this)[make_pair(307, 244)] = 16777215;
+      (*this)[make_pair(307, 245)] = 16777215;
+    }
+  } s1c;
+  map<pair<int, int>, int> table1c;
+  void update_table1c()
+  {
+    for (const auto& x : s1c) {
+      auto pos = x.first;
+      pos.first += time_button.first - 271 - 39;
+      pos.second += time_button.second - 482 + 2;
+      table1c[pos] = x.second;
     }
   }
   // "4,000" data
@@ -1015,8 +1573,8 @@ namespace mine {
   
   // "10,000" data
   //  ^^
-  struct table10_t : map<pair<int, int>, int> {
-    table10_t()
+  struct table10c_t : map<pair<int, int>, int> {
+    table10c_t()
     {
       (*this)[make_pair(295, 233)] = 16777215;
       (*this)[make_pair(295, 234)] = 16777215;
@@ -1188,15 +1746,15 @@ namespace mine {
       (*this)[make_pair(307, 244)] = 16777215;
       (*this)[make_pair(307, 245)] = 16777215;
     }
-  } s10;
-  map<pair<int, int>, int> table10;
-  void update_table10()
+  } s10c;
+  map<pair<int, int>, int> table10c;
+  void update_table10c()
   {
-    for (const auto& x : s10) {
+    for (const auto& x : s10c) {
       auto pos = x.first;
       pos.first += time_button.first - 271 - 39;
       pos.second += time_button.second - 482 + 2;
-      table10[pos] = x.second;
+      table10c[pos] = x.second;
     }
   }
   // "20,000" data
@@ -2126,6 +2684,1122 @@ namespace mine {
       pos.first += time_button.first - 271 - 39;
       pos.second += time_button.second - 482 + 2;
       table15j[pos] = x.second;
+    }
+  }
+  // "10:00" data
+  //  ^^
+  struct table10j_t : map<pair<int, int>, int> {
+    table10j_t()
+    {
+      (*this)[make_pair(696, 421)] = 16777215;
+      (*this)[make_pair(696, 422)] = 16777215;
+      (*this)[make_pair(696, 423)] = 12632256;
+      (*this)[make_pair(696, 424)] = 13816530;
+      (*this)[make_pair(696, 425)] = 16777215;
+      (*this)[make_pair(696, 426)] = 16777215;
+      (*this)[make_pair(696, 427)] = 16777215;
+      (*this)[make_pair(696, 428)] = 16777215;
+      (*this)[make_pair(696, 429)] = 16777215;
+      (*this)[make_pair(696, 430)] = 16777215;
+      (*this)[make_pair(696, 431)] = 16777215;
+      (*this)[make_pair(696, 432)] = 16777215;
+      (*this)[make_pair(696, 433)] = 16777215;
+      (*this)[make_pair(697, 421)] = 16777215;
+      (*this)[make_pair(697, 422)] = 13882323;
+      (*this)[make_pair(697, 423)] = 9868950;
+      (*this)[make_pair(697, 424)] = 16711422;
+      (*this)[make_pair(697, 425)] = 16777215;
+      (*this)[make_pair(697, 426)] = 16777215;
+      (*this)[make_pair(697, 427)] = 16777215;
+      (*this)[make_pair(697, 428)] = 16777215;
+      (*this)[make_pair(697, 429)] = 16777215;
+      (*this)[make_pair(697, 430)] = 16777215;
+      (*this)[make_pair(697, 431)] = 16777215;
+      (*this)[make_pair(697, 432)] = 16777215;
+      (*this)[make_pair(697, 433)] = 16777215;
+      (*this)[make_pair(698, 421)] = 16053492;
+      (*this)[make_pair(698, 422)] = 7500402;
+      (*this)[make_pair(698, 423)] = 11842740;
+      (*this)[make_pair(698, 424)] = 12369084;
+      (*this)[make_pair(698, 425)] = 12369084;
+      (*this)[make_pair(698, 426)] = 12369084;
+      (*this)[make_pair(698, 427)] = 12369084;
+      (*this)[make_pair(698, 428)] = 12369084;
+      (*this)[make_pair(698, 429)] = 12369084;
+      (*this)[make_pair(698, 430)] = 16777215;
+      (*this)[make_pair(698, 431)] = 16777215;
+      (*this)[make_pair(698, 432)] = 16777215;
+      (*this)[make_pair(698, 433)] = 16777215;
+      (*this)[make_pair(699, 421)] = 16185078;
+      (*this)[make_pair(699, 422)] = 12369084;
+      (*this)[make_pair(699, 423)] = 12369084;
+      (*this)[make_pair(699, 424)] = 12369084;
+      (*this)[make_pair(699, 425)] = 12369084;
+      (*this)[make_pair(699, 426)] = 12369084;
+      (*this)[make_pair(699, 427)] = 12369084;
+      (*this)[make_pair(699, 428)] = 12369084;
+      (*this)[make_pair(699, 429)] = 12369084;
+      (*this)[make_pair(699, 430)] = 16777215;
+      (*this)[make_pair(699, 431)] = 16777215;
+      (*this)[make_pair(699, 432)] = 16777215;
+      (*this)[make_pair(699, 433)] = 16777215;
+      (*this)[make_pair(700, 421)] = 16777215;
+      (*this)[make_pair(700, 422)] = 16777215;
+      (*this)[make_pair(700, 423)] = 16777215;
+      (*this)[make_pair(700, 424)] = 16777215;
+      (*this)[make_pair(700, 425)] = 16777215;
+      (*this)[make_pair(700, 426)] = 16777215;
+      (*this)[make_pair(700, 427)] = 16777215;
+      (*this)[make_pair(700, 428)] = 16777215;
+      (*this)[make_pair(700, 429)] = 16777215;
+      (*this)[make_pair(700, 430)] = 16777215;
+      (*this)[make_pair(700, 431)] = 16777215;
+      (*this)[make_pair(700, 432)] = 16777215;
+      (*this)[make_pair(700, 433)] = 16777215;
+      (*this)[make_pair(701, 421)] = 16777215;
+      (*this)[make_pair(701, 422)] = 16777215;
+      (*this)[make_pair(701, 423)] = 16777215;
+      (*this)[make_pair(701, 424)] = 16777215;
+      (*this)[make_pair(701, 425)] = 16777215;
+      (*this)[make_pair(701, 426)] = 16777215;
+      (*this)[make_pair(701, 427)] = 16777215;
+      (*this)[make_pair(701, 428)] = 16777215;
+      (*this)[make_pair(701, 429)] = 16777215;
+      (*this)[make_pair(701, 430)] = 16777215;
+      (*this)[make_pair(701, 431)] = 16777215;
+      (*this)[make_pair(701, 432)] = 16777215;
+      (*this)[make_pair(701, 433)] = 16777215;
+      (*this)[make_pair(702, 421)] = 16777215;
+      (*this)[make_pair(702, 422)] = 16777215;
+      (*this)[make_pair(702, 423)] = 16448250;
+      (*this)[make_pair(702, 424)] = 14211288;
+      (*this)[make_pair(702, 425)] = 13158600;
+      (*this)[make_pair(702, 426)] = 13158600;
+      (*this)[make_pair(702, 427)] = 14211288;
+      (*this)[make_pair(702, 428)] = 16448250;
+      (*this)[make_pair(702, 429)] = 16777215;
+      (*this)[make_pair(702, 430)] = 16777215;
+      (*this)[make_pair(702, 431)] = 16777215;
+      (*this)[make_pair(702, 432)] = 16777215;
+      (*this)[make_pair(702, 433)] = 16777215;
+      (*this)[make_pair(703, 421)] = 16777215;
+      (*this)[make_pair(703, 422)] = 14606046;
+      (*this)[make_pair(703, 423)] = 8026746;
+      (*this)[make_pair(703, 424)] = 9211020;
+      (*this)[make_pair(703, 425)] = 11119017;
+      (*this)[make_pair(703, 426)] = 11119017;
+      (*this)[make_pair(703, 427)] = 9145227;
+      (*this)[make_pair(703, 428)] = 8092539;
+      (*this)[make_pair(703, 429)] = 14737632;
+      (*this)[make_pair(703, 430)] = 16777215;
+      (*this)[make_pair(703, 431)] = 16777215;
+      (*this)[make_pair(703, 432)] = 16777215;
+      (*this)[make_pair(703, 433)] = 16777215;
+      (*this)[make_pair(704, 421)] = 16777215;
+      (*this)[make_pair(704, 422)] = 10000536;
+      (*this)[make_pair(704, 423)] = 15461355;
+      (*this)[make_pair(704, 424)] = 16777215;
+      (*this)[make_pair(704, 425)] = 16777215;
+      (*this)[make_pair(704, 426)] = 16777215;
+      (*this)[make_pair(704, 427)] = 16777215;
+      (*this)[make_pair(704, 428)] = 15329769;
+      (*this)[make_pair(704, 429)] = 10197915;
+      (*this)[make_pair(704, 430)] = 16777215;
+      (*this)[make_pair(704, 431)] = 16777215;
+      (*this)[make_pair(704, 432)] = 16777215;
+      (*this)[make_pair(704, 433)] = 16777215;
+      (*this)[make_pair(705, 421)] = 16316664;
+      (*this)[make_pair(705, 422)] = 9737364;
+      (*this)[make_pair(705, 423)] = 16777215;
+      (*this)[make_pair(705, 424)] = 16777215;
+      (*this)[make_pair(705, 425)] = 16777215;
+      (*this)[make_pair(705, 426)] = 16777215;
+      (*this)[make_pair(705, 427)] = 16777215;
+      (*this)[make_pair(705, 428)] = 16777215;
+      (*this)[make_pair(705, 429)] = 9605778;
+      (*this)[make_pair(705, 430)] = 16514043;
+      (*this)[make_pair(705, 431)] = 16777215;
+      (*this)[make_pair(705, 432)] = 16777215;
+      (*this)[make_pair(705, 433)] = 16777215;
+      (*this)[make_pair(706, 421)] = 16777215;
+      (*this)[make_pair(706, 422)] = 10197915;
+      (*this)[make_pair(706, 423)] = 15329769;
+      (*this)[make_pair(706, 424)] = 16777215;
+      (*this)[make_pair(706, 425)] = 16777215;
+      (*this)[make_pair(706, 426)] = 16777215;
+      (*this)[make_pair(706, 427)] = 16777215;
+      (*this)[make_pair(706, 428)] = 15198183;
+      (*this)[make_pair(706, 429)] = 10329501;
+      (*this)[make_pair(706, 430)] = 16777215;
+      (*this)[make_pair(706, 431)] = 16777215;
+      (*this)[make_pair(706, 432)] = 16777215;
+      (*this)[make_pair(706, 433)] = 16777215;
+      (*this)[make_pair(707, 421)] = 16777215;
+      (*this)[make_pair(707, 422)] = 14869218;
+      (*this)[make_pair(707, 423)] = 8158332;
+      (*this)[make_pair(707, 424)] = 8816262;
+      (*this)[make_pair(707, 425)] = 10790052;
+      (*this)[make_pair(707, 426)] = 10724259;
+      (*this)[make_pair(707, 427)] = 8816262;
+      (*this)[make_pair(707, 428)] = 8158332;
+      (*this)[make_pair(707, 429)] = 14935011;
+      (*this)[make_pair(707, 430)] = 16777215;
+      (*this)[make_pair(707, 431)] = 16777215;
+      (*this)[make_pair(707, 432)] = 16777215;
+      (*this)[make_pair(707, 433)] = 16777215;
+      (*this)[make_pair(708, 421)] = 16777215;
+      (*this)[make_pair(708, 422)] = 16777215;
+      (*this)[make_pair(708, 423)] = 16579836;
+      (*this)[make_pair(708, 424)] = 14540253;
+      (*this)[make_pair(708, 425)] = 13487565;
+      (*this)[make_pair(708, 426)] = 13487565;
+      (*this)[make_pair(708, 427)] = 14540253;
+      (*this)[make_pair(708, 428)] = 16579836;
+      (*this)[make_pair(708, 429)] = 16777215;
+      (*this)[make_pair(708, 430)] = 16777215;
+      (*this)[make_pair(708, 431)] = 16777215;
+      (*this)[make_pair(708, 432)] = 16777215;
+      (*this)[make_pair(708, 433)] = 16777215;
+    }
+  } s10j;
+  map<pair<int, int>, int> table10j;
+  void update_table10j()
+  {
+    for (const auto& x : s10j) {
+      auto pos = x.first;
+      pos.first += time_button.first - 271 - 39;
+      pos.second += time_button.second - 482 + 2;
+      table10j[pos] = x.second;
+    }
+  }
+  // "9:00" data
+  //  ^^
+  struct table9_t : map<pair<int, int>, int> {
+    table9_t()
+    {
+      (*this)[make_pair(696, 421)] = 16777215;
+      (*this)[make_pair(696, 422)] = 16777215;
+      (*this)[make_pair(696, 423)] = 16777215;
+      (*this)[make_pair(696, 424)] = 16777215;
+      (*this)[make_pair(696, 425)] = 16777215;
+      (*this)[make_pair(696, 426)] = 16777215;
+      (*this)[make_pair(696, 427)] = 16777215;
+      (*this)[make_pair(696, 428)] = 16777215;
+      (*this)[make_pair(696, 429)] = 16777215;
+      (*this)[make_pair(696, 430)] = 16777215;
+      (*this)[make_pair(696, 431)] = 16777215;
+      (*this)[make_pair(696, 432)] = 16777215;
+      (*this)[make_pair(696, 433)] = 16777215;
+      (*this)[make_pair(697, 421)] = 16777215;
+      (*this)[make_pair(697, 422)] = 16777215;
+      (*this)[make_pair(697, 423)] = 16777215;
+      (*this)[make_pair(697, 424)] = 16777215;
+      (*this)[make_pair(697, 425)] = 16777215;
+      (*this)[make_pair(697, 426)] = 16777215;
+      (*this)[make_pair(697, 427)] = 16777215;
+      (*this)[make_pair(697, 428)] = 16777215;
+      (*this)[make_pair(697, 429)] = 16777215;
+      (*this)[make_pair(697, 430)] = 16777215;
+      (*this)[make_pair(697, 431)] = 16777215;
+      (*this)[make_pair(697, 432)] = 16777215;
+      (*this)[make_pair(697, 433)] = 16777215;
+      (*this)[make_pair(698, 421)] = 16777215;
+      (*this)[make_pair(698, 422)] = 16777215;
+      (*this)[make_pair(698, 423)] = 16777215;
+      (*this)[make_pair(698, 424)] = 16777215;
+      (*this)[make_pair(698, 425)] = 16777215;
+      (*this)[make_pair(698, 426)] = 16777215;
+      (*this)[make_pair(698, 427)] = 16777215;
+      (*this)[make_pair(698, 428)] = 16777215;
+      (*this)[make_pair(698, 429)] = 16777215;
+      (*this)[make_pair(698, 430)] = 16777215;
+      (*this)[make_pair(698, 431)] = 16777215;
+      (*this)[make_pair(698, 432)] = 16777215;
+      (*this)[make_pair(698, 433)] = 16777215;
+      (*this)[make_pair(699, 421)] = 16777215;
+      (*this)[make_pair(699, 422)] = 16777215;
+      (*this)[make_pair(699, 423)] = 16448250;
+      (*this)[make_pair(699, 424)] = 13816530;
+      (*this)[make_pair(699, 425)] = 15921906;
+      (*this)[make_pair(699, 426)] = 16777215;
+      (*this)[make_pair(699, 427)] = 16777215;
+      (*this)[make_pair(699, 428)] = 16777215;
+      (*this)[make_pair(699, 429)] = 16777215;
+      (*this)[make_pair(699, 430)] = 16777215;
+      (*this)[make_pair(699, 431)] = 16777215;
+      (*this)[make_pair(699, 432)] = 16777215;
+      (*this)[make_pair(699, 433)] = 16777215;
+      (*this)[make_pair(700, 421)] = 16777215;
+      (*this)[make_pair(700, 422)] = 13290186;
+      (*this)[make_pair(700, 423)] = 8618883;
+      (*this)[make_pair(700, 424)] = 10987431;
+      (*this)[make_pair(700, 425)] = 8947848;
+      (*this)[make_pair(700, 426)] = 11119017;
+      (*this)[make_pair(700, 427)] = 16777215;
+      (*this)[make_pair(700, 428)] = 16777215;
+      (*this)[make_pair(700, 429)] = 11184810;
+      (*this)[make_pair(700, 430)] = 16777215;
+      (*this)[make_pair(700, 431)] = 16777215;
+      (*this)[make_pair(700, 432)] = 16777215;
+      (*this)[make_pair(700, 433)] = 16777215;
+      (*this)[make_pair(701, 421)] = 16777215;
+      (*this)[make_pair(701, 422)] = 9474192;
+      (*this)[make_pair(701, 423)] = 16579836;
+      (*this)[make_pair(701, 424)] = 16777215;
+      (*this)[make_pair(701, 425)] = 16777215;
+      (*this)[make_pair(701, 426)] = 9868950;
+      (*this)[make_pair(701, 427)] = 15987699;
+      (*this)[make_pair(701, 428)] = 16777215;
+      (*this)[make_pair(701, 429)] = 9671571;
+      (*this)[make_pair(701, 430)] = 16382457;
+      (*this)[make_pair(701, 431)] = 16777215;
+      (*this)[make_pair(701, 432)] = 16777215;
+      (*this)[make_pair(701, 433)] = 16777215;
+      (*this)[make_pair(702, 421)] = 16250871;
+      (*this)[make_pair(702, 422)] = 10197915;
+      (*this)[make_pair(702, 423)] = 16777215;
+      (*this)[make_pair(702, 424)] = 16777215;
+      (*this)[make_pair(702, 425)] = 16777215;
+      (*this)[make_pair(702, 426)] = 12171705;
+      (*this)[make_pair(702, 427)] = 14935011;
+      (*this)[make_pair(702, 428)] = 16711422;
+      (*this)[make_pair(702, 429)] = 8553090;
+      (*this)[make_pair(702, 430)] = 16514043;
+      (*this)[make_pair(702, 431)] = 16777215;
+      (*this)[make_pair(702, 432)] = 16777215;
+      (*this)[make_pair(702, 433)] = 16777215;
+      (*this)[make_pair(703, 421)] = 16777215;
+      (*this)[make_pair(703, 422)] = 10790052;
+      (*this)[make_pair(703, 423)] = 15921906;
+      (*this)[make_pair(703, 424)] = 16777215;
+      (*this)[make_pair(703, 425)] = 16514043;
+      (*this)[make_pair(703, 426)] = 11382189;
+      (*this)[make_pair(703, 427)] = 16579836;
+      (*this)[make_pair(703, 428)] = 12763842;
+      (*this)[make_pair(703, 429)] = 9605778;
+      (*this)[make_pair(703, 430)] = 16777215;
+      (*this)[make_pair(703, 431)] = 16777215;
+      (*this)[make_pair(703, 432)] = 16777215;
+      (*this)[make_pair(703, 433)] = 16777215;
+      (*this)[make_pair(704, 421)] = 16777215;
+      (*this)[make_pair(704, 422)] = 14474460;
+      (*this)[make_pair(704, 423)] = 9605778;
+      (*this)[make_pair(704, 424)] = 10000536;
+      (*this)[make_pair(704, 425)] = 7434609;
+      (*this)[make_pair(704, 426)] = 8158332;
+      (*this)[make_pair(704, 427)] = 7434609;
+      (*this)[make_pair(704, 428)] = 10197915;
+      (*this)[make_pair(704, 429)] = 16053492;
+      (*this)[make_pair(704, 430)] = 16777215;
+      (*this)[make_pair(704, 431)] = 16777215;
+      (*this)[make_pair(704, 432)] = 16777215;
+      (*this)[make_pair(704, 433)] = 16777215;
+      (*this)[make_pair(705, 421)] = 16777215;
+      (*this)[make_pair(705, 422)] = 16777215;
+      (*this)[make_pair(705, 423)] = 16777215;
+      (*this)[make_pair(705, 424)] = 16119285;
+      (*this)[make_pair(705, 425)] = 14211288;
+      (*this)[make_pair(705, 426)] = 14935011;
+      (*this)[make_pair(705, 427)] = 16119285;
+      (*this)[make_pair(705, 428)] = 16777215;
+      (*this)[make_pair(705, 429)] = 16777215;
+      (*this)[make_pair(705, 430)] = 16777215;
+      (*this)[make_pair(705, 431)] = 16777215;
+      (*this)[make_pair(705, 432)] = 16777215;
+      (*this)[make_pair(705, 433)] = 16777215;
+      (*this)[make_pair(706, 421)] = 15987699;
+      (*this)[make_pair(706, 422)] = 14737632;
+      (*this)[make_pair(706, 423)] = 14737632;
+      (*this)[make_pair(706, 424)] = 14737632;
+      (*this)[make_pair(706, 425)] = 14737632;
+      (*this)[make_pair(706, 426)] = 14737632;
+      (*this)[make_pair(706, 427)] = 14737632;
+      (*this)[make_pair(706, 428)] = 14737632;
+      (*this)[make_pair(706, 429)] = 14737632;
+      (*this)[make_pair(706, 430)] = 15527148;
+      (*this)[make_pair(706, 431)] = 16777215;
+      (*this)[make_pair(706, 432)] = 16777215;
+      (*this)[make_pair(706, 433)] = 16777215;
+      (*this)[make_pair(707, 421)] = 12829635;
+      (*this)[make_pair(707, 422)] = 9211020;
+      (*this)[make_pair(707, 423)] = 10592673;
+      (*this)[make_pair(707, 424)] = 10592673;
+      (*this)[make_pair(707, 425)] = 7763574;
+      (*this)[make_pair(707, 426)] = 10592673;
+      (*this)[make_pair(707, 427)] = 10592673;
+      (*this)[make_pair(707, 428)] = 10592673;
+      (*this)[make_pair(707, 429)] = 7829367;
+      (*this)[make_pair(707, 430)] = 12961221;
+      (*this)[make_pair(707, 431)] = 16777215;
+      (*this)[make_pair(707, 432)] = 16777215;
+      (*this)[make_pair(707, 433)] = 16777215;
+      (*this)[make_pair(708, 421)] = 12829635;
+      (*this)[make_pair(708, 422)] = 13158600;
+      (*this)[make_pair(708, 423)] = 16777215;
+      (*this)[make_pair(708, 424)] = 16777215;
+      (*this)[make_pair(708, 425)] = 9342606;
+      (*this)[make_pair(708, 426)] = 16777215;
+      (*this)[make_pair(708, 427)] = 16777215;
+      (*this)[make_pair(708, 428)] = 16777215;
+      (*this)[make_pair(708, 429)] = 9539985;
+      (*this)[make_pair(708, 430)] = 16777215;
+      (*this)[make_pair(708, 431)] = 16777215;
+      (*this)[make_pair(708, 432)] = 16777215;
+      (*this)[make_pair(708, 433)] = 16777215;
+    }
+  } s9;
+  map<pair<int, int>, int> table9;
+  void update_table9()
+  {
+    for (const auto& x : s9) {
+      auto pos = x.first;
+      pos.first += time_button.first - 271 - 39;
+      pos.second += time_button.second - 482 + 2;
+      table9[pos] = x.second;
+    }
+  }
+  // "8:00" data
+  //  ^^
+  struct table8_t : map<pair<int, int>, int> {
+    table8_t()
+    {
+      (*this)[make_pair(696, 421)] = 16777215;
+      (*this)[make_pair(696, 422)] = 16777215;
+      (*this)[make_pair(696, 423)] = 16777215;
+      (*this)[make_pair(696, 424)] = 16777215;
+      (*this)[make_pair(696, 425)] = 16777215;
+      (*this)[make_pair(696, 426)] = 16777215;
+      (*this)[make_pair(696, 427)] = 16777215;
+      (*this)[make_pair(696, 428)] = 16777215;
+      (*this)[make_pair(696, 429)] = 16777215;
+      (*this)[make_pair(696, 430)] = 16777215;
+      (*this)[make_pair(696, 431)] = 16777215;
+      (*this)[make_pair(696, 432)] = 16777215;
+      (*this)[make_pair(696, 433)] = 16777215;
+      (*this)[make_pair(697, 421)] = 16777215;
+      (*this)[make_pair(697, 422)] = 16777215;
+      (*this)[make_pair(697, 423)] = 16777215;
+      (*this)[make_pair(697, 424)] = 16777215;
+      (*this)[make_pair(697, 425)] = 16777215;
+      (*this)[make_pair(697, 426)] = 16777215;
+      (*this)[make_pair(697, 427)] = 16777215;
+      (*this)[make_pair(697, 428)] = 16777215;
+      (*this)[make_pair(697, 429)] = 16777215;
+      (*this)[make_pair(697, 430)] = 16777215;
+      (*this)[make_pair(697, 431)] = 16777215;
+      (*this)[make_pair(697, 432)] = 16777215;
+      (*this)[make_pair(697, 433)] = 16777215;
+      (*this)[make_pair(698, 421)] = 16777215;
+      (*this)[make_pair(698, 422)] = 16777215;
+      (*this)[make_pair(698, 423)] = 16777215;
+      (*this)[make_pair(698, 424)] = 16777215;
+      (*this)[make_pair(698, 425)] = 16777215;
+      (*this)[make_pair(698, 426)] = 16777215;
+      (*this)[make_pair(698, 427)] = 16777215;
+      (*this)[make_pair(698, 428)] = 16777215;
+      (*this)[make_pair(698, 429)] = 16777215;
+      (*this)[make_pair(698, 430)] = 16777215;
+      (*this)[make_pair(698, 431)] = 16777215;
+      (*this)[make_pair(698, 432)] = 16777215;
+      (*this)[make_pair(698, 433)] = 16777215;
+      (*this)[make_pair(699, 421)] = 16777215;
+      (*this)[make_pair(699, 422)] = 16777215;
+      (*this)[make_pair(699, 423)] = 16448250;
+      (*this)[make_pair(699, 424)] = 16777215;
+      (*this)[make_pair(699, 425)] = 16777215;
+      (*this)[make_pair(699, 426)] = 16645629;
+      (*this)[make_pair(699, 427)] = 14079702;
+      (*this)[make_pair(699, 428)] = 15592941;
+      (*this)[make_pair(699, 429)] = 16777215;
+      (*this)[make_pair(699, 430)] = 16777215;
+      (*this)[make_pair(699, 431)] = 16777215;
+      (*this)[make_pair(699, 432)] = 16777215;
+      (*this)[make_pair(699, 433)] = 16777215;
+      (*this)[make_pair(700, 421)] = 16777215;
+      (*this)[make_pair(700, 422)] = 12961221;
+      (*this)[make_pair(700, 423)] = 8487297;
+      (*this)[make_pair(700, 424)] = 8421504;
+      (*this)[make_pair(700, 425)] = 15329769;
+      (*this)[make_pair(700, 426)] = 10263708;
+      (*this)[make_pair(700, 427)] = 10790052;
+      (*this)[make_pair(700, 428)] = 9342606;
+      (*this)[make_pair(700, 429)] = 12369084;
+      (*this)[make_pair(700, 430)] = 16777215;
+      (*this)[make_pair(700, 431)] = 16777215;
+      (*this)[make_pair(700, 432)] = 16777215;
+      (*this)[make_pair(700, 433)] = 16777215;
+      (*this)[make_pair(701, 421)] = 16777215;
+      (*this)[make_pair(701, 422)] = 9737364;
+      (*this)[make_pair(701, 423)] = 16579836;
+      (*this)[make_pair(701, 424)] = 15658734;
+      (*this)[make_pair(701, 425)] = 8224125;
+      (*this)[make_pair(701, 426)] = 11908533;
+      (*this)[make_pair(701, 427)] = 16777215;
+      (*this)[make_pair(701, 428)] = 16777215;
+      (*this)[make_pair(701, 429)] = 9737364;
+      (*this)[make_pair(701, 430)] = 16777215;
+      (*this)[make_pair(701, 431)] = 16777215;
+      (*this)[make_pair(701, 432)] = 16777215;
+      (*this)[make_pair(701, 433)] = 16777215;
+      (*this)[make_pair(702, 421)] = 16053492;
+      (*this)[make_pair(702, 422)] = 10395294;
+      (*this)[make_pair(702, 423)] = 16777215;
+      (*this)[make_pair(702, 424)] = 16777215;
+      (*this)[make_pair(702, 425)] = 9408399;
+      (*this)[make_pair(702, 426)] = 14935011;
+      (*this)[make_pair(702, 427)] = 16777215;
+      (*this)[make_pair(702, 428)] = 16777215;
+      (*this)[make_pair(702, 429)] = 10132122;
+      (*this)[make_pair(702, 430)] = 16382457;
+      (*this)[make_pair(702, 431)] = 16777215;
+      (*this)[make_pair(702, 432)] = 16777215;
+      (*this)[make_pair(702, 433)] = 16777215;
+      (*this)[make_pair(703, 421)] = 16777215;
+      (*this)[make_pair(703, 422)] = 9737364;
+      (*this)[make_pair(703, 423)] = 16514043;
+      (*this)[make_pair(703, 424)] = 15527148;
+      (*this)[make_pair(703, 425)] = 8355711;
+      (*this)[make_pair(703, 426)] = 11711154;
+      (*this)[make_pair(703, 427)] = 16777215;
+      (*this)[make_pair(703, 428)] = 16777215;
+      (*this)[make_pair(703, 429)] = 9605778;
+      (*this)[make_pair(703, 430)] = 16777215;
+      (*this)[make_pair(703, 431)] = 16777215;
+      (*this)[make_pair(703, 432)] = 16777215;
+      (*this)[make_pair(703, 433)] = 16777215;
+      (*this)[make_pair(704, 421)] = 16777215;
+      (*this)[make_pair(704, 422)] = 13290186;
+      (*this)[make_pair(704, 423)] = 8618883;
+      (*this)[make_pair(704, 424)] = 8684676;
+      (*this)[make_pair(704, 425)] = 15724527;
+      (*this)[make_pair(704, 426)] = 9539985;
+      (*this)[make_pair(704, 427)] = 10263708;
+      (*this)[make_pair(704, 428)] = 8882055;
+      (*this)[make_pair(704, 429)] = 12566463;
+      (*this)[make_pair(704, 430)] = 16777215;
+      (*this)[make_pair(704, 431)] = 16777215;
+      (*this)[make_pair(704, 432)] = 16777215;
+      (*this)[make_pair(704, 433)] = 16777215;
+      (*this)[make_pair(705, 421)] = 16777215;
+      (*this)[make_pair(705, 422)] = 16777215;
+      (*this)[make_pair(705, 423)] = 16579836;
+      (*this)[make_pair(705, 424)] = 16777215;
+      (*this)[make_pair(705, 425)] = 16777215;
+      (*this)[make_pair(705, 426)] = 16645629;
+      (*this)[make_pair(705, 427)] = 14277081;
+      (*this)[make_pair(705, 428)] = 15856113;
+      (*this)[make_pair(705, 429)] = 16777215;
+      (*this)[make_pair(705, 430)] = 16777215;
+      (*this)[make_pair(705, 431)] = 16777215;
+      (*this)[make_pair(705, 432)] = 16777215;
+      (*this)[make_pair(705, 433)] = 16777215;
+      (*this)[make_pair(706, 421)] = 15987699;
+      (*this)[make_pair(706, 422)] = 14737632;
+      (*this)[make_pair(706, 423)] = 14737632;
+      (*this)[make_pair(706, 424)] = 14737632;
+      (*this)[make_pair(706, 425)] = 14737632;
+      (*this)[make_pair(706, 426)] = 14737632;
+      (*this)[make_pair(706, 427)] = 14737632;
+      (*this)[make_pair(706, 428)] = 14737632;
+      (*this)[make_pair(706, 429)] = 14737632;
+      (*this)[make_pair(706, 430)] = 15527148;
+      (*this)[make_pair(706, 431)] = 16777215;
+      (*this)[make_pair(706, 432)] = 16777215;
+      (*this)[make_pair(706, 433)] = 16777215;
+      (*this)[make_pair(707, 421)] = 12829635;
+      (*this)[make_pair(707, 422)] = 9211020;
+      (*this)[make_pair(707, 423)] = 10592673;
+      (*this)[make_pair(707, 424)] = 10592673;
+      (*this)[make_pair(707, 425)] = 7763574;
+      (*this)[make_pair(707, 426)] = 10592673;
+      (*this)[make_pair(707, 427)] = 10592673;
+      (*this)[make_pair(707, 428)] = 10592673;
+      (*this)[make_pair(707, 429)] = 7829367;
+      (*this)[make_pair(707, 430)] = 12961221;
+      (*this)[make_pair(707, 431)] = 16777215;
+      (*this)[make_pair(707, 432)] = 16777215;
+      (*this)[make_pair(707, 433)] = 16777215;
+      (*this)[make_pair(708, 421)] = 12829635;
+      (*this)[make_pair(708, 422)] = 13158600;
+      (*this)[make_pair(708, 423)] = 16777215;
+      (*this)[make_pair(708, 424)] = 16777215;
+      (*this)[make_pair(708, 425)] = 9342606;
+      (*this)[make_pair(708, 426)] = 16777215;
+      (*this)[make_pair(708, 427)] = 16777215;
+      (*this)[make_pair(708, 428)] = 16777215;
+      (*this)[make_pair(708, 429)] = 9539985;
+      (*this)[make_pair(708, 430)] = 16777215;
+      (*this)[make_pair(708, 431)] = 16777215;
+      (*this)[make_pair(708, 432)] = 16777215;
+      (*this)[make_pair(708, 433)] = 16777215;
+    }
+  } s8;
+  map<pair<int, int>, int> table8;
+  void update_table8()
+  {
+    for (const auto& x : s8) {
+      auto pos = x.first;
+      pos.first += time_button.first - 271 - 39;
+      pos.second += time_button.second - 482 + 2;
+      table8[pos] = x.second;
+    }
+  }
+  // "7:00" data
+  //  ^^
+  struct table7_t : map<pair<int, int>, int> {
+    table7_t()
+    {
+      (*this)[make_pair(696, 421)] = 16777215;
+      (*this)[make_pair(696, 422)] = 16777215;
+      (*this)[make_pair(696, 423)] = 16777215;
+      (*this)[make_pair(696, 424)] = 16777215;
+      (*this)[make_pair(696, 425)] = 16777215;
+      (*this)[make_pair(696, 426)] = 16777215;
+      (*this)[make_pair(696, 427)] = 16777215;
+      (*this)[make_pair(696, 428)] = 16777215;
+      (*this)[make_pair(696, 429)] = 16777215;
+      (*this)[make_pair(696, 430)] = 16777215;
+      (*this)[make_pair(696, 431)] = 16777215;
+      (*this)[make_pair(696, 432)] = 16777215;
+      (*this)[make_pair(696, 433)] = 16777215;
+      (*this)[make_pair(697, 421)] = 16777215;
+      (*this)[make_pair(697, 422)] = 16777215;
+      (*this)[make_pair(697, 423)] = 16777215;
+      (*this)[make_pair(697, 424)] = 16777215;
+      (*this)[make_pair(697, 425)] = 16777215;
+      (*this)[make_pair(697, 426)] = 16777215;
+      (*this)[make_pair(697, 427)] = 16777215;
+      (*this)[make_pair(697, 428)] = 16777215;
+      (*this)[make_pair(697, 429)] = 16777215;
+      (*this)[make_pair(697, 430)] = 16777215;
+      (*this)[make_pair(697, 431)] = 16777215;
+      (*this)[make_pair(697, 432)] = 16777215;
+      (*this)[make_pair(697, 433)] = 16777215;
+      (*this)[make_pair(698, 421)] = 16777215;
+      (*this)[make_pair(698, 422)] = 16777215;
+      (*this)[make_pair(698, 423)] = 16777215;
+      (*this)[make_pair(698, 424)] = 16777215;
+      (*this)[make_pair(698, 425)] = 16777215;
+      (*this)[make_pair(698, 426)] = 16777215;
+      (*this)[make_pair(698, 427)] = 16777215;
+      (*this)[make_pair(698, 428)] = 16777215;
+      (*this)[make_pair(698, 429)] = 16777215;
+      (*this)[make_pair(698, 430)] = 16777215;
+      (*this)[make_pair(698, 431)] = 16777215;
+      (*this)[make_pair(698, 432)] = 16777215;
+      (*this)[make_pair(698, 433)] = 16777215;
+      (*this)[make_pair(699, 421)] = 16711422;
+      (*this)[make_pair(699, 422)] = 16448250;
+      (*this)[make_pair(699, 423)] = 16777215;
+      (*this)[make_pair(699, 424)] = 16777215;
+      (*this)[make_pair(699, 425)] = 16777215;
+      (*this)[make_pair(699, 426)] = 16777215;
+      (*this)[make_pair(699, 427)] = 16777215;
+      (*this)[make_pair(699, 428)] = 16777215;
+      (*this)[make_pair(699, 429)] = 16777215;
+      (*this)[make_pair(699, 430)] = 16777215;
+      (*this)[make_pair(699, 431)] = 16777215;
+      (*this)[make_pair(699, 432)] = 16777215;
+      (*this)[make_pair(699, 433)] = 16777215;
+      (*this)[make_pair(700, 421)] = 15329769;
+      (*this)[make_pair(700, 422)] = 10592673;
+      (*this)[make_pair(700, 423)] = 16777215;
+      (*this)[make_pair(700, 424)] = 16777215;
+      (*this)[make_pair(700, 425)] = 16777215;
+      (*this)[make_pair(700, 426)] = 16777215;
+      (*this)[make_pair(700, 427)] = 16777215;
+      (*this)[make_pair(700, 428)] = 16777215;
+      (*this)[make_pair(700, 429)] = 16777215;
+      (*this)[make_pair(700, 430)] = 16777215;
+      (*this)[make_pair(700, 431)] = 16777215;
+      (*this)[make_pair(700, 432)] = 16777215;
+      (*this)[make_pair(700, 433)] = 16777215;
+      (*this)[make_pair(701, 421)] = 15329769;
+      (*this)[make_pair(701, 422)] = 10592673;
+      (*this)[make_pair(701, 423)] = 16777215;
+      (*this)[make_pair(701, 424)] = 16777215;
+      (*this)[make_pair(701, 425)] = 16777215;
+      (*this)[make_pair(701, 426)] = 16777215;
+      (*this)[make_pair(701, 427)] = 16645629;
+      (*this)[make_pair(701, 428)] = 13355979;
+      (*this)[make_pair(701, 429)] = 9013641;
+      (*this)[make_pair(701, 430)] = 16777215;
+      (*this)[make_pair(701, 431)] = 16777215;
+      (*this)[make_pair(701, 432)] = 16777215;
+      (*this)[make_pair(701, 433)] = 16777215;
+      (*this)[make_pair(702, 421)] = 15329769;
+      (*this)[make_pair(702, 422)] = 10592673;
+      (*this)[make_pair(702, 423)] = 16777215;
+      (*this)[make_pair(702, 424)] = 16777215;
+      (*this)[make_pair(702, 425)] = 16185078;
+      (*this)[make_pair(702, 426)] = 12237498;
+      (*this)[make_pair(702, 427)] = 8487297;
+      (*this)[make_pair(702, 428)] = 11053224;
+      (*this)[make_pair(702, 429)] = 15329769;
+      (*this)[make_pair(702, 430)] = 16777215;
+      (*this)[make_pair(702, 431)] = 16777215;
+      (*this)[make_pair(702, 432)] = 16777215;
+      (*this)[make_pair(702, 433)] = 16777215;
+      (*this)[make_pair(703, 421)] = 15329769;
+      (*this)[make_pair(703, 422)] = 10592673;
+      (*this)[make_pair(703, 423)] = 15461355;
+      (*this)[make_pair(703, 424)] = 11053224;
+      (*this)[make_pair(703, 425)] = 8684676;
+      (*this)[make_pair(703, 426)] = 12434877;
+      (*this)[make_pair(703, 427)] = 16250871;
+      (*this)[make_pair(703, 428)] = 16777215;
+      (*this)[make_pair(703, 429)] = 16777215;
+      (*this)[make_pair(703, 430)] = 16777215;
+      (*this)[make_pair(703, 431)] = 16777215;
+      (*this)[make_pair(703, 432)] = 16777215;
+      (*this)[make_pair(703, 433)] = 16777215;
+      (*this)[make_pair(704, 421)] = 15329769;
+      (*this)[make_pair(704, 422)] = 7434609;
+      (*this)[make_pair(704, 423)] = 9605778;
+      (*this)[make_pair(704, 424)] = 13816530;
+      (*this)[make_pair(704, 425)] = 16711422;
+      (*this)[make_pair(704, 426)] = 16777215;
+      (*this)[make_pair(704, 427)] = 16777215;
+      (*this)[make_pair(704, 428)] = 16777215;
+      (*this)[make_pair(704, 429)] = 16777215;
+      (*this)[make_pair(704, 430)] = 16777215;
+      (*this)[make_pair(704, 431)] = 16777215;
+      (*this)[make_pair(704, 432)] = 16777215;
+      (*this)[make_pair(704, 433)] = 16777215;
+      (*this)[make_pair(705, 421)] = 16645629;
+      (*this)[make_pair(705, 422)] = 15987699;
+      (*this)[make_pair(705, 423)] = 16777215;
+      (*this)[make_pair(705, 424)] = 16777215;
+      (*this)[make_pair(705, 425)] = 16777215;
+      (*this)[make_pair(705, 426)] = 16777215;
+      (*this)[make_pair(705, 427)] = 16777215;
+      (*this)[make_pair(705, 428)] = 16777215;
+      (*this)[make_pair(705, 429)] = 16777215;
+      (*this)[make_pair(705, 430)] = 16777215;
+      (*this)[make_pair(705, 431)] = 16777215;
+      (*this)[make_pair(705, 432)] = 16777215;
+      (*this)[make_pair(705, 433)] = 16777215;
+      (*this)[make_pair(706, 421)] = 15987699;
+      (*this)[make_pair(706, 422)] = 14737632;
+      (*this)[make_pair(706, 423)] = 14737632;
+      (*this)[make_pair(706, 424)] = 14737632;
+      (*this)[make_pair(706, 425)] = 14737632;
+      (*this)[make_pair(706, 426)] = 14737632;
+      (*this)[make_pair(706, 427)] = 14737632;
+      (*this)[make_pair(706, 428)] = 14737632;
+      (*this)[make_pair(706, 429)] = 14737632;
+      (*this)[make_pair(706, 430)] = 15527148;
+      (*this)[make_pair(706, 431)] = 16777215;
+      (*this)[make_pair(706, 432)] = 16777215;
+      (*this)[make_pair(706, 433)] = 16777215;
+      (*this)[make_pair(707, 421)] = 12829635;
+      (*this)[make_pair(707, 422)] = 9211020;
+      (*this)[make_pair(707, 423)] = 10592673;
+      (*this)[make_pair(707, 424)] = 10592673;
+      (*this)[make_pair(707, 425)] = 7763574;
+      (*this)[make_pair(707, 426)] = 10592673;
+      (*this)[make_pair(707, 427)] = 10592673;
+      (*this)[make_pair(707, 428)] = 10592673;
+      (*this)[make_pair(707, 429)] = 7829367;
+      (*this)[make_pair(707, 430)] = 12961221;
+      (*this)[make_pair(707, 431)] = 16777215;
+      (*this)[make_pair(707, 432)] = 16777215;
+      (*this)[make_pair(707, 433)] = 16777215;
+      (*this)[make_pair(708, 421)] = 12829635;
+      (*this)[make_pair(708, 422)] = 13158600;
+      (*this)[make_pair(708, 423)] = 16777215;
+      (*this)[make_pair(708, 424)] = 16777215;
+      (*this)[make_pair(708, 425)] = 9342606;
+      (*this)[make_pair(708, 426)] = 16777215;
+      (*this)[make_pair(708, 427)] = 16777215;
+      (*this)[make_pair(708, 428)] = 16777215;
+      (*this)[make_pair(708, 429)] = 9539985;
+      (*this)[make_pair(708, 430)] = 16777215;
+      (*this)[make_pair(708, 431)] = 16777215;
+      (*this)[make_pair(708, 432)] = 16777215;
+      (*this)[make_pair(708, 433)] = 16777215;
+    }
+  } s7;
+  map<pair<int, int>, int> table7;
+  void update_table7()
+  {
+    for (const auto& x : s7) {
+      auto pos = x.first;
+      pos.first += time_button.first - 271 - 39;
+      pos.second += time_button.second - 482 + 2;
+      table7[pos] = x.second;
+    }
+  }
+  // "6:00" data
+  //  ^^
+  struct table6_t : map<pair<int, int>, int> {
+    table6_t()
+    {
+      (*this)[make_pair(696, 421)] = 16777215;
+      (*this)[make_pair(696, 422)] = 16777215;
+      (*this)[make_pair(696, 423)] = 16777215;
+      (*this)[make_pair(696, 424)] = 16777215;
+      (*this)[make_pair(696, 425)] = 16777215;
+      (*this)[make_pair(696, 426)] = 16777215;
+      (*this)[make_pair(696, 427)] = 16777215;
+      (*this)[make_pair(696, 428)] = 16777215;
+      (*this)[make_pair(696, 429)] = 16777215;
+      (*this)[make_pair(696, 430)] = 16777215;
+      (*this)[make_pair(696, 431)] = 16777215;
+      (*this)[make_pair(696, 432)] = 16777215;
+      (*this)[make_pair(696, 433)] = 16777215;
+      (*this)[make_pair(697, 421)] = 16777215;
+      (*this)[make_pair(697, 422)] = 16777215;
+      (*this)[make_pair(697, 423)] = 16777215;
+      (*this)[make_pair(697, 424)] = 16777215;
+      (*this)[make_pair(697, 425)] = 16777215;
+      (*this)[make_pair(697, 426)] = 16777215;
+      (*this)[make_pair(697, 427)] = 16777215;
+      (*this)[make_pair(697, 428)] = 16777215;
+      (*this)[make_pair(697, 429)] = 16777215;
+      (*this)[make_pair(697, 430)] = 16777215;
+      (*this)[make_pair(697, 431)] = 16777215;
+      (*this)[make_pair(697, 432)] = 16777215;
+      (*this)[make_pair(697, 433)] = 16777215;
+      (*this)[make_pair(698, 421)] = 16777215;
+      (*this)[make_pair(698, 422)] = 16777215;
+      (*this)[make_pair(698, 423)] = 16777215;
+      (*this)[make_pair(698, 424)] = 16777215;
+      (*this)[make_pair(698, 425)] = 16777215;
+      (*this)[make_pair(698, 426)] = 16777215;
+      (*this)[make_pair(698, 427)] = 16777215;
+      (*this)[make_pair(698, 428)] = 16777215;
+      (*this)[make_pair(698, 429)] = 16777215;
+      (*this)[make_pair(698, 430)] = 16777215;
+      (*this)[make_pair(698, 431)] = 16777215;
+      (*this)[make_pair(698, 432)] = 16777215;
+      (*this)[make_pair(698, 433)] = 16777215;
+      (*this)[make_pair(699, 421)] = 16777215;
+      (*this)[make_pair(699, 422)] = 16777215;
+      (*this)[make_pair(699, 423)] = 16777215;
+      (*this)[make_pair(699, 424)] = 16053492;
+      (*this)[make_pair(699, 425)] = 14803425;
+      (*this)[make_pair(699, 426)] = 14277081;
+      (*this)[make_pair(699, 427)] = 16250871;
+      (*this)[make_pair(699, 428)] = 16777215;
+      (*this)[make_pair(699, 429)] = 16777215;
+      (*this)[make_pair(699, 430)] = 16777215;
+      (*this)[make_pair(699, 431)] = 16777215;
+      (*this)[make_pair(699, 432)] = 16777215;
+      (*this)[make_pair(699, 433)] = 16777215;
+      (*this)[make_pair(700, 421)] = 16777215;
+      (*this)[make_pair(700, 422)] = 15987699;
+      (*this)[make_pair(700, 423)] = 10066329;
+      (*this)[make_pair(700, 424)] = 7434609;
+      (*this)[make_pair(700, 425)] = 8158332;
+      (*this)[make_pair(700, 426)] = 7763574;
+      (*this)[make_pair(700, 427)] = 9737364;
+      (*this)[make_pair(700, 428)] = 9342606;
+      (*this)[make_pair(700, 429)] = 14803425;
+      (*this)[make_pair(700, 430)] = 16777215;
+      (*this)[make_pair(700, 431)] = 16777215;
+      (*this)[make_pair(700, 432)] = 16777215;
+      (*this)[make_pair(700, 433)] = 16777215;
+      (*this)[make_pair(701, 421)] = 16777215;
+      (*this)[make_pair(701, 422)] = 9474192;
+      (*this)[make_pair(701, 423)] = 12763842;
+      (*this)[make_pair(701, 424)] = 16514043;
+      (*this)[make_pair(701, 425)] = 11382189;
+      (*this)[make_pair(701, 426)] = 16645629;
+      (*this)[make_pair(701, 427)] = 16777215;
+      (*this)[make_pair(701, 428)] = 15527148;
+      (*this)[make_pair(701, 429)] = 10263708;
+      (*this)[make_pair(701, 430)] = 16777215;
+      (*this)[make_pair(701, 431)] = 16777215;
+      (*this)[make_pair(701, 432)] = 16777215;
+      (*this)[make_pair(701, 433)] = 16777215;
+      (*this)[make_pair(702, 421)] = 16316664;
+      (*this)[make_pair(702, 422)] = 8618883;
+      (*this)[make_pair(702, 423)] = 16777215;
+      (*this)[make_pair(702, 424)] = 14671839;
+      (*this)[make_pair(702, 425)] = 12500670;
+      (*this)[make_pair(702, 426)] = 16777215;
+      (*this)[make_pair(702, 427)] = 16777215;
+      (*this)[make_pair(702, 428)] = 16777215;
+      (*this)[make_pair(702, 429)] = 9605778;
+      (*this)[make_pair(702, 430)] = 16514043;
+      (*this)[make_pair(702, 431)] = 16777215;
+      (*this)[make_pair(702, 432)] = 16777215;
+      (*this)[make_pair(702, 433)] = 16777215;
+      (*this)[make_pair(703, 421)] = 16185078;
+      (*this)[make_pair(703, 422)] = 9803157;
+      (*this)[make_pair(703, 423)] = 16777215;
+      (*this)[make_pair(703, 424)] = 15790320;
+      (*this)[make_pair(703, 425)] = 10066329;
+      (*this)[make_pair(703, 426)] = 16777215;
+      (*this)[make_pair(703, 427)] = 16777215;
+      (*this)[make_pair(703, 428)] = 16448250;
+      (*this)[make_pair(703, 429)] = 9605778;
+      (*this)[make_pair(703, 430)] = 16777215;
+      (*this)[make_pair(703, 431)] = 16777215;
+      (*this)[make_pair(703, 432)] = 16777215;
+      (*this)[make_pair(703, 433)] = 16777215;
+      (*this)[make_pair(704, 421)] = 16777215;
+      (*this)[make_pair(704, 422)] = 12171705;
+      (*this)[make_pair(704, 423)] = 16777215;
+      (*this)[make_pair(704, 424)] = 16777215;
+      (*this)[make_pair(704, 425)] = 10790052;
+      (*this)[make_pair(704, 426)] = 8947848;
+      (*this)[make_pair(704, 427)] = 10724259;
+      (*this)[make_pair(704, 428)] = 8684676;
+      (*this)[make_pair(704, 429)] = 13684944;
+      (*this)[make_pair(704, 430)] = 16777215;
+      (*this)[make_pair(704, 431)] = 16777215;
+      (*this)[make_pair(704, 432)] = 16777215;
+      (*this)[make_pair(704, 433)] = 16777215;
+      (*this)[make_pair(705, 421)] = 16777215;
+      (*this)[make_pair(705, 422)] = 16777215;
+      (*this)[make_pair(705, 423)] = 16777215;
+      (*this)[make_pair(705, 424)] = 16777215;
+      (*this)[make_pair(705, 425)] = 16777215;
+      (*this)[make_pair(705, 426)] = 15790320;
+      (*this)[make_pair(705, 427)] = 14145495;
+      (*this)[make_pair(705, 428)] = 16645629;
+      (*this)[make_pair(705, 429)] = 16777215;
+      (*this)[make_pair(705, 430)] = 16777215;
+      (*this)[make_pair(705, 431)] = 16777215;
+      (*this)[make_pair(705, 432)] = 16777215;
+      (*this)[make_pair(705, 433)] = 16777215;
+      (*this)[make_pair(706, 421)] = 15987699;
+      (*this)[make_pair(706, 422)] = 14737632;
+      (*this)[make_pair(706, 423)] = 14737632;
+      (*this)[make_pair(706, 424)] = 14737632;
+      (*this)[make_pair(706, 425)] = 14737632;
+      (*this)[make_pair(706, 426)] = 14737632;
+      (*this)[make_pair(706, 427)] = 14737632;
+      (*this)[make_pair(706, 428)] = 14737632;
+      (*this)[make_pair(706, 429)] = 14737632;
+      (*this)[make_pair(706, 430)] = 15527148;
+      (*this)[make_pair(706, 431)] = 16777215;
+      (*this)[make_pair(706, 432)] = 16777215;
+      (*this)[make_pair(706, 433)] = 16777215;
+      (*this)[make_pair(707, 421)] = 12829635;
+      (*this)[make_pair(707, 422)] = 9211020;
+      (*this)[make_pair(707, 423)] = 10592673;
+      (*this)[make_pair(707, 424)] = 10592673;
+      (*this)[make_pair(707, 425)] = 7763574;
+      (*this)[make_pair(707, 426)] = 10592673;
+      (*this)[make_pair(707, 427)] = 10592673;
+      (*this)[make_pair(707, 428)] = 10592673;
+      (*this)[make_pair(707, 429)] = 7829367;
+      (*this)[make_pair(707, 430)] = 12961221;
+      (*this)[make_pair(707, 431)] = 16777215;
+      (*this)[make_pair(707, 432)] = 16777215;
+      (*this)[make_pair(707, 433)] = 16777215;
+      (*this)[make_pair(708, 421)] = 12829635;
+      (*this)[make_pair(708, 422)] = 13158600;
+      (*this)[make_pair(708, 423)] = 16777215;
+      (*this)[make_pair(708, 424)] = 16777215;
+      (*this)[make_pair(708, 425)] = 9342606;
+      (*this)[make_pair(708, 426)] = 16777215;
+      (*this)[make_pair(708, 427)] = 16777215;
+      (*this)[make_pair(708, 428)] = 16777215;
+      (*this)[make_pair(708, 429)] = 9539985;
+      (*this)[make_pair(708, 430)] = 16777215;
+      (*this)[make_pair(708, 431)] = 16777215;
+      (*this)[make_pair(708, 432)] = 16777215;
+      (*this)[make_pair(708, 433)] = 16777215;
+    }
+  } s6;
+  map<pair<int, int>, int> table6;
+  void update_table6()
+  {
+    for (const auto& x : s6) {
+      auto pos = x.first;
+      pos.first += time_button.first - 271 - 39;
+      pos.second += time_button.second - 482 + 2;
+      table6[pos] = x.second;
+    }
+  }
+  // "5:00" data
+  //  ^^
+  struct table5_t : map<pair<int, int>, int> {
+    table5_t()
+    {
+      (*this)[make_pair(696, 421)] = 16777215;
+      (*this)[make_pair(696, 422)] = 16777215;
+      (*this)[make_pair(696, 423)] = 16777215;
+      (*this)[make_pair(696, 424)] = 16777215;
+      (*this)[make_pair(696, 425)] = 16777215;
+      (*this)[make_pair(696, 426)] = 16777215;
+      (*this)[make_pair(696, 427)] = 16777215;
+      (*this)[make_pair(696, 428)] = 16777215;
+      (*this)[make_pair(696, 429)] = 16777215;
+      (*this)[make_pair(696, 430)] = 16777215;
+      (*this)[make_pair(696, 431)] = 16777215;
+      (*this)[make_pair(696, 432)] = 16777215;
+      (*this)[make_pair(696, 433)] = 16777215;
+      (*this)[make_pair(697, 421)] = 16777215;
+      (*this)[make_pair(697, 422)] = 16777215;
+      (*this)[make_pair(697, 423)] = 16777215;
+      (*this)[make_pair(697, 424)] = 16777215;
+      (*this)[make_pair(697, 425)] = 16777215;
+      (*this)[make_pair(697, 426)] = 16777215;
+      (*this)[make_pair(697, 427)] = 16777215;
+      (*this)[make_pair(697, 428)] = 16777215;
+      (*this)[make_pair(697, 429)] = 16777215;
+      (*this)[make_pair(697, 430)] = 16777215;
+      (*this)[make_pair(697, 431)] = 16777215;
+      (*this)[make_pair(697, 432)] = 16777215;
+      (*this)[make_pair(697, 433)] = 16777215;
+      (*this)[make_pair(698, 421)] = 16777215;
+      (*this)[make_pair(698, 422)] = 16777215;
+      (*this)[make_pair(698, 423)] = 16777215;
+      (*this)[make_pair(698, 424)] = 16777215;
+      (*this)[make_pair(698, 425)] = 16777215;
+      (*this)[make_pair(698, 426)] = 16777215;
+      (*this)[make_pair(698, 427)] = 16777215;
+      (*this)[make_pair(698, 428)] = 16777215;
+      (*this)[make_pair(698, 429)] = 16777215;
+      (*this)[make_pair(698, 430)] = 16777215;
+      (*this)[make_pair(698, 431)] = 16777215;
+      (*this)[make_pair(698, 432)] = 16777215;
+      (*this)[make_pair(698, 433)] = 16777215;
+      (*this)[make_pair(699, 421)] = 16777215;
+      (*this)[make_pair(699, 422)] = 16777215;
+      (*this)[make_pair(699, 423)] = 16777215;
+      (*this)[make_pair(699, 424)] = 16777215;
+      (*this)[make_pair(699, 425)] = 16777215;
+      (*this)[make_pair(699, 426)] = 16777215;
+      (*this)[make_pair(699, 427)] = 16777215;
+      (*this)[make_pair(699, 428)] = 16777215;
+      (*this)[make_pair(699, 429)] = 16777215;
+      (*this)[make_pair(699, 430)] = 16777215;
+      (*this)[make_pair(699, 431)] = 16777215;
+      (*this)[make_pair(699, 432)] = 16777215;
+      (*this)[make_pair(699, 433)] = 16777215;
+      (*this)[make_pair(700, 421)] = 15987699;
+      (*this)[make_pair(700, 422)] = 10724259;
+      (*this)[make_pair(700, 423)] = 10132122;
+      (*this)[make_pair(700, 424)] = 9605778;
+      (*this)[make_pair(700, 425)] = 9013641;
+      (*this)[make_pair(700, 426)] = 16185078;
+      (*this)[make_pair(700, 427)] = 16777215;
+      (*this)[make_pair(700, 428)] = 16316664;
+      (*this)[make_pair(700, 429)] = 10000536;
+      (*this)[make_pair(700, 430)] = 16777215;
+      (*this)[make_pair(700, 431)] = 16777215;
+      (*this)[make_pair(700, 432)] = 16777215;
+      (*this)[make_pair(700, 433)] = 16777215;
+      (*this)[make_pair(701, 421)] = 15329769;
+      (*this)[make_pair(701, 422)] = 9737364;
+      (*this)[make_pair(701, 423)] = 14935011;
+      (*this)[make_pair(701, 424)] = 15592941;
+      (*this)[make_pair(701, 425)] = 9013641;
+      (*this)[make_pair(701, 426)] = 16711422;
+      (*this)[make_pair(701, 427)] = 16777215;
+      (*this)[make_pair(701, 428)] = 16777215;
+      (*this)[make_pair(701, 429)] = 9145227;
+      (*this)[make_pair(701, 430)] = 16579836;
+      (*this)[make_pair(701, 431)] = 16777215;
+      (*this)[make_pair(701, 432)] = 16777215;
+      (*this)[make_pair(701, 433)] = 16777215;
+      (*this)[make_pair(702, 421)] = 15329769;
+      (*this)[make_pair(702, 422)] = 10592673;
+      (*this)[make_pair(702, 423)] = 16777215;
+      (*this)[make_pair(702, 424)] = 16119285;
+      (*this)[make_pair(702, 425)] = 10197915;
+      (*this)[make_pair(702, 426)] = 16777215;
+      (*this)[make_pair(702, 427)] = 16777215;
+      (*this)[make_pair(702, 428)] = 16777215;
+      (*this)[make_pair(702, 429)] = 9474192;
+      (*this)[make_pair(702, 430)] = 16514043;
+      (*this)[make_pair(702, 431)] = 16777215;
+      (*this)[make_pair(702, 432)] = 16777215;
+      (*this)[make_pair(702, 433)] = 16777215;
+      (*this)[make_pair(703, 421)] = 15329769;
+      (*this)[make_pair(703, 422)] = 10592673;
+      (*this)[make_pair(703, 423)] = 16777215;
+      (*this)[make_pair(703, 424)] = 16777215;
+      (*this)[make_pair(703, 425)] = 9408399;
+      (*this)[make_pair(703, 426)] = 15461355;
+      (*this)[make_pair(703, 427)] = 16711422;
+      (*this)[make_pair(703, 428)] = 14013909;
+      (*this)[make_pair(703, 429)] = 10197915;
+      (*this)[make_pair(703, 430)] = 16777215;
+      (*this)[make_pair(703, 431)] = 16777215;
+      (*this)[make_pair(703, 432)] = 16777215;
+      (*this)[make_pair(703, 433)] = 16777215;
+      (*this)[make_pair(704, 421)] = 15790320;
+      (*this)[make_pair(704, 422)] = 12500670;
+      (*this)[make_pair(704, 423)] = 16777215;
+      (*this)[make_pair(704, 424)] = 16777215;
+      (*this)[make_pair(704, 425)] = 14211288;
+      (*this)[make_pair(704, 426)] = 9408399;
+      (*this)[make_pair(704, 427)] = 8158332;
+      (*this)[make_pair(704, 428)] = 10658466;
+      (*this)[make_pair(704, 429)] = 15198183;
+      (*this)[make_pair(704, 430)] = 16777215;
+      (*this)[make_pair(704, 431)] = 16777215;
+      (*this)[make_pair(704, 432)] = 16777215;
+      (*this)[make_pair(704, 433)] = 16777215;
+      (*this)[make_pair(705, 421)] = 16777215;
+      (*this)[make_pair(705, 422)] = 16777215;
+      (*this)[make_pair(705, 423)] = 16777215;
+      (*this)[make_pair(705, 424)] = 16777215;
+      (*this)[make_pair(705, 425)] = 16777215;
+      (*this)[make_pair(705, 426)] = 16777215;
+      (*this)[make_pair(705, 427)] = 16777215;
+      (*this)[make_pair(705, 428)] = 16777215;
+      (*this)[make_pair(705, 429)] = 16777215;
+      (*this)[make_pair(705, 430)] = 16777215;
+      (*this)[make_pair(705, 431)] = 16777215;
+      (*this)[make_pair(705, 432)] = 16777215;
+      (*this)[make_pair(705, 433)] = 16777215;
+      (*this)[make_pair(706, 421)] = 15987699;
+      (*this)[make_pair(706, 422)] = 14737632;
+      (*this)[make_pair(706, 423)] = 14737632;
+      (*this)[make_pair(706, 424)] = 14737632;
+      (*this)[make_pair(706, 425)] = 14737632;
+      (*this)[make_pair(706, 426)] = 14737632;
+      (*this)[make_pair(706, 427)] = 14737632;
+      (*this)[make_pair(706, 428)] = 14737632;
+      (*this)[make_pair(706, 429)] = 14737632;
+      (*this)[make_pair(706, 430)] = 15527148;
+      (*this)[make_pair(706, 431)] = 16777215;
+      (*this)[make_pair(706, 432)] = 16777215;
+      (*this)[make_pair(706, 433)] = 16777215;
+      (*this)[make_pair(707, 421)] = 12829635;
+      (*this)[make_pair(707, 422)] = 9211020;
+      (*this)[make_pair(707, 423)] = 10592673;
+      (*this)[make_pair(707, 424)] = 10592673;
+      (*this)[make_pair(707, 425)] = 7763574;
+      (*this)[make_pair(707, 426)] = 10592673;
+      (*this)[make_pair(707, 427)] = 10592673;
+      (*this)[make_pair(707, 428)] = 10592673;
+      (*this)[make_pair(707, 429)] = 7829367;
+      (*this)[make_pair(707, 430)] = 12961221;
+      (*this)[make_pair(707, 431)] = 16777215;
+      (*this)[make_pair(707, 432)] = 16777215;
+      (*this)[make_pair(707, 433)] = 16777215;
+      (*this)[make_pair(708, 421)] = 12829635;
+      (*this)[make_pair(708, 422)] = 13158600;
+      (*this)[make_pair(708, 423)] = 16777215;
+      (*this)[make_pair(708, 424)] = 16777215;
+      (*this)[make_pair(708, 425)] = 9342606;
+      (*this)[make_pair(708, 426)] = 16777215;
+      (*this)[make_pair(708, 427)] = 16777215;
+      (*this)[make_pair(708, 428)] = 16777215;
+      (*this)[make_pair(708, 429)] = 9539985;
+      (*this)[make_pair(708, 430)] = 16777215;
+      (*this)[make_pair(708, 431)] = 16777215;
+      (*this)[make_pair(708, 432)] = 16777215;
+      (*this)[make_pair(708, 433)] = 16777215;
+    }
+  } s5;
+  map<pair<int, int>, int> table5;
+  void update_table5()
+  {
+    for (const auto& x : s5) {
+      auto pos = x.first;
+      pos.first += time_button.first - 271 - 39;
+      pos.second += time_button.second - 482 + 2;
+      table5[pos] = x.second;
     }
   }
   // "4:00" data
@@ -3132,6 +4806,9 @@ namespace mine {
   }
   inline void update()
   {
+    update_table400();
+    update_table600();
+    update_table1c();
     update_table2c();
     update_table3c();
     update_table4c();
@@ -3139,13 +4816,19 @@ namespace mine {
     update_table6c();
     update_table15c();
     update_table20();
-    update_table10();
+    update_table10c();
     update_table40();
     update_table30();
     update_table14();
     update_table15j();    
     update_table12();
     update_table11();
+    update_table10j();
+    update_table9();
+    update_table8();
+    update_table7();
+    update_table6();
+    update_table5();
     update_table4();
     update_table3();
     top += time_button.second - 482;
@@ -3193,10 +4876,10 @@ namespace mine {
     {
       // check if "10,000"
       //           ^^
-      assert(!table10.empty());
-      auto p = find_if(begin(table10), end(table10),
+      assert(!table10c.empty());
+      auto p = find_if(begin(table10c), end(table10c),
 		       bind2nd(ptr_fun(check), in_image));
-      if (p == end(table10))
+      if (p == end(table10c))
 	return 10000;
     }
     {
@@ -3243,6 +4926,33 @@ namespace mine {
 		       bind2nd(ptr_fun(check), in_image));
       if (p == end(table2c))
 	return 2000;
+    }
+    {
+      // check if "1,000"
+      //           ^^
+      assert(!table1c.empty());
+      auto p = find_if(begin(table1c), end(table1c),
+		       bind2nd(ptr_fun(check), in_image));
+      if (p == end(table1c))
+	return 1000;
+    }
+    {
+      // check if "600"
+      //           ^^
+      assert(!table600.empty());
+      auto p = find_if(begin(table600), end(table600),
+		       bind2nd(ptr_fun(check), in_image));
+      if (p == end(table600))
+	return 600;
+    }
+    {
+      // check if "400"
+      //           ^^
+      assert(!table400.empty());
+      auto p = find_if(begin(table400), end(table400),
+		       bind2nd(ptr_fun(check), in_image));
+      if (p == end(table400))
+	return 400;
     }
     asm("int3");
     return 0;
@@ -3293,6 +5003,60 @@ namespace mine {
 		       bind2nd(ptr_fun(check), in_image));
       if (p == end(table4))
 	return 4;
+    }
+    {
+      // Check if 5:00
+      //          ^^
+      assert(!table5.empty());
+      auto p = find_if(begin(table5), end(table5),
+		       bind2nd(ptr_fun(check), in_image));
+      if (p == end(table5))
+	return 5;
+    }
+    {
+      // Check if 6:00
+      //          ^^
+      assert(!table6.empty());
+      auto p = find_if(begin(table6), end(table6),
+		       bind2nd(ptr_fun(check), in_image));
+      if (p == end(table6))
+	return 6;
+    }
+    {
+      // Check if 7:00
+      //          ^^
+      assert(!table7.empty());
+      auto p = find_if(begin(table7), end(table7),
+		       bind2nd(ptr_fun(check), in_image));
+      if (p == end(table7))
+	return 7;
+    }
+    {
+      // Check if 8:00
+      //          ^^
+      assert(!table8.empty());
+      auto p = find_if(begin(table8), end(table8),
+		       bind2nd(ptr_fun(check), in_image));
+      if (p == end(table8))
+	return 8;
+    }
+    {
+      // Check if 9:00
+      //          ^^
+      assert(!table9.empty());
+      auto p = find_if(begin(table9), end(table9),
+		       bind2nd(ptr_fun(check), in_image));
+      if (p == end(table9))
+	return 9;
+    }
+    {
+      // Check if 10:00
+      //          ^^
+      assert(!table10j.empty());
+      auto p = find_if(begin(table10j), end(table10j),
+		       bind2nd(ptr_fun(check), in_image));
+      if (p == end(table10j))
+	return 10;
     }
     {
       // Check if 15:00
@@ -4364,12 +6128,13 @@ Do_Direct(Display *dpy, XWDFileHeader *header, Colormap *colormap,
 			 * obmask / 65535) << obshift);
 #if 0
 		{
-		  // 40,000 at Nihonbashi.time
+		  // 10:00 at Nihonbashi.time
 		  // ^^
-		  int X = 295;  // 270 small 290 small
-		  int Y = 235;
+		  int X = 657 + 39;
+		  int Y = 423 - 2;
 		  int delta = 13;
 		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
+		    mine::s10j[std::make_pair(x,y)] = xpix;
 		    xpix = 0;
 		  }
 		}
@@ -4382,111 +6147,7 @@ Do_Direct(Display *dpy, XWDFileHeader *header, Colormap *colormap,
 		  int Y = 235 - 2;
 		  int delta = 13;
 		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::s30[std::make_pair(x,y)] = xpix;
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 10,000 at Ochanomizu.time
-		  // ^^
-		  int X = 295;  // 270 small 290 small
-		  int Y = 235 - 2;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::s20[std::make_pair(x,y)] = xpix;
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 3,000 at Yoyogi.time
-		  // ^^
-		  int X = 295;  // 270 small 290 small
-		  int Y = 235 - 2;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::s3c[std::make_pair(x,y)] = xpix;
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 6,000 at Daiba.time
-		  // ^^
-		  int X = 295;  // 270 small 290 small
-		  int Y = 235 - 2;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::s6c[std::make_pair(x,y)] = xpix;
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 4,000 at Haneda.time
-		  // ^^
-		  int X = 295;  // 270 small 290 small
-		  int Y = 235 - 2;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::s4c[std::make_pair(x,y)] = xpix;
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 2,000 at Yoyogi.time
-		  // ^^
-		  int X = 295;  // 270 small 290 small
-		  int Y = 235 - 2;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::s2c[std::make_pair(x,y)] = xpix;
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 8,000 at Kamiizumi.time
-		  // ^^
-		  int X = 295;  // 270 small 290 small
-		  int Y = 235 - 2;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::s8c[std::make_pair(x,y)] = xpix;
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 10,000 at Kitasenju.time
-		  // ^^
-		  int X = 295;  // 270 small 290 small
-		  int Y = 235 - 2;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::s10[std::make_pair(x,y)] = xpix;
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 15,000 at KeikyuKawasaki.time
-		  // ^^
-		  int X = 295;  // 270 small 290 small
-		  int Y = 235 - 2;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::s15[std::make_pair(x,y)] = xpix;
+		    mine::s400[std::make_pair(x,y)] = xpix;
 		    xpix = 0;
 		  }
 		}
@@ -4504,165 +6165,11 @@ Do_Direct(Display *dpy, XWDFileHeader *header, Colormap *colormap,
 #endif		
 #if 0
 		{
-		  // 2nd bule dot at Nihonbashi.time
-		  int X = 320;
-		  int Y = 277;
-		  int delta = 5;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    xpix = 0;
-		  }
-		}
-#endif		
-#if 0
-		{
-		  // 3rd bule dot at Nihonbashi.time
-		  int X = 336;
-		  int Y = 278;
-		  int delta = 5;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 4th bule dot at Nihonbashi.time
-		  int X = 336+16;
-		  int Y = 278+4;
-		  int delta = 5;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 5th bule dot at Nihonbashi.time
-		  int X = 336+16+16;
-		  int Y = 278+4+13;
-		  int delta = 5;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 6th bule dot at Nihonbashi.time
-		  int X = 336+16+16+16;
-		  int Y = 278+4+13+22;
-		  int delta = 5;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 7th bule dot at Nihonbashi.time
-		  int X = 336+16+16+16+16;
-		  int Y = 278+4+13+22+30;
-		  int delta = 5;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 7th bule dot at Nihonbashi.time
-		  int X = 336+16+16+16+16;
-		  int Y = 278+4+13+22+30;
-		  int delta = 5;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::dummy[std::make_pair(x,y)] = xpix;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 12:00 at Nihonbashi.time
-		  // ^^
-		  int X = 657;
-		  int Y = 423;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
 		  // top
 		  int X = 500;
 		  int Y = 235;
 		  int delta = 5;
 		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 11:00 at Nihonbashi.time
-		  // ^^
-		  int X = 657 + 39;
-		  int Y = 423 - 2;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::table3[std::make_pair(x,y)] = xpix;
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 14:00 at Nihonbashi.time
-		  // ^^
-		  int X = 657 + 39;
-		  int Y = 423 - 2;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::s14[std::make_pair(x,y)] = xpix;
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 4:00 at Nihonbashi.time
-		  // ^^
-		  int X = 657 + 39;
-		  int Y = 423 - 2;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::s4[std::make_pair(x,y)] = xpix;
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 3:00 at Nihonbashi.time
-		  // ^^
-		  int X = 657 + 39;
-		  int Y = 423 - 2;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::s3[std::make_pair(x,y)] = xpix;
-		    xpix = 0;
-		  }
-		}
-#endif
-#if 0
-		{
-		  // 15:00 at Nihonbashi.time
-		  // ^^
-		  int X = 657 + 39;
-		  int Y = 423 - 2;
-		  int delta = 13;
-		  if (X <= x && x < X+delta && Y <= y && y < Y+delta) {
-		    mine::s15j[std::make_pair(x,y)] = xpix;
 		    xpix = 0;
 		  }
 		}
