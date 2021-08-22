@@ -10,4 +10,6 @@ date_sample:date_sample.cpp
 	g++ -g3 -o $@ $< -lrt
 
 clean:
-	rm -f collect2 collect2.j tdata tdata.j date_sample date_smaple.j *~
+	rm -f collect2 collect2.j tdata tdata.j date_sample date_sample.j *~
+	rm -f TAGS
+
