@@ -127,12 +127,12 @@ map<COORD, CROWD> data;
 
 現状この data から Yahoo の雨雲レーダー相当のことができないかという問題になっている..
 
-gnuplot か mathematica 3D の動画ができないか調べてみる.
+gnuplot で動画ができている:
 
 /media/ca850f52-0605-42a7-9fd4-899de9edf461/work/gnuplot-5.2.6/demo/animate{,2}.dem
 
 にサンプルがある. これは View Point を時間で変更するというものだが
-gnuplot でアニメーションができるらしい.
+gnuplot で動画ができるらしい.
 
 イメージ的には Yahoo にある雨雲レーダーのようなものを目標にする. アニ
 メーションをスライダで動かす. 人の流れが多いところを赤くするなど.
