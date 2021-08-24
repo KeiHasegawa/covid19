@@ -15,8 +15,8 @@ struct info_t {
 
 std::vector<info_t> data = {
   {533946114, "Nihonbashi", {35.68123,139.774534}},
-#if 1
   {533946113, "Marunouchi", {35.680478,139.765367}},
+#if 1
   {533946211, "Ootemachi", {35.687438,139.764955}},
   {533946013, "Ginza", {35.669626,139.765539}},
   {533936904, "Shinbashi", {35.664917,139.757003}},
@@ -73,7 +73,8 @@ std::vector<info_t> data = {
   {533943683, "Hitotsubashigakuen", {35.72206,139.480039}},
   {533945821, "Nerima", {35.735785,139.651776}},
   {533955372, "Akabane", {35.783721,139.7217}},
-  {533956174, "Kameari", {35.761606,139.848806}},  
+  {533956174, "Kameari", {35.761606,139.848806}},
+  {533936984, "Nishikasai", {35.664577,139.859203}},
 
   {533925354, "Kawasaki", {35.532988,139.700872}},
   {533925363, "KeikyuKawasaki", {35.531365,139.696889}},
@@ -187,6 +188,59 @@ std::vector<info_t> data = {
   {543905671, "SugidoTakanodai", {36.051502,139.714422}},
   {543905283, "ToubuDoubutsuKouen", {36.02495,139.7267}},
   {543905231, "Shiraoka", {36.017588,139.667094}},
+
+  {533937601, "DisneyLand", {35.632896,139.880394}},
+  {533947643, "Honyawata", {35.721091,139.927234}},
+  {533947482, "Hunabashi", {35.701736,139.985382}},
+  {534040214, "Tsudanuma", {35.691215,140.020407}},
+  {534030941, "KeiseiMakuhari", {35.660444,140.056076}},
+  {534030733, "KaihinMakuhari", {35.648476,140.041987}},
+  {534030673, "Inage", {35.63717,140.09249}},
+  {534031612, "Tsuga", {35.636095,140.149201}},
+  {534030391, "KeiseiChiba", {35.611618,140.114267}},
+  {534021741, "Kamatori", {35.562653,140.178736}},
+  {534020173, "Goieki", {35.513028,140.089701}},
+  {533917164, "Sodegaura", {35.432189,139.957829}},
+  {533907543, "Kisarazu", {35.381579,139.926229}},
+  {533907012, "Kimitsu", {35.333667,139.895042}},
+  {523976984, "Aobori", {35.330531,139.858939}},
+  {523956364, "Katsuyama", {35.114027,139.833394}},
+  {523956172, "Iwaieki", {35.09328,139.849893}},
+  {523936984, "Tateyama", {34.995957,139.861896}},
+  {524050283, "Kamogawa", {34.995957,139.861896}},
+  {524052842, "Katsuura", {35.152563,140.311936}},
+  {524062283, "Mishuku", {35.18756,140.351431}},
+  {524073011, "Ohara", {35.251221,140.391036}},
+  {534002493, "Ichinomiya", {35.373089,140.369527}},
+  {534012141, "Shigehara", {35.426874,140.304048}},
+  {534022244, "Ohami", {35.452607,140.282762}},
+  {534023451, "Kujuukuri", {35.522631,140.310999}},
+  {534022791, "Tougane", {35.560158,140.363609}},
+  {534033322, "Naritou", {35.608387,140.410859}},
+  {534033991, "Yokoshiba", {35.661769,140.491232}},
+  {534044343, "Youkaichi", {35.699286,140.552366}},
+  {534043331, "Shibayamacho", {35.693126,140.414397}},
+  {534032953, "Yachimata", {35.644488,140.301338}},
+  {534031933, "Yotsukido", {35.644488,140.301338}},
+  {534041503, "Katsutadai", {35.715438,140.125972}},
+  {534041721, "Chikucentereki", {35.725856,140.155287}},
+  {534042723, "Sakesakai", {35.731664,140.275249}},
+  {534042771, "Miyazato", {35.726649,140.346981}},
+  {534043871, "Takocho", {35.726649,140.346981}},
+  {534053104, "Narita", {35.771987,140.39285}},
+  {534045623, "Asahi", {35.722009,140.654939}},
+  {534046763, "Choushi", {35.751212,140.7845}},
+  {534055861, "ShimousaTachibana", {35.780462,140.744675}},
+  {534061091, "Ajikieki", {35.835707,140.242358}},
+  {534050691, "ChibaNewtown", {35.800133,140.116274}},
+  {534050422, "Nishishiraieki", {35.784402,140.031767}},
+  {533957392, "Kamagaya", {35.779409,139.998398}},
+  {533957421, "Matsudo", {35.7843,139.900661}},
+  {533967372, "Kashiwa", {35.86215,139.970917}},
+  {534060404, "Abiko", {35.872703,140.010794}},
+  {533967443, "Nagareyama", {35.871905,139.925241}},
+  {533976491, "Atagoeki", {35.950148,139.864819}},
+  {533976151, "Matsubushicho", {35.922758,139.815748}},
 #endif  
 };
 
@@ -214,7 +268,18 @@ inline std::string dump_file(std::string base, kind_t kind)
     return base + ".gen";
   case place:
   default:
-    return base + ".gen";
+    return base + ".place";
+  }
+}
+
+inline std::string  prog(kind_t kind)
+{
+  switch (kind) {
+  case time_s: return "tdata";
+  case generation: return "gdata";
+  case place:
+  default:
+    return "pdata";
   }
 }
 
@@ -247,26 +312,24 @@ inline bool capture(std::string wid, const info_t& info, kind_t kind)
     return true;
   }
 
-  if (kind == time_s) {
-    ostringstream os;
-    auto c = info.coord;
-    os << "tdata -in " << fn;
-    os << " -x " << c.first;
-    os << " -y " << c.second;
-    os << " > " << fn << ".cpp";
-    auto u = system(os.str().c_str());
-    if (u) {
-      static set<string> retry;
-      if (retry.find(fn) != retry.end()) {
-	cerr << os.str() << " failed\n";
-	return true;
-      }
-      retry.insert(fn);
-      sleep(5);
-      goto label;
+  ostringstream os;
+  auto c = info.coord;
+  os << prog(kind) << " -in " << fn;
+  os << " -x " << c.first;
+  os << " -y " << c.second;
+  os << " > " << fn << ".cpp";
+  auto u = system(os.str().c_str());
+  if (u) {
+    static set<string> retry;
+    if (retry.find(fn) != retry.end()) {
+      cerr << os.str() << " failed\n";
+      return true;
     }
-    unlink(fn.c_str());
+    retry.insert(fn);
+    sleep(5);
+    goto label;
   }
+  unlink(fn.c_str());
   return false;
 }
 
