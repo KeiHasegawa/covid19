@@ -112,8 +112,12 @@ tokyo を作成してみた. 色々と問題はあるが最初のバージョン
 
 また collect2.cpp は画面にデータが揃う前に次のデータを収集しにいくとい
 う問題があったので, tdata を動作させ, 1 回リトライするように修正した.
-この時点での collect2.cpp を collect2.cpp.002 としてアップロードしてお
-く.
+この時点での collect2.cpp を collect2.cpp.002 としてアップロードしておく.
+
+再度修正. -s -e オプションを collect2 に追加した. また性世代や居住地のデータも
+取得できるように修正した. この時点での collect2.cpp, tdata.cpp, gdata.cpp, pdata.cpp
+を collect2.cpp.003, tdata.cpp.002, gdata.cpp.001, pdata.cpp.001
+としてアップロードしておく.
 
 (*6) グラフで表示
 
