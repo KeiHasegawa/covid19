@@ -107,8 +107,17 @@ namespace mine {
     x = center.first + x;
     y = center.second - y;
     auto pix = XGetPixel(in_image, x, y);
-    if (pix == sky_blue)
+    static int prev;
+    struct sweeper {
+      int pix;
+      sweeper(int p) : pix{p} {}
+      ~sweeper(){ prev = pix; }
+    } sweeper(pix);
+    if (pix == sky_blue) {
+      if (prev == orange)
+	return true;
       return false;
+    }
     if (pix == pink)
       return false;
     if (pix == orange)
@@ -161,15 +170,32 @@ namespace mine {
     assert(a != -1);
     int b = get_white(a+1, in_image);
     assert(b != -1);
-    while (b - a < 5)
+    int delta = 2;
+    while (b - a < delta)
       b = get_white(b+1, in_image);
     int c = get_white(b+1, in_image);
-    assert(c != -1);
-    while (c - b < 5)
-      c = get_white(c+1, in_image);
-    int d = get_white(c+1, in_image);
-    while (d != -1)
-      d = get_white(d+1, in_image);
+    if (c == -1) {
+      // special case. For example, very few alian.
+      c = b;
+      b = get_white(a+1, in_image);
+    }
+    else {
+      while (c - b < delta) {
+	c = get_white(c+1, in_image);
+	if (c == -1) {
+	  // very special case. For example, no alian
+	  assert(a == 90);
+	  c = b;
+	  b = a;
+	  break;
+	}
+      }
+      int d = get_white(c+1, in_image);
+      while (d != -1) {
+	d = get_white(d+1, in_image);
+	assert(d != 360);
+      }
+    }
     cout << "    ";
     cout << "table = make_tuple";
     if (a == 90) {
