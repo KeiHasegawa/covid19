@@ -12,6 +12,7 @@ enum class Prefectures {
   Kanagawa,
   Saitama,
   Chiba,
+  Ibaraki,
 };
 
 struct info_t {
@@ -262,6 +263,50 @@ std::vector<info_t> data = {
   {533967443, "Nagareyama", {35.871905,139.925241}, Prefectures::Chiba},
   {533976491, "Atagoeki", {35.950148,139.864819}, Prefectures::Chiba},
   {533976151, "Matsubushicho", {35.922758,139.815748}, Prefectures::Chiba},
+
+  // Ibaraki
+  {534075601, "Kashima", {35.968807,140.631517}, Prefectures::Ibaraki},
+  {534074232, "Itako", {35.937343,140.549606}, Prefectures::Ibaraki},
+  {534073893, "Namekata", {35.993244,140.482587}, Prefectures::Ibaraki},
+  {534072454, "Inashiki", {35.95472,140.326839}, Prefectures::Ibaraki},
+  {534071113, "Sanuki", {35.930066,140.138229}, Prefectures::Ibaraki},
+  {534060753, "Toride", {35.895699,140.062875}, Prefectures::Ibaraki},
+  {533977491, "Moriya", {35.95067,139.992268}, Prefectures::Ibaraki},
+  {534070931, "Miraidaira", {35.895699,140.062875}, Prefectures::Ibaraki},
+  {544001024, "HitachinoUshiku", {36.007352,140.158247}, Prefectures::Ibaraki},
+  {544001373, "Amicho", {36.030812,140.214808}, Prefectures::Ibaraki},
+  {544001961, "Tsuchiura", {36.078484,140.206212}, Prefectures::Ibaraki},
+  {544000984, "Tsukuba", {36.08251,140.11171}, Prefectures::Ibaraki},
+  {543907291, "Mizukaidou", {36.018325,139.991993}, Prefectures::Ibaraki},
+  {534070931, "Miraidaira", {35.994711,140.038313}, Prefectures::Ibaraki},
+  {543907513, "Bandoushi", {36.048356,139.888837}, Prefectures::Ibaraki},
+  {543916332, "Sakaicho", {36.108485,139.794953}, Prefectures::Ibaraki},
+  {543927173, "Shimotsuma", {36.181994,139.96445}, Prefectures::Ibaraki},
+  {543927113, "Yachiyocho", {36.181684,139.891121}, Prefectures::Ibaraki},
+  {543925362, "Hurukawa", {36.194597,139.709555}, Prefectures::Ibaraki},
+  {543925784, "Nogicho", {36.194597,139.709555}, Prefectures::Ibaraki},
+  {543936594, "Yuuki", {36.298223,139.872371}, Prefectures::Ibaraki},
+  {543937681, "Shimodate", {36.304147,139.978334}, Prefectures::Ibaraki},
+  {544040382, "Iwase", {36.359588,140.108271}, Prefectures::Ibaraki},
+  {544041494, "Kasama", {36.373302,140.246142}, Prefectures::Ibaraki},
+  {544040382, "Iwase", {36.359588,140.108271}, Prefectures::Ibaraki},
+  {544053703, "Shirosato", {36.488544,140.307827}, Prefectures::Ibaraki},
+  {544053954, "Uritura", {36.498221,140.449424}, Prefectures::Ibaraki},
+  {544063533, "HitachiOomiya", {36.547132,140.412619}, Prefectures::Ibaraki},
+  {544064323, "HitachOota", {36.531528,140.527906}, Prefectures::Ibaraki},
+  {544054553, "Toukaieki", {36.465534,140.566054}, Prefectures::Ibaraki},
+  {544043483, "Mito", {36.370755,140.476308}, Prefectures::Ibaraki},
+  {544044712, "Katsuta", {36.39468,140.524589}, Prefectures::Ibaraki},
+  {544034753, "Ooarai", {36.31505,140.562942}, Prefectures::Ibaraki},
+  {544022924, "Hatori", {36.247523,140.286754}, Prefectures::Ibaraki},
+  {544022223, "Ishioka", {36.19095,140.28025}, Prefectures::Ibaraki},
+  {544014812, "Hokota", {36.152444,140.520298}, Prefectures::Ibaraki},
+  {544071821, "Toriyamaeki", {}, Prefectures::Ibaraki},
+  {544075024, "Hitachi", {36.590439,140.661847}, Prefectures::Ibaraki},
+  {554005573, "Takahagi", {36.714482,140.717003}, Prefectures::Ibaraki},
+  {554012281, "HitachDaiko", {36.77094,140.3508}, Prefectures::Ibaraki},
+  {554015494, "Isohara", {36.790502,140.746164}, Prefectures::Ibaraki},
+  
 };
 
 enum kind_t { time_s, generation, place };
@@ -426,10 +471,12 @@ int main(int argc, char** argv)
 {
   using namespace std;
   string s, e;
-  for (int opt ; (opt = getopt(argc, argv, "s:e:")) != -1 ; ) {
+  bool ignore = false;
+  for (int opt ; (opt = getopt(argc, argv, "s:e:i")) != -1 ; ) {
     switch (opt) {
     case 's': s = optarg; break;
     case 'e': e = optarg; break;
+    case 'i': ignore = true; break;
     default: usage(argv[0]); return 1;
     }
   }
@@ -470,7 +517,12 @@ int main(int argc, char** argv)
     }
     ee = p+1;
   }
-    
+
   auto p = find_if(ss, ee, subr);
-  return end(data) - p;
+  auto ret = end(data) - p;
+  if (!ignore || !ret)
+    return ret;
+  
+  for_each(p+1, ee, subr);
+  return ret;
 }
