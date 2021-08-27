@@ -6,6 +6,8 @@
 #include <vector>
 #include <fstream>
 #include <map>
+#include <cassert>
+#include <numeric>
 
 enum class Prefectures {
   Tokyo,
@@ -13,6 +15,8 @@ enum class Prefectures {
   Saitama,
   Chiba,
   Ibaraki,
+  Tochigi,
+  Gunma,
 };
 
 struct info_t {
@@ -23,7 +27,6 @@ struct info_t {
 };
 
 std::vector<info_t> data = {
-  // Tokyo
   {533946114, "Nihonbashi", {35.68123,139.774534}, Prefectures::Tokyo},
   {533946113, "Marunouchi", {35.680478,139.765367}, Prefectures::Tokyo},
   {533946211, "Ootemachi", {35.687438,139.764955}, Prefectures::Tokyo},
@@ -85,7 +88,6 @@ std::vector<info_t> data = {
   {533956174, "Kameari", {35.761606,139.848806}, Prefectures::Tokyo},
   {533936984, "Nishikasai", {35.664577,139.859203}, Prefectures::Tokyo},
 
-  // Kanagawa
   {533925354, "Kawasaki", {35.532988,139.700872}, Prefectures::Kanagawa},
   {533925363, "KeikyuKawasaki", {35.531365,139.696889}, Prefectures::Kanagawa},
   {533925141, "Tsurumi", {35.508036,139.676262}, Prefectures::Kanagawa},
@@ -103,7 +105,7 @@ std::vector<info_t> data = {
   {523974561, "Shinzushi", {35.295934,139.581199}, Prefectures::Kanagawa},
   {523974264, "Hayamacho", {35.272094,139.586202}, Prefectures::Kanagawa},
   {533903084, "Hujisawa", {35.338898,139.48747}, Prefectures::Kanagawa},
-  {533903084, "Oohuna", {35.354048,139.531299}, Prefectures::Kanagawa},
+  {533904224, "Oohuna", {35.354048,139.531299}, Prefectures::Kanagawa},
   {533904822, "Totsuka", {35.400766,139.534204}, Prefectures::Kanagawa},
   {533904903, "Tateba", {35.414484,139.500994}, Prefectures::Kanagawa},
   {533903402, "Samukawacho", {35.37595,139.387012}, Prefectures::Kanagawa},
@@ -143,7 +145,6 @@ std::vector<info_t> data = {
   {533914524, "Hutamatagawa", {35.463577,139.53231}, Prefectures::Kanagawa},
   {533924133, "Nakayama", {35.514752,139.539181}, Prefectures::Kanagawa},
 
-  // Saitama
   {533955671, "Kawaguchi", {35.833731,139.731689}, Prefectures::Saitama},
   {533955643, "Toda", {35.801922,139.66835}, Prefectures::Saitama},
   {533954493, "Wakou", {35.789853,139.62211}, Prefectures::Saitama},
@@ -209,8 +210,9 @@ std::vector<info_t> data = {
   {543905671, "SugidoTakanodai", {36.051502,139.714422}, Prefectures::Saitama},
   {543905283, "ToubuDoubutsuKouen", {36.02495,139.7267}, Prefectures::Saitama},
   {543905231, "Shiraoka", {36.017588,139.667094}, Prefectures::Saitama},
+  {543924521, "Kawamataeki", {36.208923,139.526515}, Prefectures::Saitama},
+  {543900202, "Oganocho", {36.01714,139.008604}, Prefectures::Saitama},
 
-  // Chiba
   {533937601, "DisneyLand", {35.632896,139.880394}, Prefectures::Chiba},
   {533947643, "Honyawata", {35.721091,139.927234}, Prefectures::Chiba},
   {533947482, "Hunabashi", {35.701736,139.985382}, Prefectures::Chiba},
@@ -272,24 +274,20 @@ std::vector<info_t> data = {
   {534071113, "Sanuki", {35.930066,140.138229}, Prefectures::Ibaraki},
   {534060753, "Toride", {35.895699,140.062875}, Prefectures::Ibaraki},
   {533977491, "Moriya", {35.95067,139.992268}, Prefectures::Ibaraki},
-  {534070931, "Miraidaira", {35.895699,140.062875}, Prefectures::Ibaraki},
+  {534070931, "Miraidaira", {35.99375,140.040625}, Prefectures::Ibaraki},
   {544001024, "HitachinoUshiku", {36.007352,140.158247}, Prefectures::Ibaraki},
   {544001373, "Amicho", {36.030812,140.214808}, Prefectures::Ibaraki},
   {544001961, "Tsuchiura", {36.078484,140.206212}, Prefectures::Ibaraki},
   {544000984, "Tsukuba", {36.08251,140.11171}, Prefectures::Ibaraki},
   {543907291, "Mizukaidou", {36.018325,139.991993}, Prefectures::Ibaraki},
-  {534070931, "Miraidaira", {35.994711,140.038313}, Prefectures::Ibaraki},
   {543907513, "Bandoushi", {36.048356,139.888837}, Prefectures::Ibaraki},
   {543916332, "Sakaicho", {36.108485,139.794953}, Prefectures::Ibaraki},
   {543927173, "Shimotsuma", {36.181994,139.96445}, Prefectures::Ibaraki},
   {543927113, "Yachiyocho", {36.181684,139.891121}, Prefectures::Ibaraki},
-  {543925362, "Hurukawa", {36.194597,139.709555}, Prefectures::Ibaraki},
-  {543925784, "Nogicho", {36.194597,139.709555}, Prefectures::Ibaraki},
   {543936594, "Yuuki", {36.298223,139.872371}, Prefectures::Ibaraki},
   {543937681, "Shimodate", {36.304147,139.978334}, Prefectures::Ibaraki},
   {544040382, "Iwase", {36.359588,140.108271}, Prefectures::Ibaraki},
   {544041494, "Kasama", {36.373302,140.246142}, Prefectures::Ibaraki},
-  {544040382, "Iwase", {36.359588,140.108271}, Prefectures::Ibaraki},
   {544053703, "Shirosato", {36.488544,140.307827}, Prefectures::Ibaraki},
   {544053954, "Uritura", {36.498221,140.449424}, Prefectures::Ibaraki},
   {544063533, "HitachiOomiya", {36.547132,140.412619}, Prefectures::Ibaraki},
@@ -301,13 +299,89 @@ std::vector<info_t> data = {
   {544022924, "Hatori", {36.247523,140.286754}, Prefectures::Ibaraki},
   {544022223, "Ishioka", {36.19095,140.28025}, Prefectures::Ibaraki},
   {544014812, "Hokota", {36.152444,140.520298}, Prefectures::Ibaraki},
-  {544071821, "Toriyamaeki", {}, Prefectures::Ibaraki},
   {544075024, "Hitachi", {36.590439,140.661847}, Prefectures::Ibaraki},
   {554005573, "Takahagi", {36.714482,140.717003}, Prefectures::Ibaraki},
   {554012281, "HitachDaiko", {36.77094,140.3508}, Prefectures::Ibaraki},
   {554015494, "Isohara", {36.790502,140.746164}, Prefectures::Ibaraki},
   
+  {543925362, "Koga", {36.194597,139.709555}, Prefectures::Tochigi},
+  {543925784, "Nogi", {36.229954,139.734718}, Prefectures::Tochigi},
+  {543933954, "Ashikaga", {36.331824,139.455877}, Prefectures::Tochigi},
+  {543934861, "Sano", {36.316738,139.578856}, Prefectures::Tochigi},
+  {543945063, "ShinOhirashita", {36.339024,139.701633}, Prefectures::Tochigi},
+  {543936744, "Koyama", {36.313121,139.806324}, Prefectures::Tochigi},
+  {543946781, "Jichiidaieki", {36.395411,139.854729}, Prefectures::Tochigi},
+  {543957224, "Kamimikawa", {36.43922,139.909927}, Prefectures::Tochigi},
+  {544050203, "Mouka", {36.439188,140.002576}, Prefectures::Tochigi},
+  {544050573, "Mashiko", {36.463321,140.088886}, Prefectures::Tochigi},
+  {544061344, "Mogi", {36.530794,140.181362}, Prefectures::Tochigi},
+  {544060544, "Hagacho", {36.548215,140.058199}, Prefectures::Tochigi},
+  {543956661, "Omochanomachi", {36.466668,139.829498}, Prefectures::Tochigi},
+  {543965694, "Kanuma", {36.557266,139.744969}, Prefectures::Tochigi},
+  {543967712, "Utsunomiya", {36.559023,139.898451}, Prefectures::Tochigi},
+  {543977583, "Takarazumidera", {36.631476,139.979498}, Prefectures::Tochigi},
+  {553907164, "Ujiie", {36.681632,139.962097}, Prefectures::Tochigi},
+  {554030642, "Kuroiso", {36.9699,140.059446}, Prefectures::Tochigi},
+  {554040294, "Nasucho", {37.01977,140.121006}, Prefectures::Tochigi},
+  {553917644, "Yaita", {36.806617,139.932955}, Prefectures::Tochigi},
+  {553905642, "Nikko", {36.720785,139.686834}, Prefectures::Tochigi},
+  {544071821, "KarasuyamaKeisatsu", {36.652108,140.158461}, Prefectures::Tochigi},
+  {543925614, "Itakura", {36.222008,139.648559}, Prefectures::Gunma},
+  {543924923, "Tatebayashi", {36.245994,139.528202}, Prefectures::Gunma},
+  {543933172, "Honnakanoeki", {36.258552,139.469758}, Prefectures::Gunma},
+  {543933122, "Nishikoizumi", {36.25848,139.408457}, Prefectures::Gunma},
+  {543933501, "Ohta", {36.294137,139.378518}, Prefectures::Gunma},
+  {543942962, "Kiryu", {36.411145,139.333079}, Prefectures::Gunma},
+  {543952121, "Akagi", {36.425779,139.276292}, Prefectures::Gunma},
+  {543931952, "Isezaki", {36.326906,139.193895}, Prefectures::Gunma},
+  {543930693, "Tamamuracho", {36.304404,139.114992}, Prefectures::Gunma},
+  {543930062, "Hujioka", {36.250159,139.083324}, Prefectures::Gunma},
+  {543837043, "Jyoshuhukushima", {36.2563,138.929675}, Prefectures::Gunma},
+  {543837121, "Higashitomioka", {36.260842,138.901856}, Prefectures::Gunma},
+  {543826522, "Shimonita", {36.210588,138.786197}, Prefectures::Gunma},
+  {543930804, "Takasaki", {36.322827,139.012662}, Prefectures::Gunma},
+  {543940554, "Maebashi", {36.383184,139.073217}, Prefectures::Gunma},
+  {543950304, "Yoshioka", {36.447377,139.009948}, Prefectures::Gunma},
+  {543950804, "Shibukawa", {36.491322,139.008798}, Prefectures::Gunma},
+  {543876081, "Nakanojyo", {36.58539,138.851446}, Prefectures::Gunma},
+  {543866854, "Gunmabara", {36.571722,138.824408}, Prefectures::Gunma},
+  {543970722, "Numata", {36.6425,139.035623}, Prefectures::Gunma},
 };
+
+bool comp_id(const info_t& a, const info_t& b)
+{
+  return a.id < b.id;
+}
+
+int check_id(int prev_id, const info_t& info)
+{
+  auto curr_id = info.id;
+  assert(prev_id != curr_id);
+  return curr_id;
+}
+
+bool comp_place(const info_t& a, const info_t& b)
+{
+  return a.place < b.place;
+}
+
+std::string check_place(std::string prev_place, const info_t& info)
+{
+  auto curr_place = info.place;
+  assert(prev_place != curr_place);
+  return curr_place;
+}
+
+void check_valid()
+{
+  using namespace std;
+  vector<info_t> tmp;
+  copy(begin(data), end(data), back_inserter(tmp));
+  sort(begin(tmp), end(tmp), comp_id);
+  accumulate(begin(tmp), end(tmp), 0, check_id);
+  sort(begin(tmp), end(tmp), comp_place);
+  accumulate(begin(tmp), end(tmp), string(""), check_place);
+}
 
 enum kind_t { time_s, generation, place };
 
@@ -459,7 +533,7 @@ inline bool subr(const info_t& info)
 inline void usage(const char* prog)
 {
   using namespace std;
-  cerr << "usage % " << prog << " [-s Nihonbashi] [-e Shibuya]\n";
+  cerr << "usage % " << prog << " [-s Nihonbashi] [-e Shibuya] [-i]\n";
 }
 
 inline bool comp(info_t info, std::string name)
@@ -470,6 +544,8 @@ inline bool comp(info_t info, std::string name)
 int main(int argc, char** argv)
 {
   using namespace std;
+  check_valid();
+  
   string s, e;
   bool ignore = false;
   for (int opt ; (opt = getopt(argc, argv, "s:e:i")) != -1 ; ) {
