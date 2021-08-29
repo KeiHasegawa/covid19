@@ -23,6 +23,7 @@ enum class Prefectures {
   Kyoto,
   Wakayama,
   Shiga,
+  Okinawa,
 };
 
 struct info_t {
@@ -566,6 +567,28 @@ std::vector<info_t> data = {
   {523546091, "Ohtsu", {35.003051,135.864572}, Prefectures::Shiga},
   {523536853, "Yamashina", {34.992374,135.817157}, Prefectures::Shiga},
 
+  {392725543, "OkinawaKentyou", {26.214395,127.679337}, Prefectures::Okinawa},
+  {392715932, "Toyomijyou", {26.177104,127.681291}, Prefectures::Okinawa},
+  {392715433, "Itoman", {26.123542,127.665856}, Prefectures::Okinawa},
+  {392715493, "Yaesecho", {26.123528,127.742226}, Prefectures::Okinawa},
+  {392725283, "Nanpubara", {26.193297,127.728236}, Prefectures::Okinawa},
+  {392725972, "Urazoe", {26.245875,127.721865}, Prefectures::Okinawa},
+  {392716711, "Nanjyo", {26.146106,127.769519}, Prefectures::Okinawa},
+  {392726303, "Yonabaracho", {26.199558,127.755468}, Prefectures::Okinawa},
+  {392726604, "Saibaracho", {26.222837,127.758824}, Prefectures::Okinawa},
+  {392736231, "Nakajyomura", {26.262176,127.789834}, Prefectures::Okinawa},
+  {392736323, "Ginowan", {26.281497,127.778435}, Prefectures::Okinawa},
+  {392736631, "Kitanakajyo", {26.301052,127.793063}, Prefectures::Okinawa},
+  {392746041, "OkinawaCity", {26.334248,127.80547}, Prefectures::Okinawa},
+  {392746301, "Kadenacho", {26.361372,127.755332}, Prefectures::Okinawa},
+  {392746582, "Uruma", {26.378871,127.857378}, Prefectures::Okinawa},
+  {392757443, "Kanatakecho", {26.456123,127.926107}, Prefectures::Okinawa},
+  {392757783, "Ginoza", {26.481576,127.97558}, Prefectures::Okinawa},
+  {392777181, "Nago", {26.591555,127.977475}, Prefectures::Okinawa},
+  {402706544, "Iemura", {26.713491,127.807017}, Prefectures::Okinawa},
+  {372512623, "Miyako", {24.846095,125.301883}, Prefectures::Okinawa},
+  {362441023, "Ishigaki", {24.471136,124.205}, Prefectures::Okinawa},
+  
 };
 
 bool comp_id(const info_t& a, const info_t& b)
@@ -768,13 +791,14 @@ int main(int argc, char** argv)
   
   string s, e;
   bool ignore = false;
-  for (int opt ; (opt = getopt(argc, argv, "s:e:i01")) != -1 ; ) {
+  for (int opt ; (opt = getopt(argc, argv, "s:e:i012")) != -1 ; ) {
     switch (opt) {
     case 's': s = optarg; break;
     case 'e': e = optarg; break;
     case 'i': ignore = true; break;
     case '0': s = "Nihonbashi"; e = "Numata"; break;
-    case '1': s = "Umeda"; break;
+    case '1': s = "Umeda"; e = "Yamashina"; break;
+    case '2': s = "OkinawaKentyou"; break;
     default: usage(argv[0]); return 1;
     }
   }
