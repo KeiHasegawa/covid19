@@ -2238,6 +2238,21 @@ namespace mine {
     return a/b * yscale;
   }
   pair<double, double> coord;
+  inline int calc_t(int h)
+  {
+    timeval res;
+    gettimeofday(&res, nullptr);
+    auto tm = localtime(&res.tv_sec);
+    auto t = res.tv_sec;
+    t -= tm->tm_sec;
+    t -= tm->tm_min * 60;
+    auto d = tm->tm_hour - h;
+    if (d < 0)
+      d += 24;
+    assert(d >= 0);
+    t -= d * 3600;
+    return t;
+  }
   inline string out_header()
   {
     cout << "#include <map>\n";
@@ -2255,7 +2270,8 @@ namespace mine {
     ostringstream os;
     auto x = coord.first;
     auto y = coord.second;
-    os << '_' << x << '_' << y;
+    auto t = calc_t(14);   // any value is OK (14, 15, ...)
+    os << '_' << x << '_' << y << '_' << t;
     string tn = "gn" + os.str();
     auto p = tn.find_first_of('.');
     if (p != string::npos)
