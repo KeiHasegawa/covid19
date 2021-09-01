@@ -85,6 +85,9 @@ extern vector<pair<double, double> > okinawa;
 extern vector<pair<double, double> > hokkaido;
 extern vector<pair<double, double> > aichi;
 extern vector<pair<double, double> > hukuoka;
+extern vector<pair<double, double> > miyagi;
+extern vector<pair<double, double> > shizuoka;
+extern vector<pair<double, double> > hiroshima;
 
 struct map_map : map<string, vector<pair<double, double> >*> {
   map_map()
@@ -106,6 +109,9 @@ struct map_map : map<string, vector<pair<double, double> >*> {
     (*this)["Hokkaido"] = &hokkaido;
     (*this)["Aichi"] = &aichi;
     (*this)["Hukuoka"] = &hukuoka;
+    (*this)["Miyagi"] = &miyagi;
+    (*this)["Shizuoka"] = &shizuoka;
+    (*this)["Hiroshima"] = &hiroshima;
   }
 } map_map;
 
@@ -233,6 +239,9 @@ struct range_data : map<string, int> {
     (*this)["Hokkaido"] = 30000;
     (*this)["Aichi"] = 30000;
     (*this)["Hukuoka"] = 30000;
+    (*this)["Miyagi"] = 20000;
+    (*this)["Shizuoka"] = 10000;
+    (*this)["Hiroshima"] = 10000;
   }
 } range_data;
 
