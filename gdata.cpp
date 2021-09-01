@@ -2253,18 +2253,20 @@ namespace mine {
     t -= d * 3600;
     return t;
   }
+  string pref;
   inline string out_header()
   {
     cout << "#include <map>\n";
     cout << "#include <vector>\n";
     cout << "#include <tuple>\n";
+    cout << "#include <string>\n";
     cout << "using namespace std;\n\n";
     cout << "struct info_t {\n";
     cout << "  map<int, int> tm;\n";
     cout << "  vector<pair<int, int> > gn;\n";
     cout << "  tuple<int, int, int> pl;\n";
     cout << "};\n";
-    cout << "extern map<pair<double, double>, info_t> ";
+    cout << "extern map<string, map<pair<double, double>, info_t> > ";
     string vn = "g_crow_data";
     cout << vn << ";\n\n";
     ostringstream os;
@@ -2283,6 +2285,7 @@ namespace mine {
     cout << "  " << tn << "()\n";
     cout << "  " << "{\n";
     cout << "  " << "  auto& table = " << vn;
+    cout << '[' << '"' << pref << '"' << ']';
     cout << "[make_pair(" << x << ',' << y << ")].gn;\n";
     return tn;
   }
@@ -2464,6 +2467,11 @@ main(int argc, char *argv[])
 	    if (++i >= argc) usage();
 	    char* end;
 	    mine::coord.second = strtod(argv[i], &end);
+	    continue;
+	}
+	if (strcmp(argv[i], "-p") == 0) {
+	    if (++i >= argc) usage();
+	    mine::pref = argv[i];
 	    continue;
 	}
 	if (strcmp(argv[i], "-inverse") == 0) { /* for compatibility */
