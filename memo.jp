@@ -160,3 +160,36 @@ https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v3_0.html#prefecture13
 https://toyokeizai.net/articles/-/448957
 
 少し減らしたくらいでは陽性者は減らないらしい.
+
+
+各国のデータが以下から入手できるらしい.
+
+https://github.com/CSSEGISandData/COVID-19
+
+% mkdir CSSEGISandData
+% cd CSSEGISandData
+% mkdir COVID-19
+% cd COVID-19
+% git init
+% git pull https://github.com/CSSEGISandData/COVID-19
+
+
+(*) 世界地図
+
+https://upload.wikimedia.org/wikipedia/commons/9/9f/BlankMap-World-Equirectangular.svg
+
+SVG というのは XML でこれが一般的な地図データらしい. firefox もサポートしている.
+
+/media/ca850f52-0605-42a7-9fd4-899de9edf461/work/CSSEGISandData/COVID-19/archived_data/archived_time_series/time_series_19-covid-Confirmed_archived_0325.csv
+
+を見ると
+
+2020/01/22 の日本の感染者数が 36.0 だったことが
+2020/03/23                1086.0 らしいが      <- Google の結果では 40 人
+
+
+/media/ca850f52-0605-42a7-9fd4-899de9edf461/work/CSSEGISandData/COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv
+
+によれば 2021/08/31 の日本の感染者数は累計で 1491514 だが
+
+

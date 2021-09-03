@@ -89,7 +89,8 @@ namespace mine {
     auto b = zero_line.second;
     auto e = b + 38;
     for (int y = b ; y != e ; ++y) {
-      assert(XGetPixel(in_image, x, y) == 0xffffff);
+      auto v = XGetPixel(in_image, x, y);
+      assert(v == 0xffffff);
     }
   }
 
