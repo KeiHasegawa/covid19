@@ -99,6 +99,22 @@ extern vector<pair<double, double> > ishikawa;
 extern vector<pair<double, double> > hukui;
 extern vector<pair<double, double> > yamanashi;
 extern vector<pair<double, double> > nagano;
+extern vector<pair<double, double> > gihu;
+extern vector<pair<double, double> > mie;
+extern vector<pair<double, double> > tottori;
+extern vector<pair<double, double> > shimane;
+extern vector<pair<double, double> > okayama;
+extern vector<pair<double, double> > yamaguchi;
+extern vector<pair<double, double> > tokushima;
+extern vector<pair<double, double> > kagawa;
+extern vector<pair<double, double> > ehime;
+extern vector<pair<double, double> > kouchi;
+extern vector<pair<double, double> > saga;
+extern vector<pair<double, double> > nagasaki;
+extern vector<pair<double, double> > kumamoto;
+extern vector<pair<double, double> > ooita;
+extern vector<pair<double, double> > miyazaki;
+extern vector<pair<double, double> > kagoshima;
 
 struct map_map : map<string, vector<pair<double, double> >*> {
   map_map()
@@ -135,6 +151,22 @@ struct map_map : map<string, vector<pair<double, double> >*> {
     (*this)["Hukui"] = &hukui;
     (*this)["Yamanashi"] = &yamanashi;
     (*this)["Nagano"] = &nagano;
+    (*this)["Gihu"] = &gihu;
+    (*this)["Mie"] = &mie;
+    (*this)["Tottori"] = &tottori;
+    (*this)["Shimane"] = &shimane;
+    (*this)["Okayama"] = &okayama;
+    (*this)["Yamaguchi"] = &yamaguchi;
+    (*this)["Tokushima"] = &tokushima;
+    (*this)["Kagawa"] = &kagawa;
+    (*this)["Ehime"] = &ehime;
+    (*this)["Kouchi"] = &kouchi;
+    (*this)["Saga"] = &saga;
+    (*this)["Nagasaki"] = &nagasaki;
+    (*this)["Kumamoto"] = &kumamoto;
+    (*this)["Ooita"] = &ooita;
+    (*this)["Miyazaki"] = &miyazaki;
+    (*this)["Kagoshima"] = &kagoshima;
   }
 } map_map;
 
@@ -238,6 +270,25 @@ bool chose(string area, vector<string>& prefs)
     return true;
   }
 
+  if (area == "Shikoku") {
+    prefs.push_back("Tokushima");
+    prefs.push_back("Kagawa");
+    prefs.push_back("Ehime");
+    prefs.push_back("Kouchi");
+    return true;
+  }
+
+  if (area == "Kyushuu") {
+    prefs.push_back("Hukuoka");
+    prefs.push_back("Saga");
+    prefs.push_back("Nagasaki");
+    prefs.push_back("Kumamoto");
+    prefs.push_back("Ooita");
+    prefs.push_back("Miyazaki");
+    prefs.push_back("Kagoshima");
+    return true;
+  }
+  
   cerr << "Unknown area : `" << area << "'\n"; 
   return false;
 }
@@ -276,6 +327,22 @@ struct range_data : map<string, int> {
     (*this)["Hukui"] = 5000;
     (*this)["Yamanashi"] = 3000;
     (*this)["Nagano"] = 5000;
+    (*this)["Gihu"] = 7000;
+    (*this)["Mie"] = 5000;
+    (*this)["Tottori"] = 5000;
+    (*this)["Shimane"] = 3000;
+    (*this)["Okayama"] = 10000;
+    (*this)["Yamaguchi"] = 3000;
+    (*this)["Tokushima"] = 3000;
+    (*this)["Kagawa"] = 4000;
+    (*this)["Ehime"] = 7000;
+    (*this)["Kouchi"] = 4000;
+    (*this)["Saga"] = 4000;
+    (*this)["Nagasaki"] = 15000;
+    (*this)["Kumamoto"] = 4000;
+    (*this)["Ooita"] = 4000;
+    (*this)["Miyazaki"] = 3000;
+    (*this)["Kagoshima"] = 7500;
   }
 } range_data;
 

@@ -193,3 +193,8 @@ SVG というのは XML でこれが一般的な地図データらしい. firefo
 によれば 2021/08/31 の日本の感染者数は累計で 1491514 だが
 
 
+https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv
+
+https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv
+
+/media/ca850f52-0605-42a7-9fd4-899de9edf461/work/CSSEGISandData/COVID-19/csse_covid_19_data/csse_covid_19_time_series/

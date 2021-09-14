@@ -83,6 +83,18 @@ namespace mine {
     center.first += place_button.first - 589;
     center.second += place_button.second - 480;
   }
+  inline bool no_alian(XImage* in_image)
+  {
+    auto x = zero_line.first;
+    auto b = zero_line.second;
+    auto e = b + 38;
+    for (int y = b ; y != e ; ++y) {
+      auto v = XGetPixel(in_image, x, y);
+      if (v != sky_blue)
+	return false;
+    }
+    return true;
+  }
   inline void check_zero(XImage* in_image)
   {
     auto x = zero_line.first;
@@ -133,7 +145,7 @@ namespace mine {
     }
     return -1;  // not found
   }
-  inline int calc_t(int h)
+  inline int calc_t()
   {
     timeval res;
     gettimeofday(&res, nullptr);
@@ -141,11 +153,6 @@ namespace mine {
     auto t = res.tv_sec;
     t -= tm->tm_sec;
     t -= tm->tm_min * 60;
-    auto d = tm->tm_hour - h;
-    if (d < 0)
-      d += 24;
-    assert(d >= 0);
-    t -= d * 3600;
     return t;
   }
   string pref;
@@ -167,7 +174,7 @@ namespace mine {
     ostringstream os;
     auto x = coord.first;
     auto y = coord.second;
-    auto t = calc_t(14);  // any value is OK (14, 15, ...)
+    auto t = calc_t();
     os << '_' << x << '_' << y << '_' << t;
     string tn = "pl" + os.str();
     auto p = tn.find_first_of('.');
@@ -203,10 +210,16 @@ namespace mine {
       while (c - b < delta) {
 	c = get_white(c+1, in_image);
 	if (c == -1) {
-	  // very special case. For example, no alian
-	  assert(a == 90);
-	  c = b;
-	  b = a;
+	  // very special case. For example, no alian or, very few alian
+	  if (a == 90) {
+	    // no alian
+	    c = b;
+	    b = a;
+	  }
+	  else {
+	    // very few alian
+	    c = b;
+	  }
 	  break;
 	}
       }
@@ -1299,9 +1312,14 @@ Do_Direct(Display *dpy, XWDFileHeader *header, Colormap *colormap,
 	  using namespace mine;
 	  find_place_button(in_image);
 	  update();
-	  check_zero(in_image);
+	  bool no_a = no_alian(in_image);
+	  if (!no_a)
+	    check_zero(in_image);
 	  auto nm = out_header();
-	  out_data(in_image);
+	  if (no_a)
+	    cout << "    table = make_tuple(100,0,0)\n";
+	  else
+	    out_data(in_image);
 	  out_footer(nm);
 	  if (1)
 	    exit(0);

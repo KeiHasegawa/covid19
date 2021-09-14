@@ -41,82 +41,92 @@ enum class Prefectures {
   Hukui,
   Yamanashi,
   Nagano,
+  Gihu,
+  Mie,
+  Tottori,
+  Shimane,
+  Okayama,
+  Yamaguchi,
+  Saga,
+  Nagasaki,
+  Kumamoto,
+  Kagoshima,
+  Miyazaki,
+  Ooita,
+  Kagawa,
+  Tokushima,
+  Ehime,
+  Kouchi,
 };
 
-std::string to_string(Prefectures p)
+std::vector<std::pair<Prefectures, std::string> > pref_str = {
+  { Prefectures::Tokyo, "Tokyo"},
+  { Prefectures::Kanagawa, "Kanagawa"},
+  { Prefectures::Saitama, "Saitama"},
+  { Prefectures::Chiba, "Chiba"},
+  { Prefectures::Ibaraki, "Ibaraki"},
+  { Prefectures::Tochigi, "Tochigi"},
+  { Prefectures::Gunma, "Gunma"},
+  { Prefectures::Osaka, "Osaka"},
+  { Prefectures::Hyougo, "Hyougo"},
+  { Prefectures::Nara, "Nara"},
+  { Prefectures::Kyoto, "Kyoto"},
+  { Prefectures::Wakayama, "Wakayama"},
+  { Prefectures::Shiga, "Shiga"},
+  { Prefectures::Okinawa, "Okinawa"},
+  { Prefectures::Hokkaido, "Hokkaido"},
+  { Prefectures::Aichi, "Aichi"},
+  { Prefectures::Hukuoka, "Hukuoka"},    
+  { Prefectures::Miyagi, "Miyagi"},
+  { Prefectures::Shizuoka, "Shizuoka"},
+  { Prefectures::Hiroshima, "Hiroshima"},
+  { Prefectures::Aomori, "Aomori"},
+  { Prefectures::Iwate, "Iwate"},
+  { Prefectures::Akita, "Akita"},
+  { Prefectures::Yamagata, "Yamagata"},
+  { Prefectures::Hukushima, "Hukushima"},
+  { Prefectures::Niigata, "Niigata"},
+  { Prefectures::Toyama, "Toyama"},
+  { Prefectures::Ishikawa, "Ishikawa"},
+  { Prefectures::Hukui, "Hukui"},
+  { Prefectures::Yamanashi, "Yamanashi"},
+  { Prefectures::Nagano, "Nagano"},
+  { Prefectures::Gihu, "Gihu"},
+  { Prefectures::Mie, "Mie"},
+  { Prefectures::Tottori, "Tottori"},
+  { Prefectures::Shimane, "Shimane"},
+  { Prefectures::Okayama, "Okayama"},
+  { Prefectures::Yamaguchi, "Yamaguchi"},
+  { Prefectures::Saga, "Saga"},
+  { Prefectures::Nagasaki, "Nagasaki"},
+  { Prefectures::Kumamoto, "Kumamoto"},
+  { Prefectures::Kagoshima, "Kagoshima"},
+  { Prefectures::Miyazaki, "Miyazaki"},
+  { Prefectures::Ooita, "Ooita"},
+  { Prefectures::Kagawa, "Kagawa"},
+  { Prefectures::Tokushima, "Tokushima"},
+  { Prefectures::Ehime, "Ehime"},
+  { Prefectures::Kouchi, "Kouchi"},
+};
+
+std::string to_string(Prefectures x)
 {
-  switch (p) {
-  case Prefectures::Tokyo: return "Tokyo";
-  case Prefectures::Kanagawa: return "Kanagawa";
-  case Prefectures::Saitama: return "Saitama";
-  case Prefectures::Chiba: return "Chiba";
-  case Prefectures::Ibaraki: return "Ibaraki";
-  case Prefectures::Tochigi: return "Tochigi";
-  case Prefectures::Gunma: return "Gunma";
-  case Prefectures::Osaka: return "Osaka";
-  case Prefectures::Hyougo: return "Hyougo";
-  case Prefectures::Nara: return "Nara";
-  case Prefectures::Kyoto: return "Kyoto";
-  case Prefectures::Wakayama: return "Wakayama";
-  case Prefectures::Shiga: return "Shiga";
-  case Prefectures::Okinawa: return "Okinawa";
-  case Prefectures::Hokkaido: return "Hokkaido";
-  case Prefectures::Aichi: return "Aichi";
-  case Prefectures::Hukuoka: return "Hukuoka";    
-  case Prefectures::Miyagi: return "Miyagi";
-  case Prefectures::Shizuoka: return "Shizuoka";
-  case Prefectures::Hiroshima: return "Hiroshima";
-  case Prefectures::Aomori: return "Aomori";
-  case Prefectures::Iwate: return "Iwate";
-  case Prefectures::Akita: return "Akita";
-  case Prefectures::Yamagata: return "Yamagata";
-  case Prefectures::Hukushima: return "Hukushima";
-  case Prefectures::Niigata: return "Niigata";
-  case Prefectures::Toyama: return "Toyama";
-  case Prefectures::Ishikawa: return "Ishikawa";
-  case Prefectures::Hukui: return "Hukui";
-  case Prefectures::Yamanashi: return "Yamanashi";
-  default:
-  case Prefectures::Nagano: return "Nagano";
-  }
+  using namespace std;
+  auto it = find_if(begin(pref_str), end(pref_str),
+		    [x](const pair<Prefectures, string>& p)
+		    { return p.first == x; });
+  assert(it != end(pref_str));
+  return it->second;
 }
 
-
-Prefectures from_string(std::string s)
+Prefectures from_string(std::string x)
 {
-  if (s == "Tokyo") return Prefectures::Tokyo;
-  if (s == "Kanagawa") return Prefectures::Kanagawa;
-  if (s == "Saitama") return Prefectures::Saitama;
-  if (s == "Chiba") return Prefectures::Chiba;
-  if (s == "Ibaraki") return Prefectures::Ibaraki;
-  if (s == "Tochigi") return Prefectures::Tochigi;
-  if (s == "Gunma") return Prefectures::Gunma;
-  if (s == "Osaka") return Prefectures::Osaka;
-  if (s == "Hyougo") return Prefectures::Hyougo;
-  if (s == "Nara") return Prefectures::Nara;
-  if (s == "Kyoto") return Prefectures::Kyoto;
-  if (s == "Wakayama") return Prefectures::Wakayama;
-  if (s == "Shiga") return Prefectures::Shiga;
-  if (s == "Okinawa") return Prefectures::Okinawa;
-  if (s == "Hokkaido") return Prefectures::Hokkaido;
-  if (s == "Aichi") return Prefectures::Aichi;
-  if (s == "Hukuoka") return Prefectures::Hukuoka;    
-  if (s == "Miyagi") return Prefectures::Miyagi;
-  if (s == "Shizuoka") return Prefectures::Shizuoka;
-  if (s == "Hiroshima") return Prefectures::Hiroshima;
-  if (s == "Aomori") return Prefectures::Aomori;
-  if (s == "Iwate") return Prefectures::Iwate;
-  if (s == "Akita") return Prefectures::Akita;
-  if (s == "Yamagata") return Prefectures::Yamagata;
-  if (s == "Hukushima") return Prefectures::Hukushima;
-  if (s == "Niigata") return Prefectures::Niigata;
-  if (s == "Toyama") return Prefectures::Toyama;
-  if (s == "Ishikawa") return Prefectures::Ishikawa;
-  if (s == "Hukui") return Prefectures::Hukui;
-  if (s == "Yamanashi") return Prefectures::Yamanashi;
-  if (s == "Nagano") return Prefectures::Nagano;
-  asm("int3");
-  return Prefectures::Tokyo;
+  using namespace std;
+  auto it = find_if(begin(pref_str), end(pref_str),
+		    [x](const pair<Prefectures, string>& p)
+		    { return p.second == x; });
+  assert(it != end(pref_str));
+  return it->first;
 }
 
 struct info_t {
@@ -636,8 +646,6 @@ std::vector<info_t> data = {
   {503640811, "Uden", {33.737114,136.015908}, Prefectures::Wakayama},
   {503650633, "Adawa", {33.805305,136.04298}, Prefectures::Wakayama},
   {503660674, "Kumano", {33.889638,136.09886}, Prefectures::Wakayama},
-  {513601853, "Owasi", {34.074725,136.190312}, Prefectures::Wakayama},
-  {513611381, "Aiga", {34.111582,136.227184}, Prefectures::Wakayama},
 
   {533602511, "Nagahama", {35.378545,136.264941}, Prefectures::Shiga},
   {523672733, "Yonehara", {35.31477,136.289845}, Prefectures::Shiga},
@@ -843,10 +851,6 @@ std::vector<info_t> data = {
   {503022584, "Hukudaimae", {33.547478,130.36222}, Prefectures::Hukuoka},
   {503032061, "Meihama", {33.583748,130.325073}, Prefectures::Hukuoka},
   {503021654, "Chikuzenmaehara", {33.557077,130.199326}, Prefectures::Hukuoka},
-  {502917373, "Karatsu", {33.445938,129.968507}, Prefectures::Hukuoka},
-  {493060314, "Takeo", {33.19647,130.023086}, Prefectures::Hukuoka},
-  {493050542, "Ureshino", {33.100892,129.987055}, Prefectures::Hukuoka},
-  {493050374, "Bizenkashima", {33.114459,130.097808}, Prefectures::Hukuoka},
   {503131234, "Yoshitomi", {33.604845,131.173822}, Prefectures::Hukuoka},
   {503131403, "Ushimaeki", {33.621218,131.126315}, Prefectures::Hukuoka},
   {503140033, "Chikujyoueki", {33.673149,131.03773}, Prefectures::Hukuoka},
@@ -882,12 +886,16 @@ std::vector<info_t> data = {
   {503023474, "Kasugaharaeki", {33.537964,130.473126}, Prefectures::Hukuoka},
   {503023242, "Hakataminami", {33.517855,130.436852}, Prefectures::Hukuoka},
   {503014723, "Tenpaisan", {33.482291,130.529984}, Prefectures::Hukuoka},
-  {503014222, "Keyakidai", {33.434116,130.533401}, Prefectures::Hukuoka},
   {503026882, "Soeda", {33.567274,130.85659}, Prefectures::Hukuoka},
   {503006003, "Chikugoyoshii", {33.340909,130.753134}, Prefectures::Hukuoka},
   {503015021, "Amaki", {33.419218,130.653588}, Prefectures::Hukuoka},
   {503004994, "Tachiarai", {33.413898,130.618894}, Prefectures::Hukuoka},
   {503004743, "Nishitetsukogouri", {33.396121,130.553567}, Prefectures::Hukuoka},
+  {503004872, "Imaguma", {33.403821,130.593985}, Prefectures::Hukuoka},
+  {493043353, "Ohmuta", {33.029659,130.44409}, Prefectures::Hukuoka},
+  {493063404, "Ookawa", {33.206618,130.384004}, Prefectures::Hukuoka},
+  {493074712, "Kurume", {33.312436,130.521461}, Prefectures::Hukuoka},  
+  
   {584124744, "Kesennuma", {38.89852,141.562502}, Prefectures::Miyagi},
   {574037101, "Aobadoori", {38.260683,140.878116}, Prefectures::Miyagi},
   {574037102, "Sendaieki", {38.260132,140.882437}, Prefectures::Miyagi},
@@ -1225,7 +1233,321 @@ std::vector<info_t> data = {
   {533727612, "NaganoToyooka", {35.551373,137.896088}, Prefectures::Nagano},
   {533727504, "Ichita", {35.549344,137.886543}, Prefectures::Nagano},
   {533726252, "Iida", {35.519564,137.821249}, Prefectures::Nagano},
+
+  {533666682, "Minoshiratori", {35.884914,136.860593}, Prefectures::Gihu},
+  {543712603, "Takayama", {36.141076,137.251365}, Prefectures::Gihu},
+  {543721851, "Hidahurukawa", {36.236726,137.189603}, Prefectures::Gihu},
+  {533751693, "Gero", {35.921587,137.465382}, Prefectures::Gihu},
+  {533720494, "Kamiasou", {35.541425,137.118725}, Prefectures::Gihu},
+  {533724001, "Nakatsugawa", {35.500502,137.503153}, Prefectures::Gihu},
+  {533713424, "Ena", {35.455097,137.40817}, Prefectures::Gihu},
+  {533702401, "Mizunami", {35.36907,137.252033}, Prefectures::Gihu},
+  {533701342, "Toki", {35.359764,137.182195}, Prefectures::Gihu},
+  {533711711, "Yamozu", {35.476007,137.14143}, Prefectures::Gihu},
+  {533711103, "Odaka", {35.429718,137.128229}, Prefectures::Gihu},
+  {533700092, "Tajimi", {35.334979,137.121042}, Prefectures::Gihu},
+  {533710851, "Nakakawabe", {35.487542,137.065359}, Prefectures::Gihu},
+  {533710124, "Imawatarieki", {35.432315,137.037186}, Prefectures::Gihu},
+  {533710312, "Minooota", {35.445588,137.019416}, Prefectures::Gihu},
+  {533617181, "Sakaiwa", {35.426338,136.976865}, Prefectures::Gihu},
+  {533617772, "Toka", {35.47531,136.969319}, Prefectures::Gihu},
+  {533627533, "Umeyama", {35.548709,136.917939}, Prefectures::Gihu},
+  {533617831, "Hamonokaikan", {35.483542,136.914116}, Prefectures::Gihu},
+  {533606862, "Nakaeki", {35.400514,136.835804}, Prefectures::Gihu},
+  {533606413, "Kasamatsu", {35.374073,136.764287}, Prefectures::Gihu},
+  {533606614, "Ginan", {35.389779,136.769229}, Prefectures::Gihu},
+  {533606902, "Gihueki", {35.409528,136.756466}, Prefectures::Gihu},
+  {533615434, "Moreragihu", {35.455406,136.670048}, Prefectures::Gihu},
+  {533615242, "Kitakatacho", {35.435774,136.684343}, Prefectures::Gihu},
+  {533605753, "Hozumi", {35.396082,136.693097}, Prefectures::Gihu},
+  {533605031, "Anpachicho", {35.335418,136.665415}, Prefectures::Gihu},
+  {523675744, "Shinhatori", {35.315747,136.686397}, Prefectures::Gihu},
+  {533615601, "Oonocho", {35.470708,136.627665}, Prefectures::Gihu},
+  {533614654, "Ibieki", {35.470237,136.572521}, Prefectures::Gihu},
+  {533614352, "Kitaikeno", {35.443434,136.573661}, Prefectures::Gihu},
+  {533614081, "Hirokoube", {35.419827,136.602104}, Prefectures::Gihu},
+  {533604393, "Oogaki", {35.366778,136.617826}, Prefectures::Gihu},
+  {533604421, "Tarui", {35.369692,136.531084}, Prefectures::Gihu},
+  {533603374, "Sekigahara", {35.363802,136.470368}, Prefectures::Gihu},
+  {523674751, "Minotakada", {35.309061,136.563584}, Prefectures::Gihu},
+  {523664683, "Komano", {35.223682,136.603583}, Prefectures::Gihu},
+
+  {523645744, "Nishikuwana", {35.06573,136.683999}, Prefectures::Mie},
+  {523645422, "Asahieki", {35.033733,136.657974}, Prefectures::Mie},
+  {523645124, "Kwagoetomisubara", {35.016682,136.660154}, Prefectures::Mie},
+  {523634691, "Yokkaichi", {34.966323,136.618286}, Prefectures::Mie},
+  {523624662, "Suzuka", {34.884064,136.58238}, Prefectures::Mie},
+  {523654034, "Taianeki", {35.091982,136.545357}, Prefectures::Mie},
+  {523644111, "Komono", {35.008732,136.517376}, Prefectures::Mie},
+  {523623491, "Idagawa", {34.86822,136.49255}, Prefectures::Mie},
+  {523604802, "Tsueki", {34.733993,136.510243}, Prefectures::Mie},
+  {523611201, "Uenoshieki", {34.76755,136.129955}, Prefectures::Mie},
+  {513670474, "Meibari", {34.621773,136.095609}, Prefectures::Mie},
+  {513664922, "Matsuzaka", {34.576881,136.535564}, Prefectures::Mie},
+  {513664493, "Saimiya", {34.537871,136.615218}, Prefectures::Mie},
+  {513664032, "Aikaeki", {34.502624,136.545447}, Prefectures::Mie},
+  {513655804, "Tamaru", {34.488556,136.634089}, Prefectures::Mie},
+  {513655873, "Ujiyamada", {34.488268,136.713961}, Prefectures::Mie},
+  {513656871, "Toba", {34.486767,136.843126}, Prefectures::Mie},
+  {513636963, "Ukataeki", {34.329317,136.825901}, Prefectures::Mie},
+  {513645261, "Minamiiki", {34.352059,136.70365}, Prefectures::Mie},
+  {513643722, "Miseyaeki", {34.39477,136.408528}, Prefectures::Mie},
+  {513611381, "Aiga", {34.111582,136.227184}, Prefectures::Mie},
+  {513601853, "Owase", {34.074725,136.190312}, Prefectures::Mie},
+
+  {533411981, "Tottorieki", {35.493999,134.225896}, Prefectures::Tottori},
+  {533317621, "Matsuzaki", {35.46871,133.902042}, Prefectures::Tottori},
+  {533402903, "Gunke", {35.413228,134.251365}, Prefectures::Tottori},
+  {523471183, "Titou", {35.26526,134.225534}, Prefectures::Tottori},
+  {533316474, "Kurayoshi", {35.454752,133.849479}, Prefectures::Tottori},
+  {533315953, "Urayasueki", {35.499611,133.693193}, Prefectures::Tottori},
+  {533313203, "Hiyoshizu", {35.440182,133.380808}, Prefectures::Tottori},
+  {533312064, "Yonago", {35.423417,133.336672}, Prefectures::Tottori},
+  {533321483, "Babasaki", {35.538684,133.22641}, Prefectures::Tottori},
   
+  {533311164, "Arajima", {35.431774,133.2071}, Prefectures::Shimane},
+  {533310632, "Shinjiko", {35.467363,133.046042}, Prefectures::Shimane},
+  {533207122, "Kamonaka", {35.344584,132.911241}, Prefectures::Shimane},
+  {533206302, "Izumo", {35.361195,132.758592}, Prefectures::Shimane},
+  {523263492, "ShimaneOota", {35.200935,132.499685}, Prefectures::Shimane},
+  {523241174, "Kouzueki", {35.012746,132.223147}, Prefectures::Shimane},
+  {523220871, "Hamadaeki", {34.902571,132.088873}, Prefectures::Shimane},
+  {523106171, "Masudaeki", {34.678277,131.839025}, Prefectures::Shimane},
+
+  {523401942, "Nishikatagami", {34.745208,134.184257}, Prefectures::Okayama},
+  {523411523, "Wakieki", {34.797285,134.152814}, Prefectures::Okayama},
+  {523400071, "Okueki", {34.730723,134.152814}, Prefectures::Okayama},
+  {513470922, "Nishiooderaeki", {34.6618,134.037254}, Prefectures::Okayama},
+  {513377853, "Kadotayashiki", {34.656158,133.938948}, Prefectures::Okayama},
+  {513377934, "Nishikawamidori", {34.665556,133.92312}, Prefectures::Okayama},
+  {513377514, "Bizennishi", {34.631919,133.900493}, Prefectures::Okayama},
+  {513357961, "Unoeki", {34.494458,133.953868}, Prefectures::Okayama},
+  {513376262, "Hayajima", {34.602212,133.833257}, Prefectures::Okayama},
+  {513376211, "Kurashiki", {34.60196,133.765753}, Prefectures::Okayama},
+  {523305093, "Sousha", {34.67429,133.738077}, Prefectures::Okayama},
+  {523314493, "Bityuutakahari", {34.788489,133.616078}, Prefectures::Okayama},
+  {513364494, "Kanemitsu", {34.540941,133.620814}, Prefectures::Okayama},
+  {513364043, "Satoshoueki", {34.507749,133.550516}, Prefectures::Okayama},
+  {513364003, "Kasaoka", {34.504804,133.504464}, Prefectures::Okayama},
+  {513373172, "Ihara", {34.592821,133.469103}, Prefectures::Okayama},
+  {523345954, "Tyugokukatsuyama", {35.080576,133.694679}, Prefectures::Okayama},
+  {523337964, "Kikkoueki", {34.998619,133.959102}, Prefectures::Okayama},
+  {523440722, "Higashitsuyama", {35.058669,134.031816}, Prefectures::Okayama},
+  {523440492, "Katsumata", {35.035785,134.118809}, Prefectures::Okayama},
+  {523451443, "Nagicho", {35.123024,134.177426}, Prefectures::Okayama},
+
+  {513221472, "Wagicho", {34.202432,132.220288}, Prefectures::Yamaguchi},
+  {513221083, "Iwakuni", {34.171957,132.225028}, Prefectures::Yamaguchi},
+  {503271152, "Subouooshima", {33.927631,132.19532}, Prefectures::Yamaguchi},
+  {503270583, "Yanagii", {33.965853,132.106398}, Prefectures::Yamaguchi},
+  {503270254, "Heiseicho", {33.938056,132.073056}, Prefectures::Yamaguchi},
+  {503270532, "Tahusecho", {33.958725,132.043834}, Prefectures::Yamaguchi},
+  {503177633, "Hikarieki", {33.973943,131.914817}, Prefectures::Yamaguchi},
+  {513106191, "Shimomatsu", {34.008728,131.868056}, Prefectures::Yamaguchi},
+  {513106641, "Tokuyamaeki", {34.051162,131.802991}, Prefectures::Yamaguchi},
+  {513104652, "Bouhu", {34.053399,131.568457}, Prefectures::Yamaguchi},
+  {513123083, "Yamaguchieki", {34.176454,131.474183}, Prefectures::Yamaguchi},
+  {503172401, "Kotoshiba", {33.952654,131.252433}, Prefectures::Yamaguchi},
+  {513101044, "Onoda", {34.007813,131.185548}, Prefectures::Yamaguchi},
+  {503077334, "Shimonoseki", {33.950577,130.922101}, Prefectures::Yamaguchi},
+  {513121061, "Miroku", {34.169198,131.204445}, Prefectures::Yamaguchi},
+  {513141542, "Nagato", {34.375324,131.185052}, Prefectures::Yamaguchi},
+  {513153022, "Higashihagi", {34.417019,131.410366}, Prefectures::Yamaguchi},
+
+  {502917373, "Karatsu", {33.445938,129.968507}, Prefectures::Saga},
+  {492977203, "Imari", {33.271873,129.876298}, Prefectures::Saga},
+  {493070482, "Nakataku", {33.28332,130.112221}, Prefectures::Saga},
+  {503014222, "Keyakidaieki", {33.434116,130.533401}, Prefectures::Saga},
+  {503004612, "Tashiro", {33.383989,130.524512}, Prefectures::Saga},
+  {493064843, "Hirokawacho", {33.241698,130.551147}, Prefectures::Saga},
+  {493064542, "Yame", {33.211939,130.557874}, Prefectures::Saga},
+  {493063592, "Hainuzuka", {33.209947,130.497604}, Prefectures::Saga},
+  {493053884, "Setaka", {33.157147,130.485385}, Prefectures::Saga},
+  {493063033, "Yakabe", {33.173889,130.415682}, Prefectures::Saga},
+  {493063551, "Hattyoumuta", {33.208918,130.437582}, Prefectures::Saga},
+  {493050374, "Bizenkashima", {33.114459,130.097808}, Prefectures::Saga},
+  {493050542, "Ureshino", {33.100892,129.987055}, Prefectures::Saga},
+  {493060314, "Takeo", {33.19647,130.023086}, Prefectures::Saga},  
+  {493060582, "Oomachichoeki", {33.212412,130.106473}, Prefectures::Saga},
+  {493060593, "Oomachichoyakuba", {33.213759,130.1161}, Prefectures::Saga},
+  {493061622, "Bizenyamaguchi", {33.219393,130.160758}, Prefectures::Saga},
+  {493061963, "Ushitsu", {33.247826,130.201547}, Prefectures::Saga},
+  {493072134, "Sagaeki", {33.264176,130.297397}, Prefectures::Saga},
+  {493072794, "Kamisaki", {33.315766,130.374474}, Prefectures::Saga},
+  {503003153, "Nakaharaeki", {33.346342,130.440411}, Prefectures::Saga},
+  {493073814, "Yoshinosato", {33.324845,130.399378}, Prefectures::Saga},
+
+  {502945953, "Ichiki", {33.749967,129.691357}, Prefectures::Nagasaki},
+  {502905162, "Matsuura", {33.34425,129.707839}, Prefectures::Nagasaki},
+  {502904364, "Tabirahirado", {33.362607,129.582711}, Prefectures::Nagasaki},
+  {492965812, "Sasaeki", {33.236734,129.646875}, Prefectures::Nagasaki},
+  {492965074, "Sasebo", {33.170937,129.720537}, Prefectures::Nagasaki},
+  {492957614, "Hasamicho", {33.137893,129.895548}, Prefectures::Nagasaki},
+  {492946891, "Kawadana", {33.06846,129.863442}, Prefectures::Nagasaki},
+  {492927962, "Oomura", {32.910748,129.962203}, Prefectures::Nagasaki},
+  {493020231, "Isahaya", {32.852064,130.041238}, Prefectures::Nagasaki},
+  {492916972, "Tokitsucho", {32.828751,129.848546}, Prefectures::Nagasaki},
+  {492916683, "Michinoo", {32.804386,129.852857}, Prefectures::Nagasaki},
+  {492907901, "Kankoudoorieki", {32.743298,129.878013}, Prefectures::Nagasaki},
+  {493011821, "NagasakiAinoeki", {32.818944,130.156049}, Prefectures::Nagasaki},
+  {493012494, "Shimabara", {32.790237,130.370656}, Prefectures::Nagasaki},
+  {483072932, "Minamishimabara", {32.659796,130.297847}, Prefectures::Nagasaki},
+
+  {493044731, "Nankancho", {33.061605,130.540972}, Prefectures::Kumamoto},
+  {493033942, "Arao", {32.994287,130.434236}, Prefectures::Kumamoto},
+  {493033261, "Nagasu", {32.935617,130.45432}, Prefectures::Kumamoto},
+  {493034132, "Tamana", {32.926161,130.549355}, Prefectures::Kumamoto},
+  {493025903, "Koppa", {32.916344,130.626295}, Prefectures::Kumamoto},
+  {493045153, "Yamashika", {33.017499,130.691216}, Prefectures::Kumamoto},
+  {493150453, "Ogunicho", {33.121582,131.068152}, Prefectures::Kumamoto},
+  {493130291, "Miyajieki", {32.937259,131.117548}, Prefectures::Kumamoto},
+  {493026591, "Higoootsu", {32.877436,130.866191}, Prefectures::Kumamoto},
+  {493026332, "Misatoki", {32.861787,130.797045}, Prefectures::Kumamoto},
+  {493026224, "Hikarinomori", {32.857687,130.786755}, Prefectures::Kumamoto},
+  {493025393, "Mitsuishi", {32.864157,130.738342}, Prefectures::Kumamoto},
+  {493027021, "Nishihara", {32.834814,130.903007}, Prefectures::Kumamoto},
+  {493110892, "Takamori", {32.819336,131.122476}, Prefectures::Kumamoto},
+  {493015662, "Tsuuchosuji", {32.803275,130.70968}, Prefectures::Kumamoto},
+  {493015453, "Kumamotoeki", {32.790193,130.689915}, Prefectures::Kumamoto},
+  {493016453, "Masujyoucho", {32.791403,130.81637}, Prefectures::Kumamoto},
+  {493016302, "Kenguncho", {32.77831,130.76082}, Prefectures::Kumamoto},
+  {493015144, "Nishikumamotoeki", {32.762557,130.682961}, Prefectures::Kumamoto},
+  {493006543, "Ohunacho", {32.714554,130.801936}, Prefectures::Kumamoto},
+  {483075832, "Matsuhashi", {32.652458,130.670409}, Prefectures::Kumamoto},
+  {483076842, "Kousa", {32.65122,130.81129}, Prefectures::Kumamoto},
+  {483076633, "KumamotoMisatocho", {32.6397,130.788901}, Prefectures::Kumamoto},
+  {483065934, "Hikawacho", {32.582453,130.673737}, Prefectures::Kumamoto},
+  {483073043, "Kamiamakusa", {32.587382,130.430457}, Prefectures::Kumamoto},
+  {483051551, "Amakusa", {32.458457,130.193344}, Prefectures::Kumamoto},
+  {483054782, "Bigotakada", {32.475116,130.612364}, Prefectures::Kumamoto},
+  {483023414, "Minamata", {32.204948,130.396084}, Prefectures::Kumamoto},
+  {483026503, "Hitoyoshi", {32.21612,130.753719}, Prefectures::Kumamoto},
+  {483027811, "Asagiri", {32.236259,130.893817}, Prefectures::Kumamoto},
+  {483037144, "Taraki", {32.262812,130.933174}, Prefectures::Kumamoto},
+
+  {483021343, "Nagashimacho", {32.199343,130.176784}, Prefectures::Kagoshima},  
+  {483002971, "Nishiidemitzu", {32.075406,130.339231}, Prefectures::Kagoshima},
+  {483001254, "Akune", {32.022947,130.196237}, Prefectures::Kagoshima},
+  {483004693, "Isa", {32.057195,130.613066}, Prefectures::Kagoshima},
+  {473075472, "Kurino", {31.950538,130.723311}, Prefectures::Kagoshima},
+  {473052744, "Sendai", {31.813716,130.312237}, Prefectures::Kagoshima},
+  {473042614, "Kushikino", {31.721334,130.274188}, Prefectures::Kagoshima},
+  {473033514, "Ijuuin", {31.630235,130.395793}, Prefectures::Kagoshima},
+  {473034043, "Tenmonkantsu", {31.590658,130.555058}, Prefectures::Kagoshima},
+  {473012052, "Minamisatsuma", {31.416601,130.323485}, Prefectures::Kagoshima},
+  {463072234, "Makurazaki", {31.272014,130.299539}, Prefectures::Kagoshima},
+  {463073033, "Eiookawa", {31.257887,130.4133}, Prefectures::Kagoshima},
+  {463065811, "Ibusuki", {31.236949,130.642586}, Prefectures::Kagoshima},
+  {473045702, "Tyousa", {31.72695,130.63277}, Prefectures::Kagoshima},
+  {473046911, "Kokubun", {31.743599,130.763391}, Prefectures::Kagoshima},
+  {473015961, "Tarumizu", {31.492862,130.700797}, Prefectures::Kagoshima},
+  {473006581, "Shikaya", {31.378205,130.852177}, Prefectures::Kagoshima},
+  {473007152, "Kimotsuke", {31.344364,130.945223}, Prefectures::Kagoshima},
+  {463066931, "Nishikie", {31.243572,130.787615}, Prefectures::Kagoshima},
+  {463066611, "Minamioosumi", {31.217288,130.768172}, Prefectures::Kagoshima},
+  {473110674, "Shihushi", {31.473098,131.098346}, Prefectures::Kagoshima},
+
+  {473111583, "Kushima", {31.462963,131.230557}, Prefectures::Miyazaki},
+  {473133012, "Yutsu", {31.586785,131.395984}, Prefectures::Miyazaki},
+  {473140644, "Nishitojyou", {31.723542,131.05701}, Prefectures::Miyazaki},
+  {473140892, "Mimata", {31.733792,131.119476}, Prefectures::Miyazaki},
+  {473163732, "Minamimiyazaki", {31.895116,131.422359}, Prefectures::Miyazaki},
+  {473077883, "Kobayashi", {31.990594,130.976149}, Prefectures::Miyazaki},
+  {473172854, "Kokutomicho", {31.990649,131.323535}, Prefectures::Miyazaki},
+  {483104803, "Hyuugashintomi", {32.072511,131.501906}, Prefectures::Miyazaki},
+  {483113321, "Nishimiyako", {32.1078,131.400992}, Prefectures::Miyazaki},
+  {483114424, "Takanabe", {32.122263,131.533494}, Prefectures::Miyazaki},
+  {483006511, "Kyoumachionsen", {32.045396,130.767668}, Prefectures::Miyazaki},
+  {483134051, "Tonoueki", {32.250864,131.568088}, Prefectures::Miyazaki},
+  {483155101, "Hyuugashieki", {32.425792,131.627937}, Prefectures::Miyazaki},
+  {483155721, "Kadokawaeki", {32.477353,131.653841}, Prefectures::Miyazaki},
+  {483175034, "Nobeoka", {32.589956,131.672405}, Prefectures::Miyazaki},
+  {493102542, "Takachiho", {32.711738,131.307797}, Prefectures::Miyazaki},
+
+
+  {493136484, "Kamioka", {32.95628,131.861628}, Prefectures::Ooita},
+  {493134862, "Miecho", {32.983603,131.584366}, Prefectures::Ooita},
+  {493133613, "Bungotakeda", {32.970797,131.389726}, Prefectures::Ooita},
+  {493146893, "Tsukumi", {33.072933,131.863708}, Prefectures::Ooita},
+  {493156442, "Usuki", {33.118594,131.807767}, Prefectures::Ooita},
+  {493164313, "Mukounohara", {33.196801,131.513986}, Prefectures::Ooita},
+  {493164783, "Ooitaeki", {33.23316,131.606392}, Prefectures::Ooita},
+  {493174303, "Beppu", {33.279584,131.500607}, Prefectures::Ooita},
+  {493171323, "Bunngomorieki", {33.282656,131.155453}, Prefectures::Ooita},
+  {493077851, "Hidaeki", {33.317021,130.938733}, Prefectures::Ooita},
+  {503104421, "Youkoku", {33.370115,131.530563}, Prefectures::Ooita},
+  {503114303, "Nakayamakaori", {33.44854,131.505751}, Prefectures::Ooita},
+  {503131153, "Nakatsueki", {33.599166,131.190782}, Prefectures::Ooita},
+  {503123704, "Bungonagasu", {33.564868,131.382876}, Prefectures::Ooita},
+  {503123654, "Bungotakada", {33.556173,131.447046}, Prefectures::Ooita},
+  {503125784, "Kokutou", {33.563269,131.732218}, Prefectures::Ooita},
+
+  {513357592, "Tyokutoucho", {34.459796,133.995634}, Prefectures::Kagawa},  
+  {513451842, "Doshoucho", {34.486783,134.188298}, Prefectures::Kagawa},  
+  {513440043, "Kawaracho", {34.338961,134.052558}, Prefectures::Kagawa},
+  {513431834, "Kotodenshido", {34.322537,134.172956}, Prefectures::Kagawa},
+  {513336784, "Sakaide", {34.313167,133.856717}, Prefectures::Kagawa},
+  {513336653, "Utatsu", {34.30636,133.813896}, Prefectures::Kagawa},
+  {513336531, "Marugame", {34.291974,133.792917}, Prefectures::Kagawa},
+  {513336204, "Tadotsu", {34.271102,133.75673}, Prefectures::Kagawa},
+  {513327934, "Takimiya", {34.248146,133.922165}, Prefectures::Kagawa},
+  {513431202, "Gakuendoorieki", {34.270573,134.136917}, Prefectures::Kagawa},
+  {513432062, "Sanbonmatsu", {34.251568,134.334466}, Prefectures::Kagawa},
+  {513326733, "Zentsuuji", {34.229953,133.789225}, Prefectures::Kagawa},
+  {513326254, "Kotodenkotohira", {34.190891,133.819243}, Prefectures::Kagawa},
+  {513325262, "Takaseeki", {34.184074,133.71142}, Prefectures::Kagawa},
+  {513315423, "Kannonji", {34.124436,133.655514}, Prefectures::Kagawa},
+  
+  {513424184, "Naruto", {34.179227,134.608584}, Prefectures::Tokushima},
+  {513413771, "Itano", {34.142188,134.465922}, Prefectures::Tokushima},
+  {513414661, "Matsushigecho", {34.133784,134.580563}, Prefectures::Tokushima},
+  {513414532, "Kitajimacho", {34.12558,134.547007}, Prefectures::Tokushima},
+  {513414521, "Katsuho", {34.128655,134.528264}, Prefectures::Tokushima},
+  {513413423, "Kamiita", {34.121453,134.404929}, Prefectures::Tokushima},
+  {513404843, "Tokushimaeki", {34.074235,134.551158}, Prefectures::Tokushima},
+  {513403852, "Ishiieki", {34.070212,134.44431}, Prefectures::Tokushima},
+  {513402884, "Kamoshima", {34.073617,134.356501}, Prefectures::Tokushima},
+  {513401984, "Awa", {34.089293,134.234111}, Prefectures::Tokushima},
+  {513400444, "Sadamitsu", {34.039368,134.058787}, Prefectures::Tokushima},
+  {513307441, "Awakamo", {34.037064,133.926485}, Prefectures::Tokushima},
+  {513306341, "Awaikeda", {34.027107,133.804717}, Prefectures::Tokushima},
+  {503422841, "Shishikui", {33.566734,134.30059}, Prefectures::Tokushima},  
+
+  {513207793, "Imabari", {34.064339,132.99378}, Prefectures::Ehime},
+  {503372334, "Niihama", {33.948045,133.294363}, Prefectures::Ehime},
+  {503374733, "Iyomishima", {33.979575,133.541997}, Prefectures::Ehime},
+  {503361953, "Iyosaijyou", {33.912501,133.187561}, Prefectures::Ehime},
+  {503266011, "Matsuyama", {33.835615,132.762051}, Prefectures::Ehime},
+  {503257602, "Yokogawara", {33.803336,132.884283}, Prefectures::Ehime},
+  {503255363, "Jizoucho", {33.779537,132.70421}, Prefectures::Ehime},
+  {503255063, "Gunnakaminato", {33.756066,132.702129}, Prefectures::Ehime},
+  {503246933, "Tobecho", {33.74926,132.792233}, Prefectures::Ehime},
+  {503237823, "Kumankougen", {33.655721,132.901523}, Prefectures::Ehime},
+  {503225514, "Naishi", {33.548928,132.646304}, Prefectures::Ehime},
+  {503224232, "Iyooosu", {33.51848,132.544802}, Prefectures::Ehime},
+  {503213444, "Yawatahama", {33.458164,132.436012}, Prefectures::Ehime},
+  {503204304, "Unocho", {33.363196,132.509904}, Prefectures::Ehime},
+  {493275043, "Chikanaga", {33.255706,132.67635}, Prefectures::Ehime},
+  {493264751, "Uwajima", {33.226069,132.567642}, Prefectures::Ehime},
+  {493234562, "Ainancho", {32.962517,132.58342}, Prefectures::Ehime},
+
+  {503327024, "Akieki", {33.504424,133.906399}, Prefectures::Kouchi},
+  {503410111, "Nahanri", {33.42503,134.018081}, Prefectures::Kouchi},
+  {493471423, "Muroto", {33.289854,134.15205}, Prefectures::Kouchi},
+  {503335244, "Tosayamada", {33.607105,133.684643}, Prefectures::Kouchi},
+  {503325752, "Noichi", {33.561828,133.698055}, Prefectures::Kouchi},
+  {503325814, "Gomenhigashi", {33.574533,133.647874}, Prefectures::Kouchi},
+  {503324722, "Kouchijyou", {33.558518,133.534223}, Prefectures::Kouchi},
+  {503323543, "Inoeki", {33.547505,133.430098}, Prefectures::Kouchi},
+  {503313943, "Tosa", {33.494482,133.424274}, Prefectures::Kouchi},
+  {503322303, "Echicho", {33.532862,133.252108}, Prefectures::Kouchi},
+  {503322031, "Sagawaeki", {33.500101,133.292518}, Prefectures::Kouchi},
+  {503302932, "Tanogou", {33.410417,133.296875}, Prefectures::Kouchi},
+  {493371981, "Tosakurei", {33.329312,133.226799}, Prefectures::Kouchi},
+  {493361504, "Tubokawa", {33.212328,133.137357}, Prefectures::Kouchi},
+  {493237852, "Nakamuraeki", {32.984576,132.943976}, Prefectures::Kouchi},
+  {493235281, "Higashishukumou", {32.933605,132.728663}, Prefectures::Kouchi},
+  {493217363, "Tosashimizu", {32.781463,132.954834}, Prefectures::Kouchi},
 };
 
 bool comp_id(const info_t& a, const info_t& b)
@@ -1344,9 +1666,10 @@ inline bool capture(std::string wid, const info_t& info, kind_t kind)
     static map<string, int> retry;
     if (retry[fn]++ > 2) {
       cerr << os.str() << " failed\n";
+      unlink(ofn.c_str());
       return true;
     }
-    sleep(5);
+    cerr << "sleep 5\n"; sleep(5);
     goto label;
   }
   unlink(fn.c_str());
@@ -1380,7 +1703,13 @@ inline bool close_tab(std::string wid)
 inline bool subr(const info_t& info)
 {
   using namespace std;
+#if 0  
   pid_t pid = fork();
+  if (pid == -1) {
+    cerr << "fork failed\n";
+    ofstream ofs("fork_failed");
+    exit(1); // fatal error
+  }
   if (!pid) {
     ostringstream os;
     os << "https://tokyo.mobakumap.jp/#" << info.id;
@@ -1388,7 +1717,7 @@ inline bool subr(const info_t& info)
     cerr << "execl failed\n";
     return 1;
   }
-  sleep(15);
+  cerr << "sleep 10"; sleep(10);  // 15 -> 10 : changed 2021/09/13 7:00
   ostringstream os;
   os << "w."<< pid;
   string log = os.str();
@@ -1400,21 +1729,43 @@ inline bool subr(const info_t& info)
     cerr << cmd << " failed\n";
     return true;
   }
+#else
+  {
+    ostringstream os;
+    os << "firefox https://tokyo.mobakumap.jp/#" << info.id;
+    auto fire = os.str();
+    if (system(fire.c_str())) {
+      cerr << fire << " failed\n";
+      exit(1);
+    }
+  }
+  // 10 : enough
+  cerr << "sleep 5"; sleep(5);
+  ostringstream os;
+  os << "w." << info.id;
+  string log = os.str();
+  string cmd = "xwininfo -root -tree | grep 'モバイル空間統計' | awk '{print $1}'";
+  cmd += "> ";
+  cmd += log;
+  auto y = system(cmd.c_str());
+  if (y) {
+    cerr << cmd << " failed\n";
+    exit(1);
+  }
+#endif
   ifstream ifs(log);
   string wid;
   ifs >> wid;
-  unlink(log.c_str());  
   if (wid.empty()) {
-    // no firefox mobakumap page
-    return true;
+    cerr << "no firefox mobakumap page\n";
+    exit(1);
   }
-  if (capture(wid, info, time_s))
-    return true;
-  if (capture(wid, info, generation))
-    return true;
-  if (capture(wid, info, place))
-    return true;
-  return close_tab(wid);
+  unlink(log.c_str());
+  auto rt = capture(wid, info, time_s);
+  auto rg = capture(wid, info, generation);
+  auto rp = capture(wid, info, place);
+  auto rc = close_tab(wid);
+  return rt || rg || rp || rc;
 }
 
 inline void usage(const char* prog)
@@ -1470,7 +1821,7 @@ int main(int argc, char** argv)
     cerr << "execl failed\n";
     return 1;
   }
-  sleep(30);
+  cerr << "sleep 30"; sleep(30);
 
   auto ss = begin(data);
   if (!s.empty()) {
