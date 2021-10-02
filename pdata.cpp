@@ -197,9 +197,16 @@ namespace mine {
     assert(a != -1);
     int b = get_white(a+1, in_image);
     assert(b != -1);
+    int borg = b;
     int delta = 2;
-    while (b - a < delta)
+    while (b - a < delta) {
       b = get_white(b+1, in_image);
+      if (b == -1 && borg == 91 && a == 90) {
+	// special case
+	cout << "    table = make_tuple(100, 0, 0);\n";
+	return;
+      }
+    }
     int c = get_white(b+1, in_image);
     if (c == -1) {
       // special case. For example, very few alian.

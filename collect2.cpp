@@ -1,4 +1,7 @@
+#include <sys/wait.h>
+#include <signal.h>
 #include <unistd.h>
+
 #include <iostream>
 #include <algorithm>
 #include <string>
@@ -1629,14 +1632,14 @@ inline bool capture(std::string wid, const info_t& info, kind_t kind)
   using namespace std;
   if (kind != time_s) {
     ostringstream os;
-    os << "xdotool mousemove --window " << wid << ' ';
+    os << "wdog.exe -v xdotool mousemove --window " << wid << ' ';
     os << pos(kind) << ' ' << 490;
     auto x = system(os.str().c_str());
     if (x) {
       cerr << os.str() << " failed\n";
       return true;
     }
-    const char* cmd = "xdotool click 1";
+    const char* cmd = "wdog.exe -v xdotool click 1";
     auto y = system(cmd);
     if (y) {
       cerr << cmd << " failed\n";
@@ -1646,7 +1649,7 @@ inline bool capture(std::string wid, const info_t& info, kind_t kind)
   string fn = dump_file(info.place, kind);
  label:
   ostringstream osz;
-  osz << "xwd -id " << wid << " -out " << fn << " -silent";
+  osz << "wdog.exe -v xwd -id " << wid << " -out " << fn << " -silent";
   auto z = system(osz.str().c_str());
   if (z) {
     cerr << osz.str() << " failed\n";
@@ -1655,7 +1658,7 @@ inline bool capture(std::string wid, const info_t& info, kind_t kind)
 
   ostringstream os;
   auto c = info.coord;
-  os << prog(kind) << " -in " << fn;
+  os << "wdog.exe -v " << prog(kind) << " -in " << fn;
   os << " -x " << c.first;
   os << " -y " << c.second;
   os << " -p " << to_string(info.pref);
@@ -1675,7 +1678,7 @@ inline bool capture(std::string wid, const info_t& info, kind_t kind)
   unlink(fn.c_str());
   
   ostringstream os2;
-  os2 << "g++ -c " << ofn;
+  os2 << "wdog.exe -v g++ -c " << ofn;
   auto v = system(os2.str().c_str());
   assert(v == 0);
   return false;
@@ -1685,13 +1688,13 @@ inline bool close_tab(std::string wid)
 {
   using namespace std;
   ostringstream os;
-  os << "xdotool mousemove --window " << wid << " 210 10";
+  os << "wdog.exe -v xdotool mousemove --window " << wid << " 210 10";
   auto x = system(os.str().c_str());
   if (x) {
     cerr << os.str() << " failed\n";
     return true;
   }
-  const char* cmd = "xdotool click 1";
+  const char* cmd = "wdog.exe -v xdotool click 1";
   auto y = system(cmd);
   if (y) {
     cerr << cmd << " failed\n";
@@ -1703,33 +1706,6 @@ inline bool close_tab(std::string wid)
 inline bool subr(const info_t& info)
 {
   using namespace std;
-#if 0  
-  pid_t pid = fork();
-  if (pid == -1) {
-    cerr << "fork failed\n";
-    ofstream ofs("fork_failed");
-    exit(1); // fatal error
-  }
-  if (!pid) {
-    ostringstream os;
-    os << "https://tokyo.mobakumap.jp/#" << info.id;
-    execl("/usr/bin/firefox", "firefox", os.str().c_str(), nullptr);
-    cerr << "execl failed\n";
-    return 1;
-  }
-  cerr << "sleep 10"; sleep(10);  // 15 -> 10 : changed 2021/09/13 7:00
-  ostringstream os;
-  os << "w."<< pid;
-  string log = os.str();
-  string cmd = "xwininfo -root -tree | grep 'モバイル空間統計' | awk '{print $1}'";
-  cmd += "> ";
-  cmd += log;
-  auto y = system(cmd.c_str());
-  if (y) {
-    cerr << cmd << " failed\n";
-    return true;
-  }
-#else
   {
     ostringstream os;
     os << "firefox https://tokyo.mobakumap.jp/#" << info.id;
@@ -1739,12 +1715,13 @@ inline bool subr(const info_t& info)
       exit(1);
     }
   }
-  // 10 : enough
+  // 10 : enough, 5 : work well
   cerr << "sleep 5"; sleep(5);
   ostringstream os;
   os << "w." << info.id;
   string log = os.str();
-  string cmd = "xwininfo -root -tree | grep 'モバイル空間統計' | awk '{print $1}'";
+  string cmd = "wdog.exe -v ";
+  cmd += "xwininfo -root -tree | grep 'モバイル空間統計' | awk '{print $1}'";
   cmd += "> ";
   cmd += log;
   auto y = system(cmd.c_str());
@@ -1752,7 +1729,6 @@ inline bool subr(const info_t& info)
     cerr << cmd << " failed\n";
     exit(1);
   }
-#endif
   ifstream ifs(log);
   string wid;
   ifs >> wid;
@@ -1815,7 +1791,6 @@ int main(int argc, char** argv)
     
   pid_t pid = fork();
   if (!pid) {
-    ostringstream os;
     execl("/usr/bin/firefox", "firefox",
 	  "https://tokyo.mobakumap.jp/", nullptr);
     cerr << "execl failed\n";
