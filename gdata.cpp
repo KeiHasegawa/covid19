@@ -3749,7 +3749,7 @@ Do_Direct(Display *dpy, XWDFileHeader *header, Colormap *colormap,
 	    obmask >>= 1;
 	    obshift++;
 	}
-	if (1) {
+	if (0) {
 	  using namespace mine;
 	  find_gen_button(in_image);
 	  update();
@@ -3796,7 +3796,7 @@ Do_Direct(Display *dpy, XWDFileHeader *header, Colormap *colormap,
 		  }
 		}
 #endif
-#if 0
+#if 1
 		{
 		  // 15-39 at Katsuyama.gen
 		  // ^^^^^

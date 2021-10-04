@@ -1320,8 +1320,10 @@ Do_Direct(Display *dpy, XWDFileHeader *header, Colormap *colormap,
 	  find_place_button(in_image);
 	  update();
 	  bool no_a = no_alian(in_image);
+#if 0	  
 	  if (!no_a)
 	    check_zero(in_image);
+#endif	  
 	  auto nm = out_header();
 	  if (no_a)
 	    cout << "    table = make_tuple(100,0,0)\n";

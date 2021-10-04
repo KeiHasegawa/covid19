@@ -1708,11 +1708,11 @@ inline bool subr(const info_t& info)
   using namespace std;
   {
     ostringstream os;
-    os << "firefox https://tokyo.mobakumap.jp/#" << info.id;
+    os << "wdog.exe -v firefox https://tokyo.mobakumap.jp/#" << info.id;
     auto fire = os.str();
     if (system(fire.c_str())) {
       cerr << fire << " failed\n";
-      exit(1);
+      return true;
     }
   }
   // 10 : enough, 5 : work well
@@ -1721,8 +1721,8 @@ inline bool subr(const info_t& info)
   os << "w." << info.id;
   string log = os.str();
   string cmd = "wdog.exe -v ";
-  cmd += "xwininfo -root -tree | grep 'モバイル空間統計' | awk '{print $1}'";
-  cmd += "> ";
+  cmd += "xwininfo -root -tree | grep 'モバイル空間統計' | grep 999x619";
+  cmd += " | awk '{print $1}' > ";
   cmd += log;
   auto y = system(cmd.c_str());
   if (y) {

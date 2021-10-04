@@ -198,3 +198,23 @@ https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_d
 https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv
 
 /media/ca850f52-0605-42a7-9fd4-899de9edf461/work/CSSEGISandData/COVID-19/csse_covid_19_data/csse_covid_19_time_series/
+
+firefox のウィンドウサイズが異なると tata, gdata, pdata が期待した
+動作になっていない.
+
+937x600
+
+だと tdata, pdata は期待した動作になっているが, gdata が期待した動作に
+なっていない.
+
+937x629
+
+だと tdata は期待した動作になっているが, ボタンを押せていなくて gdata,
+pdata が失敗している.
+
+そもそもボタンの位置は xdotool
+
+937x606 だと tdata, pdata は OK. gdata は NG
+
+
+999x619 だと tdata, pdata, gdata ともうまくいっている.
