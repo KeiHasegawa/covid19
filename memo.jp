@@ -1,11 +1,9 @@
 (*1) 東京都のデータの取得
-(*2) 人出のデータ
-(*3) 人出のデータの取得
-(*4) 取得したデータの数値への変換
-(*5) グラフで表示
-(*6) 地図データ
-(*7) 問題設定
-
+(*2) NHK で集計しているデータの取得
+(*3) 人出のデータ
+(*4) 人出のデータの取得
+(*5) 地図データ
+(*6) 
 
 
 (*1) 東京都のデータ
@@ -16,7 +14,13 @@ wget https://stopcovid19.metro.tokyo.lg.jp/data/130001_tokyo_covid19_tests_condu
 
 ./read_tokyo -b 2021.07.12 -e 2021.09.27 -S 100 -T 10
 
-(*2) 人出のデータ
+(*2) NHK で集計しているデータの取得
+
+https://www3.nhk.or.jp/n-data/opendata/coronavirus/nhk_news_covid19_prefectures_daily_data.csv
+
+./read_nhk -c Tokyo -c Kanagawa -c Chiba -c Saitama -r -3 -d -p -s 50
+
+(*3) 人出のデータ
 
 https://tokyo.mobakumap.jp/
 
@@ -70,52 +74,15 @@ https://tokyo.mobakumap.jp/
 
 のようになっている.
 
-(*3) 人出のデータの取得
+(*4) 人出のデータの取得
 
 collect2 : firefox を起動して (*1) の URL からデータを取得するプログラム
 
 tdata, gdata, pdata : collect2 から起動されるプログラム
 
-(*5) 取得したデータの数値への変換
+(*5) 地図データ
 
-人出のデータにおける「時系列」のグラフから時刻と人出を取り出すプログラ
-ムを tdata.cpp として作成した. この時点での tdata.cpp を tdata.cpp.001
-としてアップロードしておく.
-
-また collect2.cpp は画面にデータが揃う前に次のデータを収集しにいくとい
-う問題があったので, tdata を動作させ, 1 回リトライするように修正した.
-この時点での collect2.cpp を collect2.cpp.002 としてアップロードしておく.
-
-再度修正. -s -e オプションを collect2 に追加した. また性世代や居住地のデータも
-取得できるように修正した. この時点での collect2.cpp, tdata.cpp, gdata.cpp, pdata.cpp
-を collect2.cpp.003, tdata.cpp.002, gdata.cpp.001, pdata.cpp.001
-としてアップロードしておく.
-
-(*6) グラフで表示
-
-現状, ある地点(座標における) unix の時刻の人出が計測できている:
-
-typedef pair<double, double> COORD;
-
-typedef map<int, int> CROWD;
-
-map<COORD, CROWD> data;
-
-現状この data から Yahoo の雨雲レーダー相当のことができないかという問題になっている..
-
-gnuplot で動画ができている:
-
-/media/ca850f52-0605-42a7-9fd4-899de9edf461/work/gnuplot-5.2.6/demo/animate{,2}.dem
-
-にサンプルがある. これは View Point を時間で変更するというものだが
-gnuplot で動画ができるらしい.
-
-イメージ的には Yahoo にある雨雲レーダーのようなものを目標にする. アニ
-メーションをスライダで動かす. 人の流れが多いところを赤くするなど.
-
-(*7) 地図データ
-
-せっかくなので (*6) のグラフを地図と一緒に表示するべきかと思い, 国土地理院のページから
+せっかくなのでグラフを地図と一緒に表示するべきかと思い, 国土地理院のページから
 それっぽいデータをダウンロードした.
 
 https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v3_0.html#prefecture13
@@ -126,8 +93,7 @@ https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v3_0.html#prefecture13
 
 とすれば北海道の地図を取得することができる.
 
-
-(*) 陽性者数と人出の関係
+(*6) 陽性者数と人出の関係
 
 https://toyokeizai.net/articles/-/448957
 
