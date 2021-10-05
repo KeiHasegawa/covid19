@@ -1,12 +1,22 @@
-(*1) 人出のデータ
-(*2) 人出のデータの取得
-(*3) 東京都のデータの取得
+(*1) 東京都のデータの取得
+(*2) 人出のデータ
+(*3) 人出のデータの取得
 (*4) 取得したデータの数値への変換
 (*5) グラフで表示
 (*6) 地図データ
 (*7) 問題設定
 
-(*1) 人出のデータ
+
+
+(*1) 東京都のデータ
+
+wget https://stopcovid19.metro.tokyo.lg.jp/data/130001_tokyo_covid19_details_testing_positive_cases.csv
+
+wget https://stopcovid19.metro.tokyo.lg.jp/data/130001_tokyo_covid19_tests_conducted.csv
+
+./read_tokyo -b 2021.07.12 -e 2021.09.27 -S 100 -T 10
+
+(*2) 人出のデータ
 
 https://tokyo.mobakumap.jp/
 
@@ -60,17 +70,11 @@ https://tokyo.mobakumap.jp/
 
 のようになっている.
 
-(*2) 人出のデータの取得
+(*3) 人出のデータの取得
 
 collect2 : firefox を起動して (*1) の URL からデータを取得するプログラム
 
 tdata, gdata, pdata : collect2 から起動されるプログラム
-
-(*4) 東京都のデータの取得
-
-東京都のページにアクセスして画面ダンプとスクロールをするスクリプト
-tokyo を作成してみた. 色々と問題はあるが最初のバージョンを tyokyo.001
-としてアップロードしておく.
 
 (*5) 取得したデータの数値への変換
 
