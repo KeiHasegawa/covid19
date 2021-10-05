@@ -1,9 +1,10 @@
 (*1) 東京都のデータの取得
 (*2) NHK で集計しているデータの取得
-(*3) 人出のデータ
-(*4) 人出のデータの取得
-(*5) 地図データ
-(*6) 
+(*3) ジョンズ・ホプキンス大学のデータの取得
+(*4) 人出のデータ
+(*5) 人出のデータの取得
+(*6) 地図データ
+(*7) 
 
 
 (*1) 東京都のデータ
@@ -20,7 +21,19 @@ https://www3.nhk.or.jp/n-data/opendata/coronavirus/nhk_news_covid19_prefectures_
 
 ./read_nhk -c Tokyo -c Kanagawa -c Chiba -c Saitama -r -3 -d -p -s 50
 
-(*3) 人出のデータ
+(*3) ジョンズ・ホプキンス大学のデータの取得
+
+wget https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv
+
+wget https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv
+
+wget https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv
+
+wget https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_US.csv
+
+./read_tsc19 -c 'United Kingdom' -c 'Spain' -c 'France' -c 'Germany' -c 'Italy' -3 -r -s 50
+
+(*4) 人出のデータ
 
 https://tokyo.mobakumap.jp/
 
@@ -74,7 +87,7 @@ https://tokyo.mobakumap.jp/
 
 のようになっている.
 
-(*4) 人出のデータの取得
+(*5) 人出のデータの取得
 
 collect2 : firefox を起動して (*1) の URL からデータを取得するプログラム
 
