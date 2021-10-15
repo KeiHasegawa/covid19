@@ -1,4 +1,5 @@
 #include <sys/stat.h>
+#include <dlfcn.h>
 #include <unistd.h>
 
 #include <map>
@@ -1997,6 +1998,62 @@ void time_series(const vector<string>& spots, bool split, bool three)
   }
 }
 
+bool read_dll1(string s)
+{
+  void* hdl = dlopen(s.c_str(), RTLD_LAZY);
+  if (!hdl) {
+    cerr << "dlopen(" << '"' << s << '"' << ") failed\n";
+    cerr << dlerror() << '\n';
+    return true;
+  }
+  struct sweeper {
+    void* hdl;
+    sweeper(void* p) : hdl{p} {}
+    ~sweeper(){ dlclose(hdl); }
+  } sweeper(hdl);
+
+  void* addr = dlsym(hdl, "_Z11g_crow_dataB5cxx11");
+  if (!addr) {
+    cerr << "dlsym failed\n";
+    return true;
+  }
+
+  typedef decltype(g_crow_data) T;
+  auto ptr = reinterpret_cast<T*>(addr);
+  copy(begin(*ptr), end(*ptr), inserter(g_crow_data, begin(g_crow_data)));
+  return false; // ok
+}
+
+int read_dll()
+{
+  vector<string> dll = {
+    "../2021.09.21.18/2021_09_21_18",
+    "../2021.09.22.18/2021_09_22_18",
+    "../2021.09.23.18/2021_09_23_18",
+    "../2021.09.24.18/2021_09_24_18",
+    "../2021.09.25.18/2021_09_25_18",
+    "../2021.09.26.18/2021_09_26_18",
+    "../2021.09.27.18/2021_09_27_18",
+    "../2021.09.28.18/2021_09_28_18",
+    "../2021.09.29.18/2021_09_29_18",
+    "../2021.09.30.18/2021_09_30_18",
+    "../2021.10.01.18/2021_10_01_18",
+    "../2021.10.02.18/2021_10_02_18",
+    "../2021.10.03.18/2021_10_03_18",
+    "../2021.10.04.18/2021_10_04_18",
+    "../2021.10.05.18/2021_10_05_18",
+    "../2021.10.06.18/2021_10_06_18",
+    "../2021.10.07.18/2021_10_07_18",
+    "../2021.10.08.18/2021_10_08_18",
+    "../2021.10.09.18/2021_10_09_18",
+    "../2021.10.10.18/2021_10_10_18",
+    "../2021.10.11.18/2021_10_11_18",
+    "../2021.10.12.18/2021_10_12_18",
+  };
+  auto p = find_if(begin(dll), end(dll), read_dll1);
+  return p - end(dll);
+}
+
 int main(int argc, char** argv)
 {
   bool pause = true;
@@ -2016,6 +2073,9 @@ int main(int argc, char** argv)
     }
   }
 
+  if (read_dll() < 0)
+    return 1;
+
   if (optind == argc && !spots.empty()) {
     time_series(spots, split, three);
     return 0;
@@ -2025,7 +2085,7 @@ int main(int argc, char** argv)
     usage(argv[0]);
     return 1;
   }
-
+  
   string area = argv[optind];
   vector<string> prefs;
   if (!chose(area, prefs))

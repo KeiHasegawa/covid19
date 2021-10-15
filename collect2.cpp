@@ -1678,9 +1678,11 @@ inline bool capture(std::string wid, const info_t& info, kind_t kind)
   unlink(fn.c_str());
   
   ostringstream os2;
-  os2 << "wdog.exe -v g++ -c " << ofn;
+  os2 << "wdog.exe -v g++ -c -fPIC " << ofn;
   auto v = system(os2.str().c_str());
+#if 0  
   assert(v == 0);
+#endif  
   return false;
 }
 
@@ -1703,22 +1705,13 @@ inline bool close_tab(std::string wid)
   return false;
 }
 
-inline bool subr(const info_t& info)
+inline std::string get_wid(int id)
 {
   using namespace std;
-  {
-    ostringstream os;
-    os << "wdog.exe -v firefox https://tokyo.mobakumap.jp/#" << info.id;
-    auto fire = os.str();
-    if (system(fire.c_str())) {
-      cerr << fire << " failed\n";
-      return true;
-    }
-  }
   // 10 : enough, 5 : work well
   cerr << "sleep 5"; sleep(5);
   ostringstream os;
-  os << "w." << info.id;
+  os << "w." << id;
   string log = os.str();
   string cmd = "wdog.exe -v ";
   cmd += "xwininfo -root -tree | grep 'モバイル空間統計' | grep 999x619";
@@ -1732,11 +1725,25 @@ inline bool subr(const info_t& info)
   ifstream ifs(log);
   string wid;
   ifs >> wid;
-  if (wid.empty()) {
-    cerr << "no firefox mobakumap page\n";
-    exit(1);
-  }
   unlink(log.c_str());
+  return wid;
+}
+
+inline bool subr(const info_t& info)
+{
+  using namespace std;
+  {
+    ostringstream os;
+    os << "wdog.exe -v firefox https://tokyo.mobakumap.jp/#" << info.id;
+    auto fire = os.str();
+    if (system(fire.c_str())) {
+      cerr << fire << " failed\n";
+      exit(1);
+    }
+  }
+  string wid;
+  while (wid.empty())
+    wid = get_wid(info.id);
   auto rt = capture(wid, info, time_s);
   auto rg = capture(wid, info, generation);
   auto rp = capture(wid, info, place);

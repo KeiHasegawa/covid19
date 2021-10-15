@@ -34,6 +34,16 @@ wget https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid
 
 ./read_tsc19 -c 'United Kingdom' -c 'Spain' -c 'France' -c 'Germany' -c 'Italy' -3 -r -s 50
 
+./read_tsc19 -u -c California -c Texas -c Florida -c 'New York' -r -s 50 -3
+
+./read_tsc19 -c Japan -c US -r
+
+./read_tsc19 -c Japan -c Israel -r
+
+./read_tsc19 -c Japan -c 'Korea, South' -r
+
+./read_tsc19 -c Japan -c India -r
+
 (*4) 人出のデータ
 
 https://tokyo.mobakumap.jp/
