@@ -46,6 +46,8 @@ wget https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid
 
 ./read_tsc19 -c Brazil -c Argentina -c Chile -c Colombia -r -s 50 -3
 
+./read_tsc19 -c Singapore -c Malaysia -c Thailand -c Philippines -r -s 50 -3
+
 (*4) 人出のデータ
 
 https://tokyo.mobakumap.jp/
