@@ -1805,8 +1805,8 @@ inline bool near(const pair<double, double>& a, const pair<double, double>& b)
   auto x2 = b.first;
   auto y1 = a.second;
   auto y2 = b.second;
-  constexpr double delta = 0.01; 
-  return fabs(x1 - x2) < delta && fabs(y1 - y2) < delta;
+  constexpr double delta = 0.001;
+  return (fabs(x1 - x2) < delta) && (fabs(y1 - y2) < delta);
 }
 
 inline void out_data(ostream& os, int x, int y, int nth)
@@ -1998,6 +1998,28 @@ void time_series(const vector<string>& spots, bool split, bool three)
   }
 }
 
+void copy3(map<int, int>& dst, const map<int, int>& src)
+{
+  copy(begin(src), end(src), inserter(dst, begin(dst)));
+}
+
+void copy2(info_t& dst, const info_t& src)
+{
+  copy3(dst.tm, src.tm);
+  dst.gn = src.gn;
+  dst.pl = src.pl;
+}
+
+void copy1(map<pair<double, double>, info_t>& dst,
+	  const map<pair<double, double>, info_t>& src)
+{
+  for (const auto x : src) {
+    auto& dst2 = dst[x.first];
+    const auto& src2 = x.second;
+    copy2(dst2, src2);
+  }
+}
+
 bool read_dll1(string s)
 {
   void* hdl = dlopen(s.c_str(), RTLD_LAZY);
@@ -2020,7 +2042,11 @@ bool read_dll1(string s)
 
   typedef decltype(g_crow_data) T;
   auto ptr = reinterpret_cast<T*>(addr);
-  copy(begin(*ptr), end(*ptr), inserter(g_crow_data, begin(g_crow_data)));
+  for (const auto& x : *ptr) {
+    auto& dst = g_crow_data[x.first];
+    const auto& src = x.second;
+    copy1(dst, src);
+  }
   return false; // ok
 }
 
