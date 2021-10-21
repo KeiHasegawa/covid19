@@ -1786,7 +1786,7 @@ int main(int argc, char** argv)
     case 'p': pref = optarg; break;
     case '0': s = "Nihonbashi"; e = "Numata"; break;
     case '1': s = "Umeda"; e = "Yamashina"; break;
-    case '2': s = "OkinawaKentyou"; break;
+    case '2': s = "OkinawaKentyou"; e = "Ishigaki"; break;
     default: usage(argv[0]); return 1;
     }
   }
